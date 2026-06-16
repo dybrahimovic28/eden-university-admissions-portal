@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Eden University Admissions</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body style="background: var(--bg-light);">
+
+  <!-- Admin Header -->
+  <header style="background: var(--primary-dark); padding: 15px 24px; color: white; display: flex; justify-content: space-between; align-items: center;">
+    <div style="font-family: 'Outfit'; font-weight: 700; font-size: 1.2rem; display: flex; align-items: center; gap: 10px;">
+      <span style="color: var(--accent);">EDEN</span> ADMISSIONS ADMIN
+    </div>
+    <div style="display: flex; gap: 15px; align-items: center;">
+      <span style="font-size: 0.9rem; color: #aaa;">Placeholder Architecture</span>
+      <button class="btn btn-primary" style="padding: 8px 15px; font-size: 0.8rem;">Logout</button>
+    </div>
+  </header>
+  <!-- Mobile Drawer -->
+  <div class="nav-overlay" id="nav-overlay"></div>
+  <div class="nav-drawer" id="nav-drawer">
+    <button class="nav-toggle" id="nav-close" style="text-align: right;">&#10005;</button>
+    <a href="index.html">Home</a>
+    <a href="programmes.html">Programmes</a>
+    <a href="schools.html">Schools</a>
+    <a href="requirements.html">Requirements</a>
+    <a href="process.html">Application Process</a>
+    <a href="fees.html">Fees & Funding</a>
+    <a href="testimonials.html">Student Success</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="apply.html" class="btn btn-primary" style="margin-top: 20px;">Apply Online</a>
+  </div>
+
+  <div style="display: flex; min-height: calc(100vh - 60px);">
+    
+    <!-- Sidebar -->
+    <div style="width: 250px; background: white; border-right: 1px solid #ddd; padding: 20px 0;">
+      <ul style="list-style: none;">
+        <li style="padding: 12px 24px; border-left: 4px solid var(--primary); background: rgba(0, 43, 91, 0.05); font-weight: 600; color: var(--primary);">Dashboard</li>
+        <li style="padding: 12px 24px; color: var(--text-muted); cursor: pointer;">All Applications</li>
+        <li style="padding: 12px 24px; color: var(--text-muted); cursor: pointer;">Under Review</li>
+        <li style="padding: 12px 24px; color: var(--text-muted); cursor: pointer;">Approved</li>
+        <li style="padding: 12px 24px; color: var(--text-muted); cursor: pointer;">Generate Reports</li>
+        <li style="padding: 12px 24px; color: var(--text-muted); cursor: pointer; border-top: 1px solid #ddd; margin-top: 20px;">Settings</li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div style="flex: 1; padding: 30px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+        <h1 style="font-size: 2rem;">Recent Applications</h1>
+        <div style="display: flex; gap: 10px;">
+          <input type="text" placeholder="Search NRC or Name..." class="form-control" style="width: 250px;">
+          <button class="btn btn-outline">Search</button>
+        </div>
+      </div>
+
+      <div class="grid-4" style="margin-bottom: 30px;">
+        <div class="widget-card" style="padding: 20px;">
+          <h4 style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 5px;">Total Applications</h4>
+          <div style="font-size: 2rem; font-weight: 700; color: var(--primary);">1,204</div>
+        </div>
+        <div class="widget-card" style="padding: 20px;">
+          <h4 style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 5px;">Pending Review</h4>
+          <div style="font-size: 2rem; font-weight: 700; color: var(--accent);">45</div>
+        </div>
+        <div class="widget-card" style="padding: 20px;">
+          <h4 style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 5px;">Approved</h4>
+          <div style="font-size: 2rem; font-weight: 700; color: var(--whatsapp);">892</div>
+        </div>
+      </div>
+
+      <!-- Data Table Placeholder -->
+      <div class="widget-card" style="padding: 0; overflow: hidden;">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>App ID</th>
+              <th>Applicant Name</th>
+              <th>Programme</th>
+              <th>Date Submitted</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#APP-9021</td>
+              <td>John Musonda</td>
+              <td>BSc Nursing</td>
+              <td>Oct 12, 2026</td>
+              <td><span style="background: #fff3cd; color: #856404; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: 600;">Under Review</span></td>
+              <td><button class="btn btn-outline" style="padding: 6px 12px; font-size: 0.8rem;">View</button></td>
+            </tr>
+            <tr>
+              <td>#APP-9020</td>
+              <td>Sarah Phiri</td>
+              <td>LLB Law</td>
+              <td>Oct 12, 2026</td>
+              <td><span style="background: #d4edda; color: #155724; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: 600;">Approved</span></td>
+              <td><button class="btn btn-outline" style="padding: 6px 12px; font-size: 0.8rem;">View</button></td>
+            </tr>
+            <tr>
+              <td>#APP-9019</td>
+              <td>Michael Banda</td>
+              <td>BSc ICT</td>
+              <td>Oct 11, 2026</td>
+              <td><span style="background: #fff3cd; color: #856404; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: 600;">Under Review</span></td>
+              <td><button class="btn btn-outline" style="padding: 6px 12px; font-size: 0.8rem;">View</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const navToggle = document.getElementById('nav-toggle');
+      const navClose = document.getElementById('nav-close');
+      const navDrawer = document.getElementById('nav-drawer');
+      const navOverlay = document.getElementById('nav-overlay');
+
+      if(navToggle && navDrawer) {
+        navToggle.addEventListener('click', () => {
+          navDrawer.classList.add('open');
+          navOverlay.classList.add('open');
+        });
+        
+        const closeDrawer = () => {
+          navDrawer.classList.remove('open');
+          navOverlay.classList.remove('open');
+        };
+        if(navClose) navClose.addEventListener('click', closeDrawer);
+        if(navOverlay) navOverlay.addEventListener('click', closeDrawer);
+      }
+    });
+  </script>
+</body>
+</html>

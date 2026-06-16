@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Success Stories | Eden University Admissions</title>
+  <meta name="description" content="Read real success stories from students who successfully applied and got admitted to Eden University Zambia.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="eden-university-application-logo.png" alt="Eden University Logo" class="logo-img">
+        <div class="logo-text">
+          EDEN UNIVERSITY
+          <span>OFFICIAL ADMISSIONS PORTAL</span>
+        </div>
+      </a>
+      <button class="nav-toggle" id="nav-toggle">&#9776;</button>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="programmes.html">Programmes</a>
+        <a href="schools.html">Schools & Faculties</a>
+        <a href="international-relations.html">International Relations</a>
+        <a href="requirements.html">Admission Requirements</a>
+        <a href="apply.html" class="nav-cta">Apply Online</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <!-- Mobile Drawer -->
+  <div class="nav-overlay" id="nav-overlay"></div>
+  <div class="nav-drawer" id="nav-drawer">
+    <button class="nav-toggle" id="nav-close" style="text-align: right;">&#10005;</button>
+    <a href="index.html">Home</a>
+    <a href="programmes.html">Programmes</a>
+    <a href="schools.html">Schools</a>
+    <a href="requirements.html">Requirements</a>
+    <a href="process.html">Application Process</a>
+    <a href="fees.html">Fees & Funding</a>
+    <a href="testimonials.html">Student Success</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="apply.html" class="btn btn-primary" style="margin-top: 20px;">Apply Online</a>
+  </div>
+
+  <div class="page-header" style="background: linear-gradient(rgba(0, 43, 91, 0.65), rgba(0, 43, 91, 0.65)), url('eden-university-admission-zambia-students.jpg') center center / cover no-repeat;">
+    <div class="container">
+      <h1>Student Success Stories</h1>
+      <p>Hear from students across Zambia who used our portal to secure their future.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid-3">
+        
+        <div class="widget-card">
+          <div style="color: var(--accent); font-size: 1.5rem; margin-bottom: 15px;">â˜…â˜…â˜…â˜…â˜…</div>
+          <p style="color: var(--text-muted); font-style: italic; margin-bottom: 20px;">"The online application process was incredibly smooth. I received my admission letter for Nursing in less than 6 hours without having to travel to Lusaka."</p>
+          <div style="display: flex; align-items: center; gap: 15px; border-top: 1px solid #eee; padding-top: 15px;">
+            <div style="width: 50px; height: 50px; background: var(--primary-light); border-radius: 50%; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold;">M</div>
+            <div>
+              <h4 style="color: var(--primary);">Mutinta C.</h4>
+              <span style="font-size: 0.85rem; color: var(--text-muted);">BSc Nursing | Copperbelt</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="widget-card">
+          <div style="color: var(--accent); font-size: 1.5rem; margin-bottom: 15px;">â˜…â˜…â˜…â˜…â˜…</div>
+          <p style="color: var(--text-muted); font-style: italic; margin-bottom: 20px;">"I was worried about my documents, but the WhatsApp admissions team guided me through everything. Very professional and highly recommended!"</p>
+          <div style="display: flex; align-items: center; gap: 15px; border-top: 1px solid #eee; padding-top: 15px;">
+            <div style="width: 50px; height: 50px; background: var(--accent); border-radius: 50%; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold;">J</div>
+            <div>
+              <h4 style="color: var(--primary);">John B.</h4>
+              <span style="font-size: 0.85rem; color: var(--text-muted);">LLB Law | Lusaka</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="widget-card">
+          <div style="color: var(--accent); font-size: 1.5rem; margin-bottom: 15px;">â˜…â˜…â˜…â˜…â˜…</div>
+          <p style="color: var(--text-muted); font-style: italic; margin-bottom: 20px;">"The fees calculator helped me plan exactly what I needed to pay for my first semester. Eden University is truly embracing digital enrollment."</p>
+          <div style="display: flex; align-items: center; gap: 15px; border-top: 1px solid #eee; padding-top: 15px;">
+            <div style="width: 50px; height: 50px; background: var(--primary); border-radius: 50%; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold;">S</div>
+            <div>
+              <h4 style="color: var(--primary);">Sarah M.</h4>
+              <span style="font-size: 0.85rem; color: var(--text-muted);">BSc ICT | Southern Province</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      
+      <div style="text-align: center; margin-top: 50px;">
+        <a href="apply.html" class="btn btn-primary">Start Your Journey Today</a>
+      </div>
+    </div>
+  </section>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const navToggle = document.getElementById('nav-toggle');
+      const navClose = document.getElementById('nav-close');
+      const navDrawer = document.getElementById('nav-drawer');
+      const navOverlay = document.getElementById('nav-overlay');
+
+      if(navToggle && navDrawer) {
+        navToggle.addEventListener('click', () => {
+          navDrawer.classList.add('open');
+          navOverlay.classList.add('open');
+        });
+        
+        const closeDrawer = () => {
+          navDrawer.classList.remove('open');
+          navOverlay.classList.remove('open');
+        };
+        if(navClose) navClose.addEventListener('click', closeDrawer);
+        if(navOverlay) navOverlay.addEventListener('click', closeDrawer);
+      }
+    });
+  </script>
+</body>
+</html>

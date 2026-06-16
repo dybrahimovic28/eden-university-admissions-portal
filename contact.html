@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Eden University Admissions</title>
+  <meta name="description" content="Contact the Eden University Admissions team today for application assistance.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="eden-university-application-logo.png" type="image/png">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="eden-university-application-logo.png" alt="Eden University Logo" class="logo-img">
+        <div class="logo-text">
+          EDEN UNIVERSITY
+          <span>OFFICIAL ADMISSIONS PORTAL</span>
+        </div>
+      </a>
+      <button class="nav-toggle" id="nav-toggle">&#9776;</button>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="programmes.html">Programmes</a>
+        <a href="schools.html">Schools & Faculties</a>
+        <a href="international-relations.html">International Relations</a>
+        <a href="requirements.html">Admission Requirements</a>
+        <a href="apply.html" class="nav-cta">Apply Online</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <!-- Mobile Drawer -->
+  <div class="nav-overlay" id="nav-overlay"></div>
+  <div class="nav-drawer" id="nav-drawer">
+    <button class="nav-toggle" id="nav-close" style="text-align: right;">&#10005;</button>
+    <a href="index.html">Home</a>
+    <a href="programmes.html">Programmes</a>
+    <a href="schools.html">Schools</a>
+    <a href="requirements.html">Requirements</a>
+    <a href="process.html">Application Process</a>
+    <a href="fees.html">Fees & Funding</a>
+    <a href="testimonials.html">Student Success</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="apply.html" class="btn btn-primary" style="margin-top: 20px;">Apply Online</a>
+  </div>
+
+  <div class="page-header" style="background: linear-gradient(rgba(0, 43, 91, 0.65), rgba(0, 43, 91, 0.65)), url('eden-university-admission-zambia-contact-details.jpg') center center / cover no-repeat;">
+    <div class="container">
+      <h1 style="color: #FFFFFF; font-weight: 900; text-shadow: 0 2px 8px rgba(0,0,0,0.45), 0 4px 20px rgba(0,0,0,0.35);">Contact Admissions</h1>
+      <p style="color: #FFFFFF; font-weight: 500; text-shadow: 0 2px 8px rgba(0,0,0,0.4); max-width: 800px; margin: 0 auto;">Need Help Applying? Chat With Our Admissions Team Now.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid-2">
+        
+        <!-- Contact Info -->
+        <div>
+          <div class="widget-card" style="margin-bottom: 30px;">
+            <h3 style="color: var(--primary); margin-bottom: 20px;">Direct Contact</h3>
+            <p style="margin-bottom: 10px; color: var(--text-muted);"><strong>Admissions WhatsApp:</strong> <a href="https://wa.me/260779934886" style="color: var(--accent);">+260 779 934 886</a></p>
+            <p style="margin-bottom: 10px; color: var(--text-muted);"><strong>Email:</strong> admissions@edenuniversity.edu.zm</p>
+            <p style="margin-bottom: 20px; color: var(--text-muted);"><strong>Location:</strong> Lusaka, Zambia</p>
+            <a href="https://wa.me/260779934886" class="btn btn-whatsapp" style="width: 100%;">Chat on WhatsApp</a>
+          </div>
+
+          <div class="widget-card">
+            <h3 style="color: var(--primary); margin-bottom: 20px;">Business Hours</h3>
+            <ul style="list-style: none; color: var(--text-muted);">
+              <li style="display: flex; justify-content: space-between; margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 10px;"><span>Monday - Friday</span> <span>08:00 - 17:00</span></li>
+              <li style="display: flex; justify-content: space-between; margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 10px;"><span>Saturday</span> <span>09:00 - 13:00</span></li>
+              <li style="display: flex; justify-content: space-between;"><span>Sunday</span> <span>Closed</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="widget-card">
+          <h2 style="color: var(--primary); margin-bottom: 20px;">Send a Message</h2>
+          <form>
+            <div class="form-group">
+              <label class="form-label">Full Name</label>
+              <input type="text" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email Address</label>
+              <input type="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Message</label>
+              <textarea class="form-control" rows="5" required style="resize: vertical;"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const navToggle = document.getElementById('nav-toggle');
+      const navClose = document.getElementById('nav-close');
+      const navDrawer = document.getElementById('nav-drawer');
+      const navOverlay = document.getElementById('nav-overlay');
+
+      if(navToggle && navDrawer) {
+        navToggle.addEventListener('click', () => {
+          navDrawer.classList.add('open');
+          navOverlay.classList.add('open');
+        });
+        
+        const closeDrawer = () => {
+          navDrawer.classList.remove('open');
+          navOverlay.classList.remove('open');
+        };
+        if(navClose) navClose.addEventListener('click', closeDrawer);
+        if(navOverlay) navOverlay.addEventListener('click', closeDrawer);
+      }
+    });
+  </script>
+</body>
+</html>

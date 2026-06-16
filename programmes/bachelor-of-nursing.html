@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bachelor of Science in Nursing | Eden University Zambia</title>
+  <meta name="description" content="Apply for the Bachelor of Science in Nursing at Eden University Zambia. View entry requirements, fees, and career opportunities.">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="../eden-university-application-logo.png" type="image/png">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="../index.html" class="logo">
+        <img src="../eden-university-application-logo.png" alt="Eden University Logo" class="logo-img">
+        <div class="logo-text">
+          EDEN UNIVERSITY
+          <span>OFFICIAL ADMISSIONS PORTAL</span>
+        </div>
+      </a>
+      <button class="nav-toggle" id="nav-toggle">☰</button>
+      <nav class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../programmes.html" class="active">Programmes</a>
+        <a href="../schools.html">Schools</a>
+        <a href="../requirements.html">Requirements</a>
+        <a href="../fees.html">Fees</a>
+        <a href="../faq.html">FAQ</a>
+        <a href="../apply.html" class="nav-cta">Apply Online</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="nav-overlay" id="nav-overlay"></div>
+  <div class="nav-drawer" id="nav-drawer">
+    <button class="nav-toggle" id="nav-close" style="text-align: right;">✕</button>
+    <a href="../index.html">Home</a>
+    <a href="../programmes.html" class="active">Programmes</a>
+    <a href="../apply.html" class="btn btn-primary" style="margin-top: 20px;">Apply Online</a>
+  </div>
+
+  <div class="page-header" style="padding: 100px 0 80px;">
+    <div class="container">
+      <span style="background: rgba(255,255,255,0.2); padding: 6px 12px; border-radius: 4px; font-weight: 600; font-size: 0.85rem; letter-spacing: 1px; margin-bottom: 20px; display: inline-block;">SCHOOL OF NURSING & MIDWIFERY</span>
+      <h1 style="font-size: 3rem;">Bachelor of Science in Nursing</h1>
+      <p>Equipping compassionate healthcare leaders with world-class clinical skills.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid-2">
+        <!-- Main Content -->
+        <div>
+          <h2 style="color: var(--primary); margin-bottom: 20px;">Programme Overview</h2>
+          <p style="color: var(--text-muted); margin-bottom: 30px;">The Bachelor of Science in Nursing at Eden University is designed to prepare highly competent professional nurses capable of providing comprehensive healthcare services. The curriculum blends rigorous academic theory with extensive practical clinical experience in top-tier Zambian hospitals.</p>
+          
+          <h3 style="color: var(--primary); margin-bottom: 15px;">Entry Requirements</h3>
+          <ul style="list-style: disc; margin-left: 20px; color: var(--text-muted); margin-bottom: 30px;">
+            <li style="margin-bottom: 10px;">Five (5) O-Level Credits including English Language, Mathematics, and Science.</li>
+            <li style="margin-bottom: 10px;">A-Level qualifications in Sciences are an added advantage.</li>
+            <li style="margin-bottom: 10px;">Valid NRC or Passport for international students.</li>
+          </ul>
+
+          <h3 style="color: var(--primary); margin-bottom: 15px;">Career Opportunities</h3>
+          <ul style="list-style: disc; margin-left: 20px; color: var(--text-muted); margin-bottom: 30px;">
+            <li style="margin-bottom: 10px;">Registered Nurse (RN) in public or private hospitals</li>
+            <li style="margin-bottom: 10px;">Clinical Nurse Specialist</li>
+            <li style="margin-bottom: 10px;">Public Health Administrator</li>
+            <li style="margin-bottom: 10px;">Nurse Educator</li>
+          </ul>
+        </div>
+
+        <!-- Sidebar -->
+        <div>
+          <div class="widget-card" style="position: sticky; top: 120px;">
+            <h3 style="border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 20px; color: var(--primary);">Key Information</h3>
+            
+            <div style="margin-bottom: 15px;">
+              <span style="color: var(--text-muted); font-size: 0.9rem; display: block;">Duration</span>
+              <strong>4 Years</strong>
+            </div>
+            <div style="margin-bottom: 15px;">
+              <span style="color: var(--text-muted); font-size: 0.9rem; display: block;">Study Mode</span>
+              <strong>Full-Time</strong>
+            </div>
+            <div style="margin-bottom: 25px;">
+              <span style="color: var(--text-muted); font-size: 0.9rem; display: block;">Application Fee</span>
+              <strong>ZMW 150 (Zambian) | ZMW 600 (International)</strong>
+            </div>
+
+            <a href="../apply.html?prog=bsnursing" class="btn btn-primary" style="width: 100%; margin-bottom: 15px;">Apply Now</a>
+            <a href="https://wa.me/260779934886" class="btn btn-outline" style="width: 100%;">Chat With Admissions</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p style="text-align: center; color: rgba(255,255,255,0.7);">&copy; 2026 Eden University. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const navToggle = document.getElementById('nav-toggle');
+    const navClose = document.getElementById('nav-close');
+    const navDrawer = document.getElementById('nav-drawer');
+    const navOverlay = document.getElementById('nav-overlay');
+
+    navToggle.addEventListener('click', () => { navDrawer.classList.add('open'); navOverlay.classList.add('open'); });
+    const closeDrawer = () => { navDrawer.classList.remove('open'); navOverlay.classList.remove('open'); };
+    navClose.addEventListener('click', closeDrawer);
+    navOverlay.addEventListener('click', closeDrawer);
+  </script>
+</body>
+</html>

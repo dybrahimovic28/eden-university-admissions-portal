@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schools & Faculties | Eden University Admissions</title>
+  <meta name="description" content="Explore the diverse academic schools and faculties at Eden University Zambia. Discover your academic home.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="eden-university-application-logo.png" type="image/png">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="eden-university-application-logo.png" alt="Eden University Logo" class="logo-img">
+        <div class="logo-text">
+          EDEN UNIVERSITY
+          <span>OFFICIAL ADMISSIONS PORTAL</span>
+        </div>
+      </a>
+      <button class="nav-toggle" id="nav-toggle">&#9776;</button>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="programmes.html">Programmes</a>
+        <a href="schools.html" class="active">Schools & Faculties</a>
+        <a href="international-relations.html">International Relations</a>
+        <a href="requirements.html">Admission Requirements</a>
+        <a href="apply.html" class="nav-cta">Apply Online</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="nav-overlay" id="nav-overlay"></div>
+  <div class="nav-drawer" id="nav-drawer">
+    <button class="nav-toggle" id="nav-close" style="text-align: right;">&#10005;</button>
+    <a href="index.html">Home</a>
+    <a href="programmes.html">Programmes</a>
+    <a href="schools.html">Schools</a>
+    <a href="requirements.html">Requirements</a>
+    <a href="process.html">Application Process</a>
+    <a href="fees.html">Fees & Funding</a>
+    <a href="testimonials.html">Student Success</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="apply.html" class="btn btn-primary" style="margin-top: 20px;">Apply Online</a>
+  </div>
+
+  <div class="page-header" style="background: linear-gradient(rgba(0, 43, 91, 0.65), rgba(0, 43, 91, 0.65)), url('Eden University application Zambia.jpeg') center center / cover no-repeat;">
+    <div class="container">
+      <h1 style="color: #FFFFFF; font-weight: 900; text-shadow: 0 2px 8px rgba(0,0,0,0.45), 0 4px 20px rgba(0,0,0,0.35);">Schools & Faculties</h1>
+      <p style="color: #FFFFFF; font-weight: 500; text-shadow: 0 2px 8px rgba(0,0,0,0.4);">Discover our centers of academic excellence driving innovation and leadership across Zambia.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid-2">
+        
+        <div class="widget-card">
+          <h2 style="color: var(--primary); margin-bottom: 10px;">School of Medicine</h2>
+          <p style="color: var(--text-muted); margin-bottom: 20px;">Dedicated to training competent, compassionate, and ethical medical professionals capable of addressing the complex healthcare needs of society.</p>
+          <a href="programmes.html" class="btn btn-outline">View Medical Programmes</a>
+        </div>
+
+        <div class="widget-card">
+          <h2 style="color: var(--primary); margin-bottom: 10px;">School of Nursing & Midwifery</h2>
+          <p style="color: var(--text-muted); margin-bottom: 20px;">Equipping frontline healthcare leaders with rigorous clinical training and theoretical foundations in nursing sciences.</p>
+          <a href="programmes/bachelor-of-nursing.html" class="btn btn-outline">View Nursing Programmes</a>
+        </div>
+
+        <div class="widget-card">
+          <h2 style="color: var(--primary); margin-bottom: 10px;">School of Pharmacy</h2>
+          <p style="color: var(--text-muted); margin-bottom: 20px;">Fostering excellence in pharmaceutical sciences, drug discovery, and clinical pharmacy practice.</p>
+          <a href="programmes.html" class="btn btn-outline">View Pharmacy Programmes</a>
+        </div>
+
+        <div class="widget-card">
+          <h2 style="color: var(--primary); margin-bottom: 10px;">School of Law & Business</h2>
+          <p style="color: var(--text-muted); margin-bottom: 20px;">Shaping the next generation of legal practitioners and business leaders through comprehensive corporate and legal studies.</p>
+          <a href="programmes.html" class="btn btn-outline">View Law Programmes</a>
+        </div>
+
+        <div class="widget-card">
+          <h2 style="color: var(--primary); margin-bottom: 10px;">School of Humanities & Social Sciences</h2>
+          <p style="color: var(--text-muted); margin-bottom: 20px;">Develop leadership, social impact, policy, psychology, hospitality, and community development skills through industry-relevant programmes designed to shape future professionals.</p>
+          <a href="programmes.html" class="btn btn-outline">View Humanities Programmes</a>
+        </div>
+
+        <div class="widget-card">
+          <h2 style="color: var(--primary); margin-bottom: 10px;">School of Education</h2>
+          <p style="color: var(--text-muted); margin-bottom: 20px;">Prepare for impactful careers in teaching, educational leadership, counselling, and academic administration through nationally recognized education programmes.</p>
+          <a href="programmes.html" class="btn btn-outline">View Education Programmes</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p style="text-align: center; color: rgba(255,255,255,0.7);">&copy; 2026 Eden University. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const navToggle = document.getElementById('nav-toggle');
+    const navClose = document.getElementById('nav-close');
+    const navDrawer = document.getElementById('nav-drawer');
+    const navOverlay = document.getElementById('nav-overlay');
+
+    navToggle.addEventListener('click', () => { navDrawer.classList.add('open'); navOverlay.classList.add('open'); });
+    const closeDrawer = () => { navDrawer.classList.remove('open'); navOverlay.classList.remove('open'); };
+    navClose.addEventListener('click', closeDrawer);
+    navOverlay.addEventListener('click', closeDrawer);
+  </script>
+</body>
+</html>

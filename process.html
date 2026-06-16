@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application Process | Eden University Admissions</title>
+  <meta name="description" content="Understand the step-by-step application process for joining Eden University.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="eden-university-application-logo.png" type="image/png">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="eden-university-application-logo.png" alt="Eden University Logo" class="logo-img">
+        <div class="logo-text">
+          EDEN UNIVERSITY
+          <span>OFFICIAL ADMISSIONS PORTAL</span>
+        </div>
+      </a>
+      <button class="nav-toggle" id="nav-toggle">&#9776;</button>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="programmes.html">Programmes</a>
+        <a href="schools.html">Schools & Faculties</a>
+        <a href="international-relations.html">International Relations</a>
+        <a href="requirements.html">Admission Requirements</a>
+        <a href="apply.html" class="nav-cta">Apply Online</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="nav-overlay" id="nav-overlay"></div>
+  <div class="nav-drawer" id="nav-drawer">
+    <button class="nav-toggle" id="nav-close" style="text-align: right;">&#10005;</button>
+    <a href="index.html">Home</a>
+    <a href="programmes.html">Programmes</a>
+    <a href="schools.html">Schools</a>
+    <a href="requirements.html">Requirements</a>
+    <a href="process.html">Application Process</a>
+    <a href="fees.html">Fees & Funding</a>
+    <a href="testimonials.html">Student Success</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="apply.html" class="btn btn-primary" style="margin-top: 20px;">Apply Online</a>
+  </div>
+
+  <div class="page-header" style="background: linear-gradient(rgba(0, 43, 91, 0.65), rgba(0, 43, 91, 0.65)), url('Eden University application Zambia.jpeg') center center / cover no-repeat;">
+    <div class="container">
+      <h1>The Application Process</h1>
+      <p>A simple, transparent 6-step journey from application to enrollment.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      
+      <div class="grid-2">
+        <!-- Visual Timeline -->
+        <div>
+          <div class="process-timeline">
+            <div class="process-step">
+              <h3 style="color: var(--primary);">1. Choose Programme</h3>
+              <p style="color: var(--text-muted);">Explore our programmes database and select the course that aligns with your career goals.</p>
+            </div>
+            <div class="process-step">
+              <h3 style="color: var(--primary);">2. Complete Application</h3>
+              <p style="color: var(--text-muted);">Fill out the online application form with your personal and academic details.</p>
+            </div>
+            <div class="process-step">
+              <h3 style="color: var(--primary);">3. Upload Documents</h3>
+              <p style="color: var(--text-muted);">Attach your NRC/Passport and Grade 12 results (or equivalent transcripts).</p>
+            </div>
+            <div class="process-step">
+              <h3 style="color: var(--primary);">4. Application Review</h3>
+              <p style="color: var(--text-muted);">Our admissions committee reviews your submission. This typically takes less than 6 hours.</p>
+            </div>
+            <div class="process-step">
+              <h3 style="color: var(--primary);">5. Admission Decision</h3>
+              <p style="color: var(--text-muted);">If successful, you will receive an official Offer Letter via email and WhatsApp.</p>
+            </div>
+            <div class="process-step">
+              <h3 style="color: var(--primary);">6. Registration</h3>
+              <p style="color: var(--text-muted);">Pay your required fees and register for your first semester classes.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Required Docs Info -->
+        <div>
+          <div class="widget-card" style="position: sticky; top: 120px;">
+            <h2 style="color: var(--primary); margin-bottom: 20px;">Required Documents</h2>
+            <ul style="list-style: disc; margin-left: 20px; color: var(--text-muted); margin-bottom: 30px;">
+              <li style="margin-bottom: 10px;">Scanned copy of Grade 12 Results (or equivalent)</li>
+              <li style="margin-bottom: 10px;">Scanned copy of NRC or Passport</li>
+              <li style="margin-bottom: 10px;">Proof of Application Fee payment (if requested)</li>
+            </ul>
+
+            <h2 style="color: var(--primary); margin-bottom: 20px;">Processing Timelines</h2>
+            <div style="background: var(--bg-light); padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+              <strong>Standard Processing:</strong> less than 6 Hours
+            </div>
+            <div style="background: rgba(247, 147, 30, 0.1); padding: 15px; border-radius: 8px; color: var(--primary-dark); font-weight: 600;">
+              Next Intake: January & July
+            </div>
+
+            <a href="apply.html" class="btn btn-primary" style="width: 100%; margin-top: 30px;">Start Application Now</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p style="text-align: center; color: rgba(255,255,255,0.7);">&copy; 2026 Eden University. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const navToggle = document.getElementById('nav-toggle');
+    const navClose = document.getElementById('nav-close');
+    const navDrawer = document.getElementById('nav-drawer');
+    const navOverlay = document.getElementById('nav-overlay');
+
+    navToggle.addEventListener('click', () => { navDrawer.classList.add('open'); navOverlay.classList.add('open'); });
+    const closeDrawer = () => { navDrawer.classList.remove('open'); navOverlay.classList.remove('open'); };
+    navClose.addEventListener('click', closeDrawer);
+    navOverlay.addEventListener('click', closeDrawer);
+  </script>
+</body>
+</html>

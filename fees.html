@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fees & Funding | Eden University Admissions</title>
+  <meta name="description" content="View Eden University tuition fees, application fees, accommodation costs, and use our advanced interactive fees calculator.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="eden-university-application-logo.png" type="image/png">
+  <script src="programmes_data.js"></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="eden-university-application-logo.png" alt="Eden University Logo" class="logo-img">
+        <div class="logo-text">EDEN UNIVERSITY<span>OFFICIAL ADMISSIONS PORTAL</span></div>
+      </a>
+      <button class="nav-toggle" id="nav-toggle">&#9776;</button>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="programmes.html">Programmes</a>
+        <a href="schools.html">Schools & Faculties</a>
+        <a href="international-relations.html">International Relations</a>
+        <a href="requirements.html">Admission Requirements</a>
+        <a href="apply.html" class="nav-cta">Apply Online</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <!-- Mobile Drawer -->
+  <div class="nav-overlay" id="nav-overlay"></div>
+  <div class="nav-drawer" id="nav-drawer">
+    <button class="nav-toggle" id="nav-close" style="text-align: right;">&#10005;</button>
+    <a href="index.html">Home</a>
+    <a href="programmes.html">Programmes</a>
+    <a href="schools.html">Schools</a>
+    <a href="requirements.html">Requirements</a>
+    <a href="process.html">Application Process</a>
+    <a href="fees.html">Fees & Funding</a>
+    <a href="testimonials.html">Student Success</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="apply.html" class="btn btn-primary" style="margin-top: 20px;">Apply Online</a>
+  </div>
+
+  <div class="page-header" style="background: linear-gradient(rgba(0, 43, 91, 0.65), rgba(0, 43, 91, 0.65)), url('Eden University application Zambia fees.avif') center center / cover no-repeat;">
+    <div class="container">
+      <h1 style="color: #FFFFFF; font-weight: 900; text-shadow: 0 2px 8px rgba(0,0,0,0.45), 0 4px 20px rgba(0,0,0,0.35);">Programme Fee Schedule</h1>
+      <p style="color: #FFFFFF; font-weight: 500; text-shadow: 0 2px 8px rgba(0,0,0,0.4); max-width: 800px; margin: 0 auto;">Official 2025-2026 Academic Catalogue & Tuition Information.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      
+      <!-- Interactive Calculator -->
+      <div class="widget-card" style="border-top: 4px solid var(--accent); margin-bottom: 60px;">
+        <div class="section-header" style="margin-bottom: 25px; text-align: left;">
+          <h2 style="margin-bottom: 10px;">Advanced Fees Calculator</h2>
+          <p style="margin: 0;">Select your exact programme to view the official granular fee breakdown.</p>
+        </div>
+
+        <!-- APPLICATION FEE NOTICE -->
+        <div style="background: rgba(0, 43, 91, 0.05); border-left: 5px solid #F7931E; padding: 20px; margin-bottom: 20px; border-radius: 0 8px 8px 0;">
+          <h3 style="color: #002B5B; margin-top: 0; margin-bottom: 10px; font-size: 1.2rem; display: flex; align-items: center; gap: 8px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F7931E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+            Application Processing Fee
+          </h3>
+          <p style="margin: 0 0 10px 0; font-size: 1rem; line-height: 1.5; color: #333;">A non-refundable application processing fee is required before your application can be processed.</p>
+          <ul style="margin: 0 0 10px 25px; padding: 0; font-size: 0.95rem; line-height: 1.6; color: #444; font-weight: 500;">
+            <li>Zambian Applicants: ZMW 150</li>
+            <li>International Applicants: ZMW 600</li>
+          </ul>
+          <p style="margin: 0 0 10px 0; font-size: 0.95rem; line-height: 1.5; color: #333;">The purpose of this fee is to confirm the seriousness of an application and begin official admissions processing.</p>
+          <p style="margin: 0; font-size: 0.95rem; line-height: 1.5; color: #333;">After payment, the Admissions Team will guide applicants through the next steps.</p>
+        </div>
+
+        <!-- IMPORTANT PAYMENT NOTICE -->
+        <div style="background: rgba(247, 147, 30, 0.05); border-left: 5px solid #002B5B; padding: 20px; margin-bottom: 30px; border-radius: 0 8px 8px 0;">
+          <h3 style="color: #002B5B; margin-top: 0; margin-bottom: 10px; font-size: 1.2rem; display: flex; align-items: center; gap: 8px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#002B5B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg>
+            Important Payment Information
+          </h3>
+          <p style="margin: 0 0 10px 0; font-size: 1rem; line-height: 1.5; color: #333;">The <strong style="color: #002B5B;">Application Processing Fee</strong> is paid first. All other fees including:</p>
+          <ul style="margin: 0 0 10px 25px; padding: 0; font-size: 0.95rem; line-height: 1.6; color: #444; font-weight: 500;">
+            <li>Tuition Fees</li>
+            <li>Student Permit Fees</li>
+            <li>Registration Fees</li>
+            <li>Accommodation Fees</li>
+          </ul>
+          <p style="margin: 0 0 10px 0; font-size: 0.95rem; line-height: 1.5; color: #333;">are normally paid after arrival at Eden University and during registration.</p>
+          <p style="margin: 0; font-size: 0.95rem; line-height: 1.5; color: #333; font-weight: 700;">For payment guidance, students should contact the Admissions Team.<br>WhatsApp: <a href="https://wa.me/260779934886" style="color: #F7931E; text-decoration: none;">+260779934886</a></p>
+        </div>
+
+        <!-- Popular Countries Quick Selector -->
+        <div style="margin-bottom: 15px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center;">
+          <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase;">Popular:</span>
+          <button class="quick-currency" data-curr="ZMW" style="background: none; border: 1px solid #ddd; padding: 4px 10px; border-radius: 15px; cursor: pointer; font-size: 0.85rem;">Zambia</button>
+          <button class="quick-currency" data-curr="USD" style="background: none; border: 1px solid #ddd; padding: 4px 10px; border-radius: 15px; cursor: pointer; font-size: 0.85rem;">Zimbabwe</button>
+          <button class="quick-currency" data-curr="MWK" style="background: none; border: 1px solid #ddd; padding: 4px 10px; border-radius: 15px; cursor: pointer; font-size: 0.85rem;">Malawi</button>
+          <button class="quick-currency" data-curr="BWP" style="background: none; border: 1px solid #ddd; padding: 4px 10px; border-radius: 15px; cursor: pointer; font-size: 0.85rem;">Botswana</button>
+          <button class="quick-currency" data-curr="NAD" style="background: none; border: 1px solid #ddd; padding: 4px 10px; border-radius: 15px; cursor: pointer; font-size: 0.85rem;">Namibia</button>
+          <button class="quick-currency" data-curr="ZAR" style="background: none; border: 1px solid #ddd; padding: 4px 10px; border-radius: 15px; cursor: pointer; font-size: 0.85rem;">South Africa</button>
+          <button class="quick-currency" data-curr="TZS" style="background: none; border: 1px solid #ddd; padding: 4px 10px; border-radius: 15px; cursor: pointer; font-size: 0.85rem;">Tanzania</button>
+          <button class="quick-currency" data-curr="UGX" style="background: none; border: 1px solid #ddd; padding: 4px 10px; border-radius: 15px; cursor: pointer; font-size: 0.85rem;">Uganda</button>
+          <button class="quick-currency" data-curr="KES" style="background: none; border: 1px solid #ddd; padding: 4px 10px; border-radius: 15px; cursor: pointer; font-size: 0.85rem;">Kenya</button>
+        </div>
+
+        <!-- Currency Converter Panel -->
+        <div id="currencyPanel" style="background: white; border: 1px solid #ddd; padding: 20px; border-radius: var(--radius-sm); margin-bottom: 30px; display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: space-between;">
+          <div style="flex: 1; min-width: 250px;">
+            <div style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px;">Auto Detect Currency</div>
+            <div id="autoDetectBadge" style="display: flex; align-items: center; gap: 10px;">
+              <span id="detectedCountry" style="font-weight: 700; color: var(--primary);">Detecting...</span>
+              <span id="detectedCurrency" style="background: var(--bg-light); padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; border: 1px solid #eee;">...</span>
+            </div>
+            <div id="exchangeRateDisplay" style="font-size: 0.85rem; color: var(--accent); margin-top: 5px; font-weight: 600;"></div>
+            <div id="lastUpdatedDisplay" style="font-size: 0.75rem; color: var(--text-muted); margin-top: 2px;"></div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 5px; font-style: italic;">Exchange rates update automatically and may vary slightly from bank or forex bureau rates.</div>
+          </div>
+          
+          <div style="flex: 1; min-width: 250px;">
+            <label class="form-label" style="margin-bottom: 5px;">Select Currency (Manual Override)</label>
+            <select id="calcCurrency" class="form-control" style="font-weight: 600; cursor: pointer;">
+              <option value="ZMW">🇿🇲 Zambian Kwacha (ZMW)</option>
+              <option value="MWK">🇲🇼 Malawi Kwacha (MWK)</option>
+              <option value="USD">🇿🇼 Zimbabwe (USD)</option>
+              <option value="BWP">🇧🇼 Botswana Pula (BWP)</option>
+              <option value="NAD">🇳🇦 Namibian Dollar (NAD)</option>
+              <option value="ZAR">🇿🇦 South African Rand (ZAR)</option>
+              <option value="TZS">🇹🇿 Tanzanian Shilling (TZS)</option>
+              <option value="KES">🇰🇪 Kenyan Shilling (KES)</option>
+              <option value="UGX">🇺🇬 Ugandan Shilling (UGX)</option>
+              <option value="NGN">🇳🇬 Nigerian Naira (NGN)</option>
+              <option value="INR">🇮🇳 Indian Rupee (INR)</option>
+              <option value="GBP">🇬🇧 British Pound (GBP)</option>
+              <option value="USD">🇺🇸 US Dollar (USD)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <!-- Form Inputs -->
+          <div>
+            <div class="form-group">
+              <label class="form-label">Select Programme</label>
+              <select id="calcProg" class="form-control">
+                <option value="">-- Choose Programme --</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Include Accommodation?</label>
+              <select id="calcAccom" class="form-control">
+                <option value="0">No, I have my own housing</option>
+                <option value="5500">Yes, include campus housing (+ZMW 5,500/semester)</option>
+              </select>
+              <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 10px; line-height: 1.5; background: #f8fafc; padding: 15px; border-radius: 8px; border: 1px solid #eee;">
+                <p style="margin-top: 0; margin-bottom: 5px;"><strong>Students may choose:</strong></p>
+                <ul style="margin-left: 20px; margin-bottom: 10px; list-style-type: disc;">
+                  <li>On-Campus Accommodation</li>
+                  <li>Private Boarding Houses</li>
+                </ul>
+                <p style="margin-bottom: 10px;">Private boarding houses usually range between ZMW 800 and ZMW 2,000 per month depending on facilities such as Wi-Fi, DSTV, Solar Power, Water Availability and Room Type.</p>
+                <p style="margin-bottom: 0;">For off-campus accommodation assistance, please contact the Admissions Team.</p>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Student Type (Application Processing Fee)</label>
+              <select id="calcAppFee" class="form-control">
+                <option value="150">Zambian Citizen (ZMW 150)</option>
+                <option value="600">International Student (ZMW 600)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Output Display -->
+          <div style="background: var(--bg-light); padding: 30px; border-radius: var(--radius-sm); border: 1px solid #eee; display: flex; flex-direction: column; justify-content: center;">
+            <h3 style="color: var(--text-muted); font-size: 1rem; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px;">Official Cost Breakdown</h3>
+            
+            <div id="calcOutput" style="display: none;">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 0.95rem;">
+                <span>Programme Duration:</span>
+                <strong id="outDuration" style="color: var(--primary);">4 YEARS</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 0.95rem;">
+                <span>Application Processing Fee (Once-off):</span>
+                <strong id="outAppFee">ZMW 150</strong>
+              </div>
+              <div id="permitFeeRow" style="display: none; justify-content: space-between; align-items: center; margin-bottom: 10px; font-size: 0.95rem;">
+                <div>
+                  <span style="display: block;">Student Permit Fee:</span>
+                  <span style="font-size: 0.75rem; color: var(--text-muted);">(Valid for 2 years, applied via the school)</span>
+                </div>
+                <strong id="outPermitFee" style="color: var(--primary);">ZMW 0</strong>
+              </div>
+              <div style="border-top: 1px dashed #ccc; margin: 10px 0;"></div>
+              
+              <div style="display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 0.95rem;">
+                <span>Year 1, Semester 1 Fee:</span>
+                <strong id="outS1" style="color: var(--primary);">ZMW 0</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 0.95rem;">
+                <span>Year 1, Semester 2 Fee:</span>
+                <strong id="outS2" style="color: var(--primary);">ZMW 0</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 0.95rem; background: rgba(0,0,0,0.05); padding: 5px;">
+                <span>Total Year 1 Tuition:</span>
+                <strong id="outY1">ZMW 0</strong>
+              </div>
+
+              <div style="border-top: 1px dashed #ccc; margin: 10px 0;"></div>
+              
+              <div style="display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 0.95rem;">
+                <span>Year 2 Tuition Total:</span>
+                <strong id="outY2">ZMW 0</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 0.95rem;">
+                <span>Year 3 Tuition Total:</span>
+                <strong id="outY3">ZMW 0</strong>
+              </div>
+              
+              <div style="border-top: 2px solid #ddd; margin: 20px 0;"></div>
+              
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-size: 1.1rem; font-weight: 700; color: var(--text-main);">First Semester Required:</span>
+                <span id="outTotalSem1" style="font-size: 2rem; font-weight: 800; color: var(--accent); font-family: 'Outfit';">ZMW 0</span>
+              </div>
+              <p id="firstSemInclusionsText" style="font-size: 0.8rem; color: var(--text-muted); text-align: right; margin-top: 5px;">(Includes Processing Fee + Sem 1 Tuition + Accomm)</p>
+
+              <div style="background: var(--primary-dark); color: white; padding: 20px; border-radius: 8px; margin-top: 30px;">
+                <h4 style="margin-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 10px;">Estimated Total Programme Cost</h4>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.95rem;">
+                  <span>Total Tuition Cost:</span>
+                  <span id="outTotalTuition" style="font-weight: 600;">ZMW 0</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.95rem;">
+                  <span>Total Accommodation Cost:</span>
+                  <span id="outTotalAccom" style="font-weight: 600;">ZMW 0</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.95rem;">
+                  <span>Application Processing Fee:</span>
+                  <span id="outTotalApp" style="font-weight: 600;">ZMW 0</span>
+                </div>
+                <div id="totalPermitRow" style="display: none; justify-content: space-between; margin-bottom: 8px; font-size: 0.95rem;">
+                  <span>Student Permit Fee:</span>
+                  <span id="outTotalPermit" style="font-weight: 600;">ZMW 0</span>
+                </div>
+                <div style="border-top: 1px dashed rgba(255,255,255,0.3); margin: 10px 0;"></div>
+                <div style="display: flex; justify-content: space-between; font-size: 1.1rem; font-weight: 700;">
+                  <span>Grand Total:</span>
+                  <span id="outGrandTotal" style="color: var(--accent);">ZMW 0</span>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 10px; margin-top: 25px; flex-wrap: wrap;">
+                <button id="btnConsult" class="btn btn-primary" style="flex: 1; width: 100%; background: #F7931E; border-color: #F7931E; color: #002B5B; display: flex; justify-content: center; align-items: center; gap: 12px; padding: 20px; border-radius: 8px; cursor: pointer; font-weight: 800; font-size: 1.1rem; min-height: 60px;">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                  <span style="white-space: pre-wrap; text-align: center; line-height: 1.3;">Consult Admissions Team For More Information</span>
+                </button>
+              </div>
+            </div>
+            
+            <div id="calcPlaceholder" style="text-align: center; color: var(--text-muted); padding: 40px 0;">
+              Please select a programme to view exact official fees.
+            </div>
+
+            <div style="margin-top: 25px; padding-top: 25px; border-top: 1px solid #ddd; font-size: 0.9rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
+              <p style="margin: 0 0 10px 0;">Converted amounts are estimates based on live exchange rates. Official tuition fees are strictly charged in Zambian Kwacha (ZMW).</p>
+              <p style="margin: 0; color: #002B5B; font-weight: 700;">Estimated costs shown above are for planning purposes only. Tuition fees, accommodation fees, permit fees and related charges are normally paid after arrival and registration at Eden University. Only the Application Processing Fee is required before admission processing begins.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Country Cost Comparison -->
+      <div id="costComparisonSection" style="display: none; background: white; padding: 30px; border-radius: var(--radius-sm); border: 1px solid #ddd; margin-bottom: 60px;">
+        <h3 style="margin-bottom: 15px; color: var(--primary);">Country Cost Comparison</h3>
+        <p style="color: var(--text-muted); margin-bottom: 20px;">Programme: <strong id="compProgName"></strong></p>
+        <div style="display: flex; justify-content: space-between; border-bottom: 2px solid var(--accent); padding-bottom: 10px; margin-bottom: 15px;">
+          <span style="font-weight: 700;">Official Fee:</span>
+          <span id="compOfficial" style="font-weight: 700; color: var(--primary);">ZMW 0</span>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px;" id="compGrid">
+          <!-- Injected via JS -->
+        </div>
+      </div>
+
+      <!-- FAQ Section -->
+      <div class="section-header" style="margin-bottom: 20px;">
+        <h2>Frequently Asked Questions About Fees</h2>
+        <p style="color: var(--text-muted); margin-top: 10px; font-size: 1.05rem;">Official policies and answers regarding tuition, accommodation, and payments.</p>
+      </div>
+
+      <div style="max-width: 800px; margin: 0 auto 30px; padding: 0 15px;">
+        <div style="position: relative;">
+          <span style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); font-size: 1.2rem;">🔍</span>
+          <input type="text" id="faqSearch" placeholder="Search FAQs (e.g. refund, accommodation, permit)..." style="width: 100%; padding: 15px 20px 15px 45px; font-size: 1.05rem; border: 2px solid #ddd; border-radius: 8px; outline: none; font-family: 'Outfit', sans-serif;">
+        </div>
+      </div>
+
+      <div class="faq-container" id="faqContainer" style="max-width: 800px; margin: 0 auto 60px; padding: 0 15px;">
+        
+        <div class="faq-item" style="margin-bottom: 15px; border-radius: 8px; overflow: hidden; background: white; border: 1px solid #eee; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+          <div class="faq-question" style="padding: 20px; background: #002B5B; color: white; cursor: pointer; font-weight: 700; display: flex; justify-content: space-between; align-items: center; font-size: 1.1rem; transition: background 0.3s;">
+            <span>Q: Is the application fee refundable?</span>
+            <span class="faq-icon" style="color: #F7931E; font-size: 1.5rem; line-height: 1;">+</span>
+          </div>
+          <div class="faq-answer" style="display: none; padding: 25px; color: #444; line-height: 1.7; font-size: 1rem;">
+            <p style="margin-top: 0;">No. The application fee is completely non-refundable.</p>
+            <p style="margin-bottom: 0;">The fee confirms the seriousness of an application and allows the Admissions Team to begin processing documents and reviewing eligibility.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" style="margin-bottom: 15px; border-radius: 8px; overflow: hidden; background: white; border: 1px solid #eee; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+          <div class="faq-question" style="padding: 20px; background: #002B5B; color: white; cursor: pointer; font-weight: 700; display: flex; justify-content: space-between; align-items: center; font-size: 1.1rem; transition: background 0.3s;">
+            <span>Q: How does accommodation work?</span>
+            <span class="faq-icon" style="color: #F7931E; font-size: 1.5rem; line-height: 1;">+</span>
+          </div>
+          <div class="faq-answer" style="display: none; padding: 25px; color: #444; line-height: 1.7; font-size: 1rem;">
+            <p style="margin-top: 0;">Students may choose:</p>
+            <ul style="margin-bottom: 0;">
+              <li><strong>On-Campus Accommodation</strong> – ZMW 5,500 per semester</li>
+              <li><strong>Private Boarding Houses</strong> – typically ZMW 800 to ZMW 2,000 per month depending on facilities and location.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="faq-item" style="margin-bottom: 15px; border-radius: 8px; overflow: hidden; background: white; border: 1px solid #eee; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+          <div class="faq-question" style="padding: 20px; background: #002B5B; color: white; cursor: pointer; font-weight: 700; display: flex; justify-content: space-between; align-items: center; font-size: 1.1rem; transition: background 0.3s;">
+            <span>Q: What payment methods are accepted?</span>
+            <span class="faq-icon" style="color: #F7931E; font-size: 1.5rem; line-height: 1;">+</span>
+          </div>
+          <div class="faq-answer" style="display: none; padding: 25px; color: #444; line-height: 1.7; font-size: 1rem;">
+            <p style="margin-top: 0;"><strong>International Students:</strong></p>
+            <ul>
+              <li>Mukuru</li>
+              <li>WorldRemit</li>
+            </ul>
+            <p><strong>Zambian Students:</strong></p>
+            <ul>
+              <li>Airtel Money</li>
+              <li>MTN Money</li>
+              <li>Zamtel Money</li>
+            </ul>
+            <p>Payment details are provided by the Admissions Office.</p>
+            <p style="margin-bottom: 0;"><strong>Admissions WhatsApp:</strong> <a href="https://wa.me/260779934886" style="color: #F7931E; font-weight: 700; text-decoration: none;">+260779934886</a></p>
+          </div>
+        </div>
+
+        <div class="faq-item" style="margin-bottom: 15px; border-radius: 8px; overflow: hidden; background: white; border: 1px solid #eee; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+          <div class="faq-question" style="padding: 20px; background: #002B5B; color: white; cursor: pointer; font-weight: 700; display: flex; justify-content: space-between; align-items: center; font-size: 1.1rem; transition: background 0.3s;">
+            <span>Q: What does the fee calculator estimate?</span>
+            <span class="faq-icon" style="color: #F7931E; font-size: 1.5rem; line-height: 1;">+</span>
+          </div>
+          <div class="faq-answer" style="display: none; padding: 25px; color: #444; line-height: 1.7; font-size: 1rem;">
+            <p style="margin-top: 0;">The calculator provides an estimated total cost of completing a programme based on tuition, accommodation and other applicable fees.</p>
+            <p style="margin-bottom: 0;">It helps parents and students plan financially for the entire duration of study.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" style="margin-bottom: 15px; border-radius: 8px; overflow: hidden; background: white; border: 1px solid #eee; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+          <div class="faq-question" style="padding: 20px; background: #002B5B; color: white; cursor: pointer; font-weight: 700; display: flex; justify-content: space-between; align-items: center; font-size: 1.1rem; transition: background 0.3s;">
+            <span>Q: Can I stay in a private boarding house?</span>
+            <span class="faq-icon" style="color: #F7931E; font-size: 1.5rem; line-height: 1;">+</span>
+          </div>
+          <div class="faq-answer" style="display: none; padding: 25px; color: #444; line-height: 1.7; font-size: 1rem;">
+            <p style="margin-top: 0;">Yes.</p>
+            <p style="margin-bottom: 0;">Students may stay in approved private boarding houses according to their budget and preferences.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" style="margin-bottom: 15px; border-radius: 8px; overflow: hidden; background: white; border: 1px solid #eee; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+          <div class="faq-question" style="padding: 20px; background: #002B5B; color: white; cursor: pointer; font-weight: 700; display: flex; justify-content: space-between; align-items: center; font-size: 1.1rem; transition: background 0.3s;">
+            <span>Q: How do student permits work?</span>
+            <span class="faq-icon" style="color: #F7931E; font-size: 1.5rem; line-height: 1;">+</span>
+          </div>
+          <div class="faq-answer" style="display: none; padding: 25px; color: #444; line-height: 1.7; font-size: 1rem;">
+            <p style="margin-top: 0;">After receiving an Acceptance Letter, international students should print the letter and travel with it.</p>
+            <p>Upon entering Zambia, students are normally granted time to complete registration.</p>
+            <p>The Student Permit application is then processed through Eden University with assistance from the Admissions Team.</p>
+            <p style="margin-bottom: 0;">The Admissions Team guides students through the entire permit process.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Browse Fees by School -->
+      <div class="section-header">
+        <h2>Browse Official Fees by School</h2>
+        <p>Complete 2025-2026 Academic Fee Schedule (ZMW)</p>
+      </div>
+      
+      <div id="feesTablesContainer">
+        <!-- Tables injected by JS -->
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    // Exchange Rate & Currency Logic
+    const calcCurrency = document.getElementById('calcCurrency');
+    const autoDetectBadge = document.getElementById('autoDetectBadge');
+    const detectedCountry = document.getElementById('detectedCountry');
+    const detectedCurrency = document.getElementById('detectedCurrency');
+    const exchangeRateDisplay = document.getElementById('exchangeRateDisplay');
+    const lastUpdatedDisplay = document.getElementById('lastUpdatedDisplay');
+    
+    let exchangeRates = null;
+    let currentCurrency = 'ZMW';
+    
+    const countryCurrencyMap = {
+      'MW': 'MWK', 'ZW': 'USD', 'BW': 'BWP', 'NA': 'NAD', 'ZA': 'ZAR', 
+      'TZ': 'TZS', 'KE': 'KES', 'UG': 'UGX', 'NG': 'NGN', 'IN': 'INR', 
+      'GB': 'GBP', 'US': 'USD', 'ZM': 'ZMW'
+    };
+
+    const currencySymbols = {
+      'ZMW': 'ZMW', 'MWK': 'MWK', 'BWP': 'BWP', 'NAD': 'NAD', 
+      'ZAR': 'ZAR', 'TZS': 'TZS', 'KES': 'KES', 'UGX': 'UGX', 'NGN': '₦', 
+      'INR': '₹', 'GBP': '£', 'USD': '$'
+    };
+
+    // FAQ Toggle Logic
+    document.querySelectorAll('.faq-question').forEach(q => {
+      q.addEventListener('click', () => {
+        const item = q.parentElement;
+        item.classList.toggle('active');
+      });
+    });
+
+    // Quick Currency Selectors
+    document.querySelectorAll('.quick-currency').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const curr = e.target.getAttribute('data-curr');
+        calcCurrency.value = curr;
+        currentCurrency = curr;
+        updateCalculator();
+      });
+    });
+
+    function formatWhiteTextCurrency(zmwAmount) {
+      if (currentCurrency === 'ZMW' || !exchangeRates || !exchangeRates[currentCurrency]) {
+        return `ZMW ${zmwAmount.toLocaleString()}`;
+      }
+      const converted = zmwAmount * exchangeRates[currentCurrency];
+      const sym = currencySymbols[currentCurrency] || currentCurrency;
+      return `${sym} ${converted.toLocaleString(undefined, {maximumFractionDigits:0})}<br><span style="font-size: 0.75rem; color: rgba(255,255,255,0.7); display: block; margin-top: 4px; font-weight: normal; text-align: right;">≈ ZMW ${zmwAmount.toLocaleString()}</span>`;
+    }
+
+    async function fetchExchangeRates() {
+      const cached = localStorage.getItem('eden_exchange_rates');
+      const cachedTime = localStorage.getItem('eden_exchange_rates_time');
+      const now = new Date().getTime();
+      
+      if (cached && cachedTime && (now - cachedTime < 3600000)) { // 1 hour
+        exchangeRates = JSON.parse(cached);
+        updateRateDisplay(cachedTime);
+        return;
+      }
+
+      try {
+        const res = await fetch('https://api.exchangerate-api.com/v4/latest/ZMW');
+        if(!res.ok) throw new Error("API failed");
+        const data = await res.json();
+        exchangeRates = data.rates;
+        
+        localStorage.setItem('eden_exchange_rates', JSON.stringify(exchangeRates));
+        localStorage.setItem('eden_exchange_rates_time', now.toString());
+        updateRateDisplay(now);
+      } catch (err) {
+        console.error("Exchange rate error:", err);
+        exchangeRateDisplay.innerText = "Live rates unavailable. Defaulting to ZMW.";
+        exchangeRateDisplay.style.color = "red";
+      }
+    }
+
+    function updateRateDisplay(timestamp) {
+      if(!exchangeRates || currentCurrency === 'ZMW') {
+        exchangeRateDisplay.innerText = "";
+        lastUpdatedDisplay.innerText = "";
+        return;
+      }
+      const rate = exchangeRates[currentCurrency];
+      if(rate) {
+        exchangeRateDisplay.innerText = `1 ZMW = ${rate.toFixed(2)} ${currentCurrency}`;
+        const date = new Date(parseInt(timestamp));
+        lastUpdatedDisplay.innerText = `Last Updated: ${date.toLocaleDateString()} ${date.toLocaleTimeString()}`;
+      }
+    }
+
+    async function detectLocation() {
+      try {
+        const res = await fetch('https://get.geojs.io/v1/ip/geo.json');
+        if(!res.ok) throw new Error("IP API failed");
+        const data = await res.json();
+        const countryCode = data.country_code;
+        const mappedCurrency = countryCurrencyMap[countryCode] || 'ZMW';
+        
+        detectedCountry.innerText = data.country || "Unknown";
+        detectedCurrency.innerText = mappedCurrency;
+        
+        const options = Array.from(calcCurrency.options).map(o => o.value);
+        if(options.includes(mappedCurrency)) {
+          calcCurrency.value = mappedCurrency;
+          currentCurrency = mappedCurrency;
+        }
+      } catch (err) {
+        console.error("Location error:", err);
+        document.getElementById('autoDetectBadge').style.display = 'none'; // Hide if failed
+      }
+    }
+
+    function formatCurrencyOutput(zmwAmount) {
+      if (currentCurrency === 'ZMW' || !exchangeRates || !exchangeRates[currentCurrency]) {
+        return `ZMW ${zmwAmount.toLocaleString()}`;
+      }
+      const converted = zmwAmount * exchangeRates[currentCurrency];
+      const sym = currencySymbols[currentCurrency] || currentCurrency;
+      return `${sym} ${converted.toLocaleString(undefined, {maximumFractionDigits:0})}<br><span style="font-size: 0.75rem; color: var(--text-muted); display: block; margin-top: 4px; font-weight: normal; text-align: right;">≈ ZMW ${zmwAmount.toLocaleString()}</span>`;
+    }
+
+    // Populate Calculator Dropdown
+    const calcProg = document.getElementById('calcProg');
+    programmesData.sort((a,b) => a.name.localeCompare(b.name)).forEach((p, idx) => {
+      const opt = document.createElement('option');
+      opt.value = idx;
+      opt.innerText = `${p.name} (${p.mode}) - ${p.school}`;
+      calcProg.appendChild(opt);
+    });
+
+    function updateCalculator() {
+      const idx = calcProg.value;
+      if(idx === "") {
+        document.getElementById('calcOutput').style.display = 'none';
+        document.getElementById('calcPlaceholder').style.display = 'block';
+        return;
+      }
+      document.getElementById('calcOutput').style.display = 'block';
+      document.getElementById('calcPlaceholder').style.display = 'none';
+
+      const p = programmesData[idx];
+      const accommFee = parseInt(document.getElementById('calcAccom').value);
+      const appFee = parseInt(document.getElementById('calcAppFee').value);
+      const permitFee = appFee === 600 ? 9500 : 0;
+
+      if (permitFee > 0) {
+        document.getElementById('permitFeeRow').style.display = 'flex';
+        document.getElementById('outPermitFee').innerHTML = formatCurrencyOutput(permitFee);
+        document.getElementById('totalPermitRow').style.display = 'flex';
+        document.getElementById('outTotalPermit').innerHTML = formatWhiteTextCurrency(permitFee);
+        document.getElementById('firstSemInclusionsText').innerText = "(Includes Processing Fee + Sem 1 Tuition + Accomm + Permit)";
+      } else {
+        document.getElementById('permitFeeRow').style.display = 'none';
+        document.getElementById('totalPermitRow').style.display = 'none';
+        document.getElementById('firstSemInclusionsText').innerText = "(Includes Processing Fee + Sem 1 Tuition + Accomm)";
+      }
+
+      document.getElementById('outDuration').innerText = p.duration;
+      document.getElementById('outAppFee').innerHTML = formatCurrencyOutput(appFee);
+      
+      const s1 = p.fees[0] || 0;
+      const s2 = p.fees[1] || 0;
+      const y1 = s1 + s2;
+      const y2 = (p.fees[2] || 0) + (p.fees[3] || 0);
+      const y3 = (p.fees[4] || 0) + (p.fees[5] || 0);
+
+      document.getElementById('outS1').innerHTML = formatCurrencyOutput(s1);
+      document.getElementById('outS2').innerHTML = formatCurrencyOutput(s2);
+      document.getElementById('outY1').innerHTML = formatCurrencyOutput(y1);
+      document.getElementById('outY2').innerHTML = formatCurrencyOutput(y2);
+      document.getElementById('outY3').innerHTML = formatCurrencyOutput(y3);
+
+      const firstSemRequired = appFee + s1 + accommFee + permitFee;
+      document.getElementById('outTotalSem1').innerHTML = formatCurrencyOutput(firstSemRequired);
+      
+      const totalTuition = s1 + s2 + y2 + y3;
+      const totalAccom = p.duration === "3 YEARS" ? accommFee * 6 : accommFee * 8;
+      const grandTotal = totalTuition + totalAccom + appFee + permitFee;
+
+      document.getElementById('outTotalTuition').innerHTML = formatWhiteTextCurrency(totalTuition);
+      document.getElementById('outTotalAccom').innerHTML = formatWhiteTextCurrency(totalAccom);
+      document.getElementById('outTotalApp').innerHTML = formatWhiteTextCurrency(appFee);
+      document.getElementById('outGrandTotal').innerHTML = formatWhiteTextCurrency(grandTotal);
+
+      // Cost Comparison
+      document.getElementById('costComparisonSection').style.display = 'block';
+      document.getElementById('compProgName').innerText = p.name;
+      document.getElementById('compOfficial').innerText = `ZMW ${totalTuition.toLocaleString()}`;
+      
+      const compCurrencies = ['MWK', 'USD', 'GBP', 'ZAR', 'BWP', 'ZWG'];
+      let compHtml = '';
+      compCurrencies.forEach(c => {
+        if(exchangeRates && exchangeRates[c]) {
+          const conv = totalTuition * exchangeRates[c];
+          const sym = currencySymbols[c] || c;
+          compHtml += `<div style="background: var(--bg-light); padding: 10px 15px; border-radius: 8px; border: 1px solid #eee; display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-weight: 600; color: var(--text-muted);">${c}</span>
+            <span style="font-weight: 700; color: var(--primary-dark);">${sym} ${conv.toLocaleString(undefined, {maximumFractionDigits:0})}</span>
+          </div>`;
+        } else {
+          compHtml += `<div style="background: var(--bg-light); padding: 10px 15px; border-radius: 8px; border: 1px solid #eee; display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-weight: 600; color: var(--text-muted);">${c}</span>
+            <span style="font-weight: 700; color: var(--primary-dark);">N/A</span>
+          </div>`;
+        }
+      });
+      document.getElementById('compGrid').innerHTML = compHtml;
+
+      updateRateDisplay(localStorage.getItem('eden_exchange_rates_time') || new Date().getTime());
+    }
+
+    calcProg.addEventListener('change', updateCalculator);
+    document.getElementById('calcAccom').addEventListener('change', updateCalculator);
+    document.getElementById('calcAppFee').addEventListener('change', updateCalculator);
+    calcCurrency.addEventListener('change', (e) => {
+      currentCurrency = e.target.value;
+      updateCalculator();
+    });
+
+    // WhatsApp Consultation Handler
+    document.getElementById('btnConsult').addEventListener('click', () => {
+      const idx = calcProg.value;
+      if(idx === "") return;
+      const p = programmesData[idx];
+      const accomSel = document.getElementById('calcAccom');
+      const appFeeSel = document.getElementById('calcAppFee');
+      
+      const accommFee = parseInt(accomSel.value);
+      const appFee = parseInt(appFeeSel.value);
+      const permitFee = appFee === 600 ? 9500 : 0;
+      const accomText = accomSel.options[accomSel.selectedIndex].text;
+      const studentTypeText = appFeeSel.options[appFeeSel.selectedIndex].text;
+
+      const s1 = p.fees[0] || 0;
+      const totalTuition = s1 + (p.fees[1] || 0) + (p.fees[2] || 0) + (p.fees[3] || 0) + (p.fees[4] || 0) + (p.fees[5] || 0);
+      const totalAccom = p.duration === "3 YEARS" ? accommFee * 6 : accommFee * 8;
+      const grandTotal = totalTuition + totalAccom + appFee + permitFee;
+      const firstSemRequired = appFee + s1 + accommFee + permitFee;
+
+      let dispAppFee = `ZMW ${appFee.toLocaleString()}`;
+      let dispPermitFee = permitFee > 0 ? `ZMW ${permitFee.toLocaleString()}` : null;
+      let dispFirstSem = `ZMW ${firstSemRequired.toLocaleString()}`;
+      let dispTotal = `ZMW ${grandTotal.toLocaleString()}`;
+
+      if(currentCurrency !== 'ZMW' && exchangeRates && exchangeRates[currentCurrency]) {
+         const rate = exchangeRates[currentCurrency];
+         const sym = currencySymbols[currentCurrency] || currentCurrency;
+         dispAppFee = `${sym} ${(appFee*rate).toLocaleString(undefined, {maximumFractionDigits:0})} (ZMW ${appFee.toLocaleString()})`;
+         if(permitFee > 0) dispPermitFee = `${sym} ${(permitFee*rate).toLocaleString(undefined, {maximumFractionDigits:0})} (ZMW ${permitFee.toLocaleString()})`;
+         dispFirstSem = `${sym} ${(firstSemRequired*rate).toLocaleString(undefined, {maximumFractionDigits:0})} (ZMW ${firstSemRequired.toLocaleString()})`;
+         dispTotal = `${sym} ${(grandTotal*rate).toLocaleString(undefined, {maximumFractionDigits:0})} (ZMW ${grandTotal.toLocaleString()})`;
+      }
+
+      let msg = `Programme Selected:\n[ ${p.name} ]\n\n`;
+      msg += `Student Type:\n[ ${studentTypeText} ]\n\n`;
+      msg += `Accommodation:\n[ ${accomText} ]\n\n`;
+      msg += `Estimated First Semester Cost:\n[ ${dispFirstSem} ]\n\n`;
+      msg += `Estimated Total Programme Cost:\n[ ${dispTotal} ]\n\n`;
+      msg += `Hello Admissions Team,\n\n`;
+      msg += `I have reviewed the fee calculator and would like more information about admissions, application fee payment, accommodation, permit requirements and registration procedures.`;
+      
+      const url = `https://wa.me/260779934886?text=${encodeURIComponent(msg)}`;
+      window.open(url, '_blank');
+    });
+
+    // Generate Tables by School
+    const schools = [...new Set(programmesData.map(p => p.school))];
+    const container = document.getElementById('feesTablesContainer');
+
+    schools.forEach(school => {
+      const schoolProgs = programmesData.filter(p => p.school === school);
+      let html = `<div class="widget-card" style="margin-bottom: 30px; padding: 0; overflow: hidden;">
+        <div style="background: var(--primary-dark); padding: 15px 24px;">
+          <h3 style="margin: 0; color: #ffffff;">${school}</h3>
+        </div>
+        <div style="overflow-x: auto;">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Programme</th>
+                <th>Mode</th>
+                <th>Duration</th>
+                <th>Y1 Sem 1</th>
+                <th>Y1 Sem 2</th>
+                <th>Y2 Sem 1</th>
+              </tr>
+            </thead>
+            <tbody>`;
+      
+      schoolProgs.forEach(p => {
+        html += `<tr>
+          <td style="font-weight: 600;">${p.name}</td>
+          <td>${p.mode}</td>
+          <td>${p.duration}</td>
+          <td style="color: var(--primary);">ZMW ${(p.fees[0]||0).toLocaleString()}</td>
+          <td>ZMW ${(p.fees[1]||0).toLocaleString()}</td>
+          <td>ZMW ${(p.fees[2]||0).toLocaleString()}</td>
+        </tr>`;
+      });
+      html += `</tbody></table></div></div>`;
+      container.innerHTML += html;
+    });
+
+    // Initialize Async operations without blocking
+    (async function initMultiCurrency() {
+      await fetchExchangeRates();
+      await detectLocation();
+      updateCalculator();
+    })();
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const navToggle = document.getElementById('nav-toggle');
+      const navClose = document.getElementById('nav-close');
+      const navDrawer = document.getElementById('nav-drawer');
+      const navOverlay = document.getElementById('nav-overlay');
+
+      if(navToggle && navDrawer) {
+        navToggle.addEventListener('click', () => {
+          navDrawer.classList.add('open');
+          navOverlay.classList.add('open');
+        });
+        
+        const closeDrawer = () => {
+          navDrawer.classList.remove('open');
+          navOverlay.classList.remove('open');
+        };
+        if(navClose) navClose.addEventListener('click', closeDrawer);
+        if(navOverlay) navOverlay.addEventListener('click', closeDrawer);
+      }
+
+      // FAQ Accordion & Search Logic
+      const faqSearch = document.getElementById('faqSearch');
+      const faqItems = document.querySelectorAll('.faq-item');
+
+      if(faqSearch) {
+        faqSearch.addEventListener('input', (e) => {
+          const term = e.target.value.toLowerCase();
+          faqItems.forEach(item => {
+            const questionText = item.querySelector('.faq-question').innerText.toLowerCase();
+            const answerText = item.querySelector('.faq-answer').innerText.toLowerCase();
+            if(questionText.includes(term) || answerText.includes(term)) {
+              item.style.display = 'block';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      }
+
+      faqItems.forEach(item => {
+        const q = item.querySelector('.faq-question');
+        const a = item.querySelector('.faq-answer');
+        const icon = item.querySelector('.faq-icon');
+        q.addEventListener('click', () => {
+          const isOpen = a.style.display === 'block';
+          
+          // Close all open answers
+          document.querySelectorAll('.faq-answer').forEach(ans => ans.style.display = 'none');
+          document.querySelectorAll('.faq-icon').forEach(icn => icn.innerText = '+');
+          
+          if(!isOpen) {
+            a.style.display = 'block';
+            icon.innerText = '-';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

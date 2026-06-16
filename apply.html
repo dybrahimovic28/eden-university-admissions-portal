@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apply Online | Eden University Admissions</title>
+  <meta name="description" content="Submit your official application to Eden University Zambia. Fast, secure, and fully online.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="eden-university-application-logo.png" type="image/png">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="eden-university-application-logo.png" alt="Eden University Logo" class="logo-img">
+        <div class="logo-text">
+          EDEN UNIVERSITY
+          <span>OFFICIAL ADMISSIONS PORTAL</span>
+        </div>
+      </a>
+      <button class="nav-toggle" id="nav-toggle">&#9776;</button>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="programmes.html">Programmes</a>
+        <a href="schools.html">Schools & Faculties</a>
+        <a href="international-relations.html">International Relations</a>
+        <a href="requirements.html">Admission Requirements</a>
+        <a href="apply.html" class="nav-cta active">Apply Online</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="nav-overlay" id="nav-overlay"></div>
+  <div class="nav-drawer" id="nav-drawer">
+    <button class="nav-toggle" id="nav-close" style="text-align: right;">&#10005;</button>
+    <a href="index.html">Home</a>
+    <a href="programmes.html">Programmes</a>
+    <a href="schools.html">Schools</a>
+    <a href="requirements.html">Requirements</a>
+    <a href="process.html">Application Process</a>
+    <a href="fees.html">Fees & Funding</a>
+    <a href="testimonials.html">Student Success</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="apply.html" class="btn btn-primary" style="margin-top: 20px;">Apply Online</a>
+  </div>
+
+  <style>
+    .hero-apply {
+      position: relative;
+      height: 550px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #FFFFFF;
+      overflow: hidden;
+    }
+    .hero-apply-bg {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(rgba(0, 43, 91, 0.75), rgba(0, 43, 91, 0.75)), url('eden-university-admission-zambia-students.jpg') center center / cover no-repeat;
+      z-index: -1;
+      animation: bgZoom 25s infinite alternate ease-in-out;
+    }
+    @keyframes bgZoom {
+      from { transform: scale(1); }
+      to { transform: scale(1.1); }
+    }
+    .hero-apply-content {
+      text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+      padding: 0 20px;
+    }
+    .hero-apply h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      font-weight: 800;
+      color: #FFFFFF;
+    }
+    .hero-apply p {
+      font-size: 1.25rem;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.9);
+    }
+    @media (max-width: 768px) {
+      .hero-apply { height: 400px; }
+      .hero-apply h1 { font-size: 2.2rem; }
+      .hero-apply p { font-size: 1.1rem; }
+    }
+  </style>
+  <div class="hero-apply">
+    <div class="hero-apply-bg"></div>
+    <div class="container hero-apply-content">
+      <h1>Official Online Application</h1>
+      <p>Complete the secure form below to begin your academic journey at Eden University.</p>
+    </div>
+  </div>
+
+  <section class="section section-alt">
+    <div class="container" style="max-width: 800px;">
+      
+      <div class="apply-form-container" id="applicationFormContainer">
+        <h2 style="margin-bottom: 20px; color: var(--primary);">Application Details</h2>
+        
+        <!-- Conditional Admission Notice -->
+        <div style="background: rgba(247, 147, 30, 0.1); padding: 20px; border-left: 4px solid var(--accent); margin-bottom: 30px; border-radius: 4px;">
+          <h3 style="color: var(--primary-dark); font-size: 1.1rem; margin-bottom: 12px;">Conditional Admission Available</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 10px;">If you do not fully meet the standard entry requirements, you may still submit your application for review.</p>
+          <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 10px;">Our admissions team will assess your qualifications and advise you on available admission options.</p>
+          <p style="color: var(--primary-dark); font-size: 0.95rem; font-weight: 600; margin-bottom: 0;">We will reply to you via WhatsApp, so please make sure you enter the correct WhatsApp number for Application Fee processing and admissions communication.</p>
+        </div>
+
+        <!-- Application Fees Information Box -->
+        <div style="background: white; border: 2px solid var(--primary-light); padding: 25px; border-radius: 8px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,43,91,0.05);">
+          <h3 style="color: var(--primary); margin-bottom: 20px; text-align: center;">Application Fees</h3>
+          <div class="grid-2" style="gap: 20px;">
+            <div style="background: var(--bg-light); padding: 20px; border-radius: 6px; text-align: center; border-bottom: 3px solid var(--accent);">
+              <h4 style="color: var(--primary-dark); margin-bottom: 10px;">Zambian Applicants</h4>
+              <p style="color: var(--text-muted); margin-bottom: 5px;">Application Fee:</p>
+              <div style="font-size: 2rem; font-weight: 800; color: var(--primary);">K150</div>
+            </div>
+            <div style="background: var(--bg-light); padding: 20px; border-radius: 6px; text-align: center; border-bottom: 3px solid var(--accent);">
+              <h4 style="color: var(--primary-dark); margin-bottom: 10px;">International Applicants</h4>
+              <p style="color: var(--text-muted); margin-bottom: 5px;">Application Fee:</p>
+              <div style="font-size: 2rem; font-weight: 800; color: var(--primary);">K600</div>
+              <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 5px;">(Non-Zambians)</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Apply Now Section -->
+        <div style="text-align: center; margin-bottom: 40px;">
+          <h3 style="color: var(--primary); margin-bottom: 15px; font-size: 1.5rem;">Complete Your Official Application</h3>
+          <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto 20px;">To begin your admission process, click the button below and complete the official Eden University online application form.</p>
+          <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto 30px;">After submitting your details, our admissions team will contact you via WhatsApp regarding application fee processing and the next steps.</p>
+          
+          <div style="display: flex; flex-direction: column; gap: 15px; max-width: 400px; margin: 0 auto;">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe5FBchHnqb-lEGc7Je2zMgY1XESZ7PoZDT4WdspVfurdz89g/viewform?usp=sharing&ouid=104348419809398264893" target="_blank" class="btn btn-primary" style="padding: 20px; font-size: 1.1rem; width: 100%; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; display: block; box-shadow: 0 4px 15px rgba(247, 147, 30, 0.4);">Enter Application Details</a>
+            
+            <a href="https://wa.me/260779934886" target="_blank" class="btn btn-whatsapp" style="padding: 18px; font-size: 1.1rem; width: 100%; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; display: block;">Chat On WhatsApp</a>
+            <a href="https://chat.whatsapp.com/JsFFCsinjZj3591P5X4vZa" target="_blank" class="btn btn-whatsapp" style="padding: 18px; font-size: 1.1rem; width: 100%; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; display: block; margin-top: 15px;">Join The Official Whatsapp Group For More Updates</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h2 style="color:white;font-size:1.5rem;margin-bottom:10px;">EDEN UNIVERSITY</h2>
+          <p style="color: rgba(255,255,255,0.7);">Dedicated to academic excellence. Secure your future with our streamlined online application system.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile Drawer
+    const navToggle = document.getElementById('nav-toggle');
+    const navClose = document.getElementById('nav-close');
+    const navDrawer = document.getElementById('nav-drawer');
+    const navOverlay = document.getElementById('nav-overlay');
+
+    navToggle.addEventListener('click', () => { navDrawer.classList.add('open'); navOverlay.classList.add('open'); });
+    const closeDrawer = () => { navDrawer.classList.remove('open'); navOverlay.classList.remove('open'); };
+    navClose.addEventListener('click', closeDrawer);
+    navOverlay.addEventListener('click', closeDrawer);
+  </script>
+</body>
+</html>

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programmes Database | Eden University Admissions</title>
+  <meta name="description" content="View the complete official fee schedule and programme database at Eden University Zambia.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="eden-university-application-logo.png" type="image/png">
+  <script src="programmes_data.js"></script>
+  <style>
+    /* Table specific styles matching the official PDF structure */
+    .school-group {
+      margin-bottom: 40px;
+    }
+    .school-header {
+      background: var(--primary-dark);
+      color: white;
+      padding: 12px 20px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-radius: 4px 4px 0 0;
+    }
+    .table-responsive {
+      width: 100%;
+      overflow-x: auto;
+      background: white;
+      border: 1px solid #ddd;
+      border-top: none;
+      border-radius: 0 0 4px 4px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    .academic-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+      min-width: 1100px;
+    }
+    .academic-table th {
+      background: var(--primary);
+      color: white;
+      text-align: left;
+      padding: 12px 15px;
+      white-space: nowrap;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .academic-table td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #eee;
+      border-right: 1px solid #f5f5f5;
+      vertical-align: middle;
+      white-space: nowrap;
+    }
+    .academic-table td:last-child {
+      border-right: none;
+    }
+    .academic-table tr:hover { background-color: #f0f7ff; }
+    
+    .fee-col {
+      font-family: monospace;
+      font-size: 0.9rem;
+    }
+
+    .btn-sm { padding: 5px 10px; font-size: 0.8rem; margin-right: 5px; }
+
+    /* Comparison Tray */
+    .comparison-tray { position: fixed; bottom: 0; left: 0; width: 100%; background: var(--primary-dark); color: white; padding: 20px; box-shadow: 0 -4px 20px rgba(0,0,0,0.2); z-index: 2000; transform: translateY(100%); transition: 0.3s ease; display: flex; justify-content: space-between; align-items: center; }
+    .comparison-tray.active { transform: translateY(0); }
+    .compare-items { display: flex; gap: 15px; }
+    .compare-item { background: rgba(255,255,255,0.1); padding: 8px 15px; border-radius: 4px; font-size: 0.85rem; display: flex; align-items: center; gap: 10px; }
+    .compare-item button { background: none; border: none; color: var(--accent); cursor: pointer; font-weight: bold; }
+    
+    .comparison-modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 3000; display: none; align-items: center; justify-content: center; padding: 20px; }
+    .comparison-content { background: white; width: 100%; max-width: 900px; border-radius: 8px; padding: 30px; max-height: 90vh; overflow-y: auto; }
+    .comp-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    .comp-table th, .comp-table td { padding: 15px; border: 1px solid #ddd; text-align: left; }
+    .comp-table th { background: var(--bg-light); color: var(--primary); width: 20%; }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="eden-university-application-logo.png" alt="Eden University Logo" class="logo-img">
+        <div class="logo-text">EDEN UNIVERSITY<span>OFFICIAL ADMISSIONS PORTAL</span></div>
+      </a>
+      <button class="nav-toggle" id="nav-toggle">&#9776;</button>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="programmes.html" class="active">Programmes</a>
+        <a href="schools.html">Schools & Faculties</a>
+        <a href="international-relations.html">International Relations</a>
+        <a href="requirements.html">Admission Requirements</a>
+        <a href="apply.html" class="nav-cta">Apply Online</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <!-- Mobile Drawer -->
+  <div class="nav-overlay" id="nav-overlay"></div>
+  <div class="nav-drawer" id="nav-drawer">
+    <button class="nav-toggle" id="nav-close" style="text-align: right;">&#10005;</button>
+    <a href="index.html">Home</a>
+    <a href="programmes.html">Programmes</a>
+    <a href="schools.html">Schools</a>
+    <a href="requirements.html">Requirements</a>
+    <a href="process.html">Application Process</a>
+    <a href="fees.html">Fees & Funding</a>
+    <a href="testimonials.html">Student Success</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="apply.html" class="btn btn-primary" style="margin-top: 20px;">Apply Online</a>
+  </div>
+
+  <div class="page-header" style="background: linear-gradient(rgba(0, 43, 91, 0.65), rgba(0, 43, 91, 0.65)), url('Eden University application Zambia fees.avif') center center / cover no-repeat; padding: 80px 0 60px;">
+    <div class="container">
+      <h1 style="color: #FFFFFF; font-weight: 900; text-shadow: 0 2px 8px rgba(0,0,0,0.45), 0 4px 20px rgba(0,0,0,0.35);">Programme Fee Schedule</h1>
+      <p style="color: #FFFFFF; font-weight: 500; text-shadow: 0 2px 8px rgba(0,0,0,0.4); max-width: 800px; margin: 0 auto;">Official 2025-2026 Academic Catalogue & Tuition Information.</p>
+    </div>
+  </div>
+
+  <section class="section" style="padding-top: 20px;">
+    <div class="container" style="max-width: 1400px;">
+      
+      <!-- Search & Filters -->
+      <div style="background: var(--bg-light); padding: 20px; border-radius: 8px; margin-bottom: 30px; display: flex; gap: 20px; align-items: center;">
+        <div class="form-group" style="margin-bottom: 0; flex: 2;">
+          <input type="text" id="searchInput" class="form-control" placeholder="Search by programme name... (e.g. Nursing, Law)">
+        </div>
+        <div class="form-group" style="margin-bottom: 0; flex: 1;">
+          <select id="schoolFilter" class="form-control">
+            <option value="all">All Schools</option>
+          </select>
+        </div>
+        <div class="form-group" style="margin-bottom: 0; flex: 1;">
+          <select id="modeFilter" class="form-control">
+            <option value="all">All Modes</option>
+            <option value="Full-Time">Full-Time</option>
+            <option value="Distance">Distance</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Container for dynamically generated tables -->
+      <div id="catalogContainer"></div>
+      
+    </div>
+  </section>
+
+  <!-- Comparison Tray -->
+  <div class="comparison-tray" id="compTray">
+    <div>
+      <h4 style="margin-bottom: 5px; color: var(--accent);">Compare Programmes</h4>
+      <div class="compare-items" id="compItems"></div>
+    </div>
+    <div style="display: flex; gap: 10px;">
+      <button class="btn btn-primary" id="btnCompare">Compare Now</button>
+      <button class="btn btn-outline" id="btnClearComp" style="border-color: rgba(255,255,255,0.3); color: white;">Clear</button>
+    </div>
+  </div>
+
+  <!-- Comparison Modal -->
+  <div class="comparison-modal" id="compModal">
+    <div class="comparison-content">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <h2 style="color: var(--primary);">Programme Comparison</h2>
+        <button id="closeModal" style="background:none; border:none; font-size: 1.5rem; cursor: pointer;">âœ•</button>
+      </div>
+      <div id="compTableContainer" style="overflow-x: auto;"></div>
+    </div>
+  </div>
+
+  <script>
+    // Extract unique schools
+    const uniqueSchools = [...new Set(programmesData.map(p => p.school))];
+    
+    // Populate School Filter
+    const schoolFilter = document.getElementById('schoolFilter');
+    uniqueSchools.forEach(s => {
+      const opt = document.createElement('option');
+      opt.value = s;
+      opt.innerText = `School of ${s}`;
+      schoolFilter.appendChild(opt);
+    });
+
+    const searchInput = document.getElementById('searchInput');
+    const modeFilter = document.getElementById('modeFilter');
+    const catalogContainer = document.getElementById('catalogContainer');
+    
+    let toCompare = [];
+
+    function renderCatalog() {
+      const searchStr = searchInput.value.toLowerCase();
+      const selectedSchool = schoolFilter.value;
+      const selectedMode = modeFilter.value;
+
+      catalogContainer.innerHTML = '';
+
+      uniqueSchools.forEach(school => {
+        // Filter rows for this specific school
+        let schoolProgs = programmesData.map((p, originalIdx) => ({ p, originalIdx }))
+          .filter(item => item.p.school === school)
+          .filter(item => {
+            const matchSearch = item.p.name.toLowerCase().includes(searchStr);
+            const matchMode = selectedMode === 'all' || item.p.mode === selectedMode;
+            return matchSearch && matchMode;
+          });
+
+        // Skip rendering the table if no programmes match or if school filter excludes it
+        if (schoolProgs.length === 0 || (selectedSchool !== 'all' && selectedSchool !== school)) {
+          return;
+        }
+
+        // Build Table
+        let tableHtml = `
+          <div class="school-group">
+            <div class="school-header">
+              SCHOOL OF ${school.toUpperCase()}
+            </div>
+            <div class="table-responsive">
+              <table class="academic-table">
+                <thead>
+                  <tr>
+                    <th style="width: 50px;">Comp</th>
+                    <th style="width: 300px;">PROGRAMME</th>
+                    <th>MODE</th>
+                    <th>DURATION</th>
+                    <th>Y1 S1</th>
+                    <th>Y1 S2</th>
+                    <th>Y2 S1</th>
+                    <th>Y2 S2</th>
+                    <th>Y3 S1</th>
+                    <th>Y3 S2</th>
+                    <th style="text-align: right; min-width: 140px;">ACTIONS</th>
+                  </tr>
+                </thead>
+                <tbody>
+        `;
+
+        schoolProgs.forEach(item => {
+          const inCompare = toCompare.includes(item.originalIdx);
+          const f = item.p.fees;
+          
+          tableHtml += `
+            <tr>
+              <td style="text-align: center;">
+                <input type="checkbox" ${inCompare ? 'checked' : ''} onchange="toggleCompare(${item.originalIdx})">
+              </td>
+              <td style="font-weight: 600; color: var(--primary); white-space: normal;">${item.p.name}</td>
+              <td>${item.p.mode}</td>
+              <td>${item.p.duration}</td>
+              <td class="fee-col">${f[0] > 0 ? f[0].toLocaleString() : '-'}</td>
+              <td class="fee-col">${f[1] > 0 ? f[1].toLocaleString() : '-'}</td>
+              <td class="fee-col">${f[2] > 0 ? f[2].toLocaleString() : '-'}</td>
+              <td class="fee-col">${f[3] > 0 ? f[3].toLocaleString() : '-'}</td>
+              <td class="fee-col">${f[4] > 0 ? f[4].toLocaleString() : '-'}</td>
+              <td class="fee-col">${f[5] > 0 ? f[5].toLocaleString() : '-'}</td>
+              <td style="text-align: right;">
+                <a href="programmes/${item.p.slug}.html" class="btn btn-outline btn-sm">Details</a>
+                <a href="apply.html?prog=${item.p.slug}" class="btn btn-primary btn-sm">Apply</a>
+              </td>
+            </tr>
+          `;
+        });
+
+        tableHtml += `
+                </tbody>
+              </table>
+            </div>
+          </div>
+        `;
+        catalogContainer.innerHTML += tableHtml;
+      });
+
+      if(catalogContainer.innerHTML === '') {
+        catalogContainer.innerHTML = `<div style="text-align: center; padding: 50px; background: white; border-radius: 8px; border: 1px solid #ddd; color: var(--text-muted);">No programmes match your search criteria.</div>`;
+      }
+    }
+
+    searchInput.addEventListener('input', renderCatalog);
+    schoolFilter.addEventListener('change', renderCatalog);
+    modeFilter.addEventListener('change', renderCatalog);
+
+    // Comparison Logic
+    function toggleCompare(idx) {
+      if(toCompare.includes(idx)) {
+        toCompare = toCompare.filter(i => i !== idx);
+      } else {
+        if(toCompare.length >= 3) {
+          alert("You can only compare up to 3 programmes at a time.");
+          event.target.checked = false;
+          return;
+        }
+        toCompare.push(idx);
+      }
+      renderTray();
+    }
+
+    function renderTray() {
+      const tray = document.getElementById('compTray');
+      const compItems = document.getElementById('compItems');
+      if(toCompare.length === 0) {
+        tray.classList.remove('active');
+        return;
+      }
+      tray.classList.add('active');
+      compItems.innerHTML = '';
+      toCompare.forEach(idx => {
+        const p = programmesData[idx];
+        compItems.innerHTML += `<div class="compare-item">
+          ${p.name} (${p.mode})
+          <button onclick="toggleCompare(${idx}); renderCatalog();">âœ•</button>
+        </div>`;
+      });
+    }
+
+    document.getElementById('btnClearComp').addEventListener('click', () => {
+      toCompare = [];
+      renderTray();
+      renderCatalog();
+    });
+
+    document.getElementById('btnCompare').addEventListener('click', () => {
+      const tableHtml = `<table class="comp-table">
+        <tr><th>Programme</th>${toCompare.map(i => `<td><strong style="color:var(--primary);">${programmesData[i].name}</strong></td>`).join('')}</tr>
+        <tr><th>School</th>${toCompare.map(i => `<td>${programmesData[i].school}</td>`).join('')}</tr>
+        <tr><th>Qualification</th>${toCompare.map(i => `<td>${programmesData[i].level}</td>`).join('')}</tr>
+        <tr><th>Mode</th>${toCompare.map(i => `<td>${programmesData[i].mode}</td>`).join('')}</tr>
+        <tr><th>Duration</th>${toCompare.map(i => `<td>${programmesData[i].duration}</td>`).join('')}</tr>
+        <tr><th>Sem 1 Tuition</th>${toCompare.map(i => `<td>ZMW ${programmesData[i].fees[0].toLocaleString()}</td>`).join('')}</tr>
+        <tr><th>Sem 2 Tuition</th>${toCompare.map(i => `<td>ZMW ${programmesData[i].fees[1].toLocaleString()}</td>`).join('')}</tr>
+        <tr><th>Total Year 1</th>${toCompare.map(i => `<td><strong>ZMW ${(programmesData[i].fees[0] + programmesData[i].fees[1]).toLocaleString()}</strong></td>`).join('')}</tr>
+        <tr><th>Actions</th>${toCompare.map(i => `<td><a href="apply.html?prog=${programmesData[i].slug}" class="btn btn-primary btn-sm" style="width:100%; display:block; text-align:center;">Apply Now</a></td>`).join('')}</tr>
+      </table>`;
+      document.getElementById('compTableContainer').innerHTML = tableHtml;
+      document.getElementById('compModal').style.display = 'flex';
+    });
+
+    document.getElementById('closeModal').addEventListener('click', () => {
+      document.getElementById('compModal').style.display = 'none';
+    });
+
+    // Initial render
+    renderCatalog();
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const navToggle = document.getElementById('nav-toggle');
+      const navClose = document.getElementById('nav-close');
+      const navDrawer = document.getElementById('nav-drawer');
+      const navOverlay = document.getElementById('nav-overlay');
+
+      if(navToggle && navDrawer) {
+        navToggle.addEventListener('click', () => {
+          navDrawer.classList.add('open');
+          navOverlay.classList.add('open');
+        });
+        
+        const closeDrawer = () => {
+          navDrawer.classList.remove('open');
+          navOverlay.classList.remove('open');
+        };
+        if(navClose) navClose.addEventListener('click', closeDrawer);
+        if(navOverlay) navOverlay.addEventListener('click', closeDrawer);
+      }
+    });
+  </script>
+</body>
+</html>
