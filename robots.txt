@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /admin-dashboard.html
+
+Sitemap: https://www.edenuniversityapplication.com/sitemap.xml

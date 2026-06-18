@@ -1,0 +1,24 @@
+{
+  "name": "eden-online-application-update",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dybrahimovic28/eden-university-admissions-portal.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/dybrahimovic28/eden-university-admissions-portal/issues"
+  },
+  "homepage": "https://github.com/dybrahimovic28/eden-university-admissions-portal#readme",
+  "dependencies": {
+    "cheerio": "^1.2.0"
+  }
+}

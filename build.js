@@ -844,15 +844,39 @@ if (!fs.existsSync('programmes')) fs.mkdirSync('programmes');
 
 data.forEach(p => {
   const slug = makeSlug(p.name, p.mode);
+  const properName = p.name.includes("Eden") ? p.name : p.name + " Eden University";
   const html = `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>${p.name} (${p.mode}) | Eden University Zambia</title>
-  <meta name="description" content="Apply for the ${p.name} at Eden University Zambia. View entry requirements, fees, and career opportunities.">
+  <title>${properName} | Admission, Fees & Online Application</title>
+  <meta name="description" content="Apply for the ${properName} in Zambia. View admission requirements, semester fees, and career opportunities. Official admissions support.">
+  <meta name="google-site-verification" content="INSERT_GSC_VERIFICATION_HERE" />
+  <meta name="msvalidate.01" content="INSERT_BING_VERIFICATION_HERE" />
+  <link rel="canonical" href="https://www.edenuniversityapplication.com/programmes/${slug}.html">
+  <meta property="og:title" content="${properName} | Admission & Fees">
+  <meta property="og:description" content="Apply for the ${properName} in Zambia. View admission requirements, semester fees, and career opportunities.">
+  <meta property="og:url" content="https://www.edenuniversityapplication.com/programmes/${slug}.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="${properName} | Admission & Fees">
+  <meta name="twitter:description" content="Apply for the ${properName} in Zambia.">
   <link rel="stylesheet" href="../style.css">
   <link rel="icon" href="../eden-university-application-logo.png" type="image/png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "${p.name}",
+    "description": "Apply for the ${p.name} at Eden University Zambia.",
+    "provider": {
+      "@type": "EducationalOrganization",
+      "name": "Eden University Application Portal",
+      "sameAs": "https://www.edenuniversityapplication.com"
+    }
+  }
+  </script>
 </head>
 <body>
 
@@ -863,14 +887,25 @@ data.forEach(p => {
         <div class="logo-text">EDEN UNIVERSITY<span>OFFICIAL ADMISSIONS PORTAL</span></div>
       </a>
       <button class="nav-toggle" id="nav-toggle">☰</button>
-      <nav class="nav-links">
+      <nav class="nav-links" id="desktop-nav">
         <a href="../index.html">Home</a>
         <a href="../programmes.html">Programmes</a>
-        <a href="../schools.html">Schools & Faculties</a>
-        <a href="../international-relations.html">International Relations</a>
-        <a href="../requirements.html">Admission Requirements</a>
+        <a href="../schools.html">Schools</a>
+        <a href="../requirements.html">Requirements</a>
+        <a href="../process.html">Application Process</a>
+        <a href="../fees.html">Fees &amp; Funding</a>
+        
+        <div class="nav-dropdown">
+          <a href="#" class="dropdown-trigger" onclick="return false;">More ▼</a>
+          <div class="dropdown-menu">
+            <a href="../testimonials.html">Student Success</a>
+            <a href="../faq.html">FAQ</a>
+            <a href="../contact.html">Contact Us</a>
+            <a href="../international-relations.html">International Relations</a>
+          </div>
+        </div>
+
         <a href="../apply.html?prog=${p.slug}" class="nav-cta">Apply Online</a>
-        <a href="../contact.html">Contact</a>
       </nav>
     </div>
   </header>
@@ -895,8 +930,8 @@ data.forEach(p => {
             ${p.level === 'Masters' ? 
               '<li style="margin-bottom: 8px;">A recognized Bachelor&apos;s Degree in a related field</li><li style="margin-bottom: 8px;">Updated Curriculum Vitae (CV)</li>' : 
               p.level === 'Diploma' ? 
-              '<li style="margin-bottom: 8px;">Minimum of Three (3) to Four (4) Grade 12 / O-Level Credits</li><li style="margin-bottom: 8px;">English Language is mandatory</li>' :
-              '<li style="margin-bottom: 8px;">Five (5) Grade 12 / O-Level Credits or better</li><li style="margin-bottom: 8px;">Must include <strong>English Language</strong></li><li style="margin-bottom: 8px;">Must include <strong>Mathematics</strong></li><li style="margin-bottom: 8px;">Must include <strong>Science</strong></li>'
+              '<li style="margin-bottom: 8px;">Minimum of Three (3) to Four (4) Grade 12 / O level Credits</li><li style="margin-bottom: 8px;">English Language is mandatory</li>' :
+              '<li style="margin-bottom: 8px;">Five (5) Grade 12 / O level Credits or better</li><li style="margin-bottom: 8px;">Must include <strong>English Language</strong></li><li style="margin-bottom: 8px;">Must include <strong>Mathematics</strong></li><li style="margin-bottom: 8px;">Must include <strong>Science</strong></li>'
             }
           </ul>
           
@@ -907,10 +942,15 @@ data.forEach(p => {
         </div>
         <div>
           <div class="widget-card" style="position: sticky; top: 120px;">
-            <h3 style="border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 20px; color: var(--primary);">Key Information</h3>
-            <div style="margin-bottom: 15px;"><span style="color: var(--text-muted); font-size: 0.9rem; display: block;">Duration</span><strong>${p.duration}</strong></div>
-            <div style="margin-bottom: 15px;"><span style="color: var(--text-muted); font-size: 0.9rem; display: block;">Study Mode</span><strong>${p.mode}</strong></div>
-            <div style="margin-bottom: 15px;"><span style="color: var(--text-muted); font-size: 0.9rem; display: block;">Year 1 Semester 1 Fee</span><strong>ZMW ${p.fees[0].toLocaleString()}</strong></div>
+            <h3 style="border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 20px; color: var(--primary);">Official Cost Breakdown</h3>
+            <div style="margin-bottom: 15px;"><span style="color: var(--text-muted); font-size: 0.9rem; display: block;">Programme Duration</span><strong>${p.duration}</strong></div>
+            <div style="margin-bottom: 15px;"><span style="color: var(--text-muted); font-size: 0.9rem; display: block;">Application Processing Fee</span><strong>ZMW 150 (Local) / ZMW 600 (Intl)</strong></div>
+            <div style="margin-bottom: 15px;"><span style="color: var(--text-muted); font-size: 0.9rem; display: block;">Student Permit Fee (International Only)</span><strong>ZMW 9,500</strong></div>
+            <div style="margin-bottom: 15px;"><span style="color: var(--text-muted); font-size: 0.9rem; display: block;">Year 1 Semester 1 Fee</span><strong style="color: var(--primary);">ZMW ${p.fees[0].toLocaleString()}</strong></div>
+            <div style="margin-bottom: 15px;"><span style="color: var(--text-muted); font-size: 0.9rem; display: block;">Year 1 Semester 2 Fee</span><strong style="color: var(--primary);">ZMW ${(p.fees[1] || 0).toLocaleString()}</strong></div>
+            <div style="margin-bottom: 15px; font-size: 0.85rem; color: var(--primary); background: rgba(0, 43, 91, 0.05); padding: 10px; border-radius: 6px; font-weight: 600; border-left: 3px solid var(--accent); line-height: 1.4;">
+              Students pay fees per semester. Full programme fees are not required upfront. Contact Admissions via WhatsApp for payment guidance.
+            </div>
             <a href="../apply.html?prog=${slug}" class="btn btn-primary" style="width: 100%; margin-bottom: 15px;">Apply Now</a>
           </div>
         </div>
@@ -970,7 +1010,11 @@ data.forEach(p => {
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 Eden University. All Rights Reserved. | Optimized for Official Admission Portal</p>
+        <p>&copy; 2026 Eden University Application Portal. All Rights Reserved. | Official Admissions Support</p>
+        <div style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0;">
+          <h2>Official Admissions Support</h2>
+          <p>This portal provides official Eden University application and admissions assistance services for prospective students. Applicants can receive guidance on programme selection, admission requirements, application submission, and enrollment procedures.</p>
+        </div>
       </div>
     </div>
   </footer>

@@ -11,7 +11,7 @@ const programmesData = [
       8090,
       7590,
       7000,
-      7000
+      0
     ],
     "slug": "diploma-in-clinical-medicine"
   },
@@ -67,15 +67,111 @@ const programmesData = [
     "name": "BSc. Clinical Medicine",
     "school": "School Of Medicine",
     "level": "Degree",
+    "mode": "Full-Time",
+    "duration": "5 YEARS",
+    "fees": [
+      10300,
+      10300,
+      9910,
+      9910,
+      10340,
+      10340
+    ],
+    "slug": "bsc-clinical-medicine"
+  },
+  {
+    "name": "BSc in Biomedical Sciences",
+    "school": "School Of Medicine",
+    "level": "Degree",
+    "mode": "Full-Time",
+    "duration": "4 YEARS",
+    "fees": [
+      10300,
+      10300,
+      9910,
+      9910,
+      10340,
+      10340
+    ],
+    "slug": "bsc-in-biomedical-sciences"
+  },
+  {
+    "name": "BSc in Public Health",
+    "school": "School Of Medicine",
+    "level": "Degree",
+    "mode": "Full-Time",
+    "duration": "4 YEARS",
+    "fees": [
+      8300,
+      8300,
+      8300,
+      8300,
+      8800,
+      8800
+    ],
+    "slug": "bsc-in-public-health"
+  },
+  {
+    "name": "BSc in Occupational Health and Safety",
+    "school": "School Of Medicine",
+    "level": "Degree",
+    "mode": "Full-Time",
+    "duration": "4 YEARS",
+    "fees": [
+      8300,
+      8300,
+      8300,
+      8300,
+      8800,
+      8800
+    ],
+    "slug": "bsc-in-occupational-health-and-safety"
+  },
+  {
+    "name": "BSc. Environmental Health",
+    "school": "School Of Medicine",
+    "level": "Degree",
+    "mode": "Full-Time",
+    "duration": "5 YEARS",
+    "fees": [
+      10300,
+      10300,
+      7860,
+      7790,
+      8290,
+      8290
+    ],
+    "slug": "bsc-environmental-health"
+  },
+  {
+    "name": "Bachelor of Medicine & Bachelor of Surgery",
+    "school": "School Of Medicine",
+    "level": "Degree",
+    "mode": "Full-Time",
+    "duration": "6 YEARS",
+    "fees": [
+      10300,
+      10300,
+      13300,
+      15790,
+      15790,
+      0
+    ],
+    "slug": "bachelor-of-medicine-bachelor-of-surgery"
+  },
+  {
+    "name": "BSc. Clinical Medicine",
+    "school": "School Of Medicine",
+    "level": "Degree",
     "mode": "Distance",
     "duration": "3 YEARS",
     "fees": [
       8490,
       8290,
-      8290,
-      8290,
-      8290,
-      8290
+      0,
+      0,
+      0,
+      0
     ],
     "slug": "bsc-clinical-medicine-distance"
   },
@@ -88,10 +184,10 @@ const programmesData = [
     "fees": [
       8490,
       8290,
-      8290,
-      8290,
-      8290,
-      8290
+      0,
+      0,
+      0,
+      0
     ],
     "slug": "bsc-environmental-health-distance"
   },
@@ -161,15 +257,31 @@ const programmesData = [
   },
   {
     "name": "BSc Nursing",
-    "school": "School of Nursing & Midwifery",
+    "school": "School Of Nursing & Midwifery",
+    "level": "Degree",
+    "mode": "Full-Time",
+    "duration": "4 YEARS",
+    "fees": [
+      10300,
+      10300,
+      9360,
+      9590,
+      9290,
+      9090
+    ],
+    "slug": "bsc-nursing"
+  },
+  {
+    "name": "BSc Nursing",
+    "school": "School Of Nursing & Midwifery",
     "level": "Degree",
     "mode": "Distance",
     "duration": "2 YEARS",
     "fees": [
       8490,
       8290,
-      8290,
-      8290,
+      0,
+      0,
       0,
       0
     ],
