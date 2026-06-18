@@ -138,6 +138,26 @@
 
         <!-- Currency Converter Panel -->
         <div id="currencyPanel" style="background: white; border: 1px solid #ddd; padding: 20px; border-radius: var(--radius-sm); margin-bottom: 30px; display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: space-between;">
+          <div style="flex: 1; min-width: 250px;">
+            <label style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--primary);">Estimated Currency Selection</label>
+            <select id="calcCurrency" class="form-control" style="background: #f8fafc;">
+              <option value="ZMW">ZMW - Zambian Kwacha (Official)</option>
+              <option value="USD">USD - US Dollar</option>
+              <option value="GBP">GBP - British Pound</option>
+              <option value="ZAR">ZAR - South African Rand</option>
+              <option value="BWP">BWP - Botswana Pula</option>
+              <option value="MWK">MWK - Malawian Kwacha</option>
+              <option value="NAD">NAD - Namibian Dollar</option>
+              <option value="TZS">TZS - Tanzanian Shilling</option>
+              <option value="UGX">UGX - Ugandan Shilling</option>
+              <option value="KES">KES - Kenyan Shilling</option>
+              <option value="NGN">NGN - Nigerian Naira</option>
+              <option value="INR">INR - Indian Rupee</option>
+            </select>
+          </div>
+          <div style="flex: 1; min-width: 200px; text-align: right;">
+            <p style="margin: 0; font-size: 0.85rem; color: #666;"><i class="fas fa-info-circle"></i> Note: All official university fees are invoiced and payable in <strong>ZMW (Kwacha)</strong>. The foreign currency conversions shown are strictly estimates for your planning purposes.</p>
+          </div>
         </div>
         
         <div class="grid-2">
@@ -359,10 +379,10 @@
     let exchangeRates = null;
     let currentCurrency = 'ZMW';
     
-    const countryCurrencyMap = {
-      'MW': 'MWK', 'ZW': 'USD', 'BW': 'BWP', 'NA': 'NAD', 'ZA': 'ZAR', 
-      'TZ': 'TZS', 'KE': 'KES', 'UG': 'UGX', 'NG': 'NGN', 'IN': 'INR', 
-      'GB': 'GBP', 'US': 'USD', 'ZM': 'ZMW'
+    const conversionRates = {
+      'ZMW': 1, 'USD': 0.038, 'GBP': 0.030, 'ZAR': 0.69, 'BWP': 0.52,
+      'MWK': 66.5, 'NAD': 0.69, 'TZS': 100.5, 'UGX': 145.2, 'KES': 5.0,
+      'NGN': 60.5, 'INR': 3.2
     };
 
     const currencySymbols = {
@@ -370,6 +390,12 @@
       'ZAR': 'ZAR', 'TZS': 'TZS', 'KES': 'KES', 'UGX': 'UGX', 'NGN': '₦', 
       'INR': '₹', 'GBP': '£', 'USD': '$'
     };
+
+    function formatCurrency(amount) {
+      if (amount === 0) return `${currencySymbols[currentCurrency]} 0`;
+      const rate = conversionRates[currentCurrency] || 1;
+      return `${currencySymbols[currentCurrency]} ${Math.round(amount * rate).toLocaleString()}`;
+    }
 
     // FAQ Toggle Logic
     document.querySelectorAll('.faq-question').forEach(q => {
@@ -405,7 +431,7 @@
 
       if (permitFee > 0) {
         document.getElementById('permitFeeRow').style.display = 'flex';
-        document.getElementById('outPermitFee').innerHTML = `ZMW ${permitFee.toLocaleString()}`;
+        document.getElementById('outPermitFee').innerHTML = formatCurrency(permitFee);
         document.getElementById('firstSemInclusionsText').innerText = "(Includes Processing Fee + Sem 1 Tuition + Accomm + Permit)";
       } else {
         document.getElementById('permitFeeRow').style.display = 'none';
@@ -413,17 +439,33 @@
       }
 
       document.getElementById('outDuration').innerText = p.duration;
-      document.getElementById('outAppFee').innerHTML = `ZMW ${appFee.toLocaleString()}`;
+      document.getElementById('outAppFee').innerHTML = formatCurrency(appFee);
       
       const s1 = p.fees[0] || 0;
       const s2 = p.fees[1] || 0;
 
-      document.getElementById('outS1').innerHTML = `ZMW ${s1.toLocaleString()}`;
-      document.getElementById('outS2').innerHTML = `ZMW ${s2.toLocaleString()}`;
+      document.getElementById('outS1').innerHTML = formatCurrency(s1);
+      document.getElementById('outS2').innerHTML = formatCurrency(s2);
 
       const firstSemRequired = appFee + s1 + accommFee + permitFee;
-      document.getElementById('outTotalSem1').innerHTML = `ZMW ${firstSemRequired.toLocaleString()}`;
+      document.getElementById('outTotalSem1').innerHTML = formatCurrency(firstSemRequired);
     }
+
+    const calcCurrency = document.getElementById('calcCurrency');
+    if (calcCurrency) {
+      calcCurrency.addEventListener('change', (e) => {
+        currentCurrency = e.target.value;
+        updateCalculator();
+      });
+    }
+
+    document.querySelectorAll('.quick-currency').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        currentCurrency = e.target.getAttribute('data-curr');
+        if(calcCurrency) calcCurrency.value = currentCurrency;
+        updateCalculator();
+      });
+    });
 
     calcProg.addEventListener('change', updateCalculator);
     document.getElementById('calcAccom').addEventListener('change', updateCalculator);
