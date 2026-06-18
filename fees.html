@@ -417,8 +417,12 @@
 
       const p = programmesData[idx];
       const accommFee = parseInt(document.getElementById('calcAccom').value);
-      const appFee = parseInt(document.getElementById('calcAppFee').value);
-      const permitFee = appFee === 600 ? 9500 : 0;
+      const appFeeSel = document.getElementById('calcAppFee');
+      const appFee = parseInt(appFeeSel.value) || 0;
+      
+      // Enforce mandatory ZMW 9,500 permit fee for international students
+      const isInternational = appFee >= 600 || appFeeSel.options[appFeeSel.selectedIndex].text.toLowerCase().includes('international');
+      const permitFee = isInternational ? 9500 : 0;
 
       if (permitFee > 0) {
         document.getElementById('permitFeeRow').style.display = 'flex';
