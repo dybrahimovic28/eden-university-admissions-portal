@@ -38,7 +38,9 @@
         <img src="../eden-university-application-logo.png" alt="Eden University Logo" class="logo-img">
         <div class="logo-text">EDEN UNIVERSITY<span>ADMISSIONS & APPLICATION PORTAL</span></div>
       </a>
-      <button class="nav-toggle" id="nav-toggle">?</button>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open navigation menu">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
       <nav class="nav-links" id="desktop-nav">
         <a href="../index.html">Home</a>
         <a href="../programmes.html">Programmes</a>
@@ -48,7 +50,10 @@
         <a href="../fees.html">Fees &amp; Funding</a>
         
         <div class="nav-dropdown">
-          <a href="#" class="dropdown-trigger" onclick="return false;">More ?</a>
+          <span class="dropdown-trigger" role="button" tabindex="0">
+            More
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </span>
           <div class="dropdown-menu">
             <a href="../testimonials.html">Student Success</a>
             <a href="../faq.html">FAQ</a>
@@ -65,20 +70,32 @@
   <!-- Mobile Drawer -->
   <div class="nav-overlay" id="nav-overlay"></div>
   <div class="nav-drawer" id="nav-drawer">
-    <button class="nav-toggle" id="nav-close" style="text-align: right;" aria-label="Close menu">✕</button>
-    <a href="../index.html">Home</a>
-    <a href="../eden-university-application.html">Application Guide</a>
-    <a href="../programmes.html">Programmes</a>
-    <a href="../requirements.html">Requirements</a>
-    <a href="../fees.html">Fees &amp; Funding</a>
-    <a href="../intakes.html">Intakes</a>
-    <a href="../schools.html">Schools &amp; Faculties</a>
-    <a href="../process.html">Application Process</a>
-    <a href="../testimonials.html">Student Success</a>
-    <a href="../faq.html">FAQ</a>
-    <a href="../contact.html">Contact Us</a>
-    <a href="../international-relations.html">International Relations</a>
-    <a href="../apply.html" class="btn btn-primary" style="margin-top: 20px;">Apply Online</a>
+    <div class="nav-drawer-header">
+      <div class="logo-text">
+        EDEN UNIVERSITY
+        <span>ADMISSIONS</span>
+      </div>
+      <button class="nav-drawer-close" id="nav-close" aria-label="Close menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    <div class="nav-drawer-links">
+      <a href="../index.html">Home</a>
+      <a href="../programmes.html">Programmes</a>
+      <a href="../schools.html">Schools &amp; Faculties</a>
+      <a href="../requirements.html">Requirements</a>
+      <a href="../process.html">Application Process</a>
+      <a href="../fees.html">Fees &amp; Funding</a>
+      <a href="../intakes.html">Intakes</a>
+      <a href="../eden-university-application.html">Application Guide</a>
+      <a href="../testimonials.html">Student Success</a>
+      <a href="../international-relations.html">International Relations</a>
+      <a href="../faq.html">FAQ</a>
+      <a href="../contact.html">Contact Us</a>
+    </div>
+    <div class="nav-drawer-footer">
+      <a href="../apply.html?prog=bsc-environmental-health" class="btn btn-primary btn-full">Apply Online Now &rarr;</a>
+    </div>
   </div>
 
   <div class="page-header" style="padding: 100px 0 80px;">
@@ -218,22 +235,23 @@
 
   <script>
     const navToggle = document.getElementById('nav-toggle');
-    const navClose = document.getElementById('nav-close');
     const navDrawer = document.getElementById('nav-drawer');
     const navOverlay = document.getElementById('nav-overlay');
-
-    if (navToggle && navDrawer) {
-      navToggle.addEventListener('click', () => {
-        navDrawer.classList.add('open');
-        navOverlay.classList.add('open');
+    const navClose = document.getElementById('nav-close');
+    if(navToggle && navDrawer) {
+      navToggle.addEventListener('click', () => { 
+        navDrawer.classList.add('open'); 
+        if (navOverlay) navOverlay.classList.add('open'); 
+        document.body.style.overflow = 'hidden'; 
       });
-      const closeDrawer = () => {
-        navDrawer.classList.remove('open');
-        navOverlay.classList.remove('open');
-      };
-      if (navClose) navClose.addEventListener('click', closeDrawer);
-      if (navOverlay) navOverlay.addEventListener('click', closeDrawer);
     }
+    const closeDrawer = () => { 
+      if (navDrawer) navDrawer.classList.remove('open'); 
+      if (navOverlay) navOverlay.classList.remove('open'); 
+      document.body.style.overflow = ''; 
+    };
+    if(navClose) navClose.addEventListener('click', closeDrawer);
+    if(navOverlay) navOverlay.addEventListener('click', closeDrawer);
   </script>
   <!-- Floating Contact Widget Script -->
   <script src="../contact-widget.js" defer></script>

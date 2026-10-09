@@ -928,18 +928,23 @@ data.forEach(p => {
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="18" x2="18" y2="6"></line></svg>
       </button>
     </div>
-    <a href="../index.html">Home</a>
-    <a href="../eden-university-application.html">Application Guide</a>
-    <a href="../programmes.html">Programmes</a>
-    <a href="../requirements.html">Requirements</a>
-    <a href="../fees.html">Fees &amp; Funding</a>
-    <a href="../intakes.html">Intakes</a>
-    <a href="../schools.html">Schools &amp; Faculties</a>
-    <a href="../process.html">Application Process</a>
-    <a href="../testimonials.html">Student Success</a>
-    <a href="../faq.html">FAQ</a>
-    <a href="../contact.html">Contact Us</a>
-    <a href="../apply.html?prog=${slug}" class="btn btn-primary" style="margin-top: 20px;">Apply Online</a>
+    <div class="nav-drawer-links">
+      <a href="../index.html">Home</a>
+      <a href="../programmes.html">Programmes</a>
+      <a href="../schools.html">Schools &amp; Faculties</a>
+      <a href="../requirements.html">Requirements</a>
+      <a href="../process.html">Application Process</a>
+      <a href="../fees.html">Fees &amp; Funding</a>
+      <a href="../intakes.html">Intakes</a>
+      <a href="../eden-university-application.html">Application Guide</a>
+      <a href="../testimonials.html">Student Success</a>
+      <a href="../international-relations.html">International Relations</a>
+      <a href="../faq.html">FAQ</a>
+      <a href="../contact.html">Contact Us</a>
+    </div>
+    <div class="nav-drawer-footer">
+      <a href="../apply.html?prog=${slug}" class="btn btn-primary btn-full">Apply Online Now &rarr;</a>
+    </div>
   </div>
 
   <div class="page-header" style="padding: 100px 0 80px;">
@@ -1059,15 +1064,20 @@ data.forEach(p => {
     const navDrawer = document.getElementById('nav-drawer');
     const navOverlay = document.getElementById('nav-overlay');
     const navClose = document.getElementById('nav-close');
-    if(navToggle) {
-      navToggle.addEventListener('click', () => { navDrawer.classList.add('open'); navOverlay.classList.add('open'); });
+    if(navToggle && navDrawer) {
+      navToggle.addEventListener('click', () => { 
+        navDrawer.classList.add('open'); 
+        if (navOverlay) navOverlay.classList.add('open'); 
+        document.body.style.overflow = 'hidden'; 
+      });
     }
-    if(navClose) {
-      navClose.addEventListener('click', () => { navDrawer.classList.remove('open'); navOverlay.classList.remove('open'); });
-    }
-    if(navOverlay) {
-      navOverlay.addEventListener('click', () => { navDrawer.classList.remove('open'); navOverlay.classList.remove('open'); });
-    }
+    const closeDrawer = () => { 
+      if (navDrawer) navDrawer.classList.remove('open'); 
+      if (navOverlay) navOverlay.classList.remove('open'); 
+      document.body.style.overflow = ''; 
+    };
+    if(navClose) navClose.addEventListener('click', closeDrawer);
+    if(navOverlay) navOverlay.addEventListener('click', closeDrawer);
   </script>
 </body>
 </html>`;

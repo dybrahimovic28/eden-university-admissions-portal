@@ -272,8 +272,8 @@ p:last-child {
   align-items: center;
   justify-content: center;
   width: auto;
-  max-width: max-content;
-  flex: 0 0 auto;
+  max-width: 100%;
+  flex: 0 1 auto;
   gap: 8px;
   padding: 10px 22px;
   min-height: 42px;
@@ -290,11 +290,42 @@ p:last-child {
               border-color 0.2s ease,
               color 0.2s ease;
   text-align: center;
-  white-space: nowrap;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: normal;
   user-select: none;
   -webkit-user-select: none;
   text-decoration: none;
   box-sizing: border-box;
+}
+
+/* Dedicated responsive rule for long application & Google Form action buttons */
+.btn-google-form {
+  width: 100%;
+  max-width: 100%;
+  white-space: normal;
+  text-align: center;
+  line-height: 1.35;
+  padding: 14px 22px;
+  font-size: clamp(0.85rem, 3.8vw, 1.05rem);
+  letter-spacing: 0.6px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+  .btn-google-form {
+    padding: 12px 16px;
+    font-size: 0.88rem;
+    letter-spacing: 0.3px;
+  }
+}
+
+@media (max-width: 340px) {
+  .btn-google-form {
+    padding: 10px 12px;
+    font-size: 0.82rem;
+    letter-spacing: 0.2px;
+  }
 }
 
 .btn:hover {
@@ -491,6 +522,20 @@ p:last-child {
   border: 1px solid var(--border);
   transition: var(--transition);
   position: relative;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+@media (max-width: 640px) {
+  .card, .widget-card {
+    padding: 22px 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  .card, .widget-card {
+    padding: 16px 12px;
+  }
 }
 
 .card:hover, .widget-card:hover {
@@ -846,9 +891,21 @@ p:last-child {
   color: var(--primary-dark);
   font-size: 1.75rem;
   cursor: pointer;
-  padding: 6px;
+  padding: 8px;
+  min-width: 44px;
+  min-height: 44px;
   border-radius: var(--radius-xs);
   line-height: 1;
+  align-items: center;
+  justify-content: center;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  box-sizing: border-box;
+}
+
+.nav-toggle svg {
+  display: block;
+  pointer-events: none;
 }
 
 .nav-toggle:focus-visible {
@@ -878,22 +935,28 @@ p:last-child {
 .nav-drawer {
   position: fixed;
   top: 0;
-  right: -100%;
+  right: 0;
   width: 320px;
   max-width: 85vw;
   height: 100%;
   background: var(--white);
   z-index: 1101;
   box-shadow: -4px 0 24px rgba(0, 0, 0, 0.15);
-  transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateX(100%);
+  visibility: hidden;
+  pointer-events: none;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.35s;
   padding: 24px 20px;
   display: flex;
   flex-direction: column;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .nav-drawer.open {
-  right: 0;
+  transform: translateX(0);
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .nav-drawer-header {
@@ -908,8 +971,10 @@ p:last-child {
 .nav-drawer-close {
   background: var(--bg-light);
   border: 1px solid var(--border);
-  width: 36px;
-  height: 36px;
+  min-width: 44px;
+  min-height: 44px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -918,6 +983,14 @@ p:last-child {
   cursor: pointer;
   color: var(--text-main);
   transition: var(--transition-fast);
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  box-sizing: border-box;
+}
+
+.nav-drawer-close svg {
+  display: block;
+  pointer-events: none;
 }
 
 .nav-drawer-close:hover {
@@ -2393,11 +2466,9 @@ p:last-child {
    ========================================================================== */
 .floating-contact-widget {
   position: fixed;
-  bottom: 100px;
-  right: 28px;
-  bottom: calc(100px + env(safe-area-inset-bottom, 0px));
-  right: calc(28px + env(safe-area-inset-right, 0px));
-  z-index: 1050;
+  bottom: max(24px, calc(18px + env(safe-area-inset-bottom, 0px)));
+  right: max(20px, calc(18px + env(safe-area-inset-right, 0px)));
+  z-index: 9999;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -2407,17 +2478,15 @@ p:last-child {
 
 @media (max-width: 1024px) {
   .floating-contact-widget {
-    bottom: 92px;
-    right: 24px;
-    bottom: calc(92px + env(safe-area-inset-bottom, 0px));
-    right: calc(24px + env(safe-area-inset-right, 0px));
+    bottom: max(22px, calc(16px + env(safe-area-inset-bottom, 0px)));
+    right: max(18px, calc(16px + env(safe-area-inset-right, 0px)));
   }
 }
 
 /* Expanded Contact Menu */
 .contact-menu-popup {
   position: absolute;
-  bottom: 70px;
+  bottom: calc(100% + 14px);
   right: 0;
   display: flex;
   flex-direction: column;
@@ -2430,7 +2499,8 @@ p:last-child {
   transition: opacity 0.22s cubic-bezier(0.16, 1, 0.3, 1),
               transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
               visibility 0.22s;
-  z-index: 1051;
+  z-index: 10000;
+  max-width: calc(100vw - 32px);
 }
 
 .floating-contact-widget.open .contact-menu-popup {
@@ -2449,7 +2519,8 @@ p:last-child {
   padding: 10px 22px;
   min-height: 42px;
   width: auto;
-  max-width: max-content;
+  max-width: calc(100vw - 36px);
+  box-sizing: border-box;
   border-radius: 9999px;
   font-size: 0.94rem;
   font-weight: 700;
@@ -2463,6 +2534,8 @@ p:last-child {
               filter 0.2s ease;
   user-select: none;
   -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 .contact-pill-btn:hover {
@@ -2557,6 +2630,7 @@ p:last-child {
   transform: translate(-50%, -50%);
   transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
               opacity 0.2s ease;
+  pointer-events: none;
 }
 
 .floating-contact-trigger .icon-whatsapp {
@@ -2596,36 +2670,63 @@ p:last-child {
 
 @media (max-width: 640px) {
   .floating-contact-widget {
-    bottom: 24px;
-    right: 20px;
-    bottom: calc(24px + env(safe-area-inset-bottom, 0px));
-    right: calc(20px + env(safe-area-inset-right, 0px));
+    bottom: max(18px, calc(14px + env(safe-area-inset-bottom, 0px)));
+    right: max(16px, calc(14px + env(safe-area-inset-right, 0px)));
   }
   .floating-contact-trigger {
-    width: 56px;
-    height: 56px;
+    width: 54px;
+    height: 54px;
   }
   .contact-pill-btn {
     padding: 9px 18px;
     font-size: 0.88rem;
     min-height: 40px;
     width: auto;
-    max-width: max-content;
+    max-width: calc(100vw - 32px);
   }
+}
+
+@media (max-width: 360px) {
+  .floating-contact-widget {
+    bottom: max(14px, calc(10px + env(safe-area-inset-bottom, 0px)));
+    right: max(12px, calc(10px + env(safe-area-inset-right, 0px)));
+  }
+  .floating-contact-trigger {
+    width: 50px;
+    height: 50px;
+  }
+  .floating-contact-trigger svg.icon-whatsapp {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+/* Responsive Tables Container */
+.table-responsive {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 24px;
+}
+
+.table-responsive table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
 /* ==========================================================================
    Responsive Adaptations
    ========================================================================== */
 @media (max-width: 1200px) {
-  .nav-links { gap: 14px; }
-  .nav-links a:not(.nav-cta) { font-size: 0.85rem; }
-  .nav-cta { padding: 9px 18px; font-size: 0.82rem; }
+  .nav-links { gap: 10px; }
+  .nav-links a:not(.nav-cta) { font-size: 0.84rem; padding: 6px 0; }
+  .nav-cta { padding: 8px 16px; font-size: 0.82rem; }
 }
 
-@media (max-width: 992px) {
-  .nav-links { display: none; }
-  .nav-toggle { display: block; }
+@media (max-width: 1024px) {
+  .nav-links { display: none !important; }
+  .nav-toggle { display: inline-flex !important; }
   .hero {
     min-height: auto;
     padding: 36px 0 65px;
@@ -2660,6 +2761,39 @@ p:last-child {
 }
 
 @media (max-width: 640px) {
+  /* Header & Logo Responsive Scaling */
+  .header .nav-container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    gap: 10px;
+  }
+  .logo {
+    min-width: 0;
+    flex: 1 1 auto;
+    gap: 10px;
+  }
+  .logo-img {
+    height: 44px;
+    flex-shrink: 0;
+  }
+  .logo-text {
+    font-size: 1.1rem;
+    min-width: 0;
+    overflow: hidden;
+  }
+  .logo-text span {
+    font-size: 0.58rem;
+    letter-spacing: 0.6px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .nav-toggle {
+    display: inline-flex;
+    flex-shrink: 0;
+    margin-left: auto;
+  }
+
   .hero {
     min-height: auto;
     padding: 24px 0 75px;
@@ -2770,18 +2904,87 @@ p:last-child {
   }
 }
 
+@media (max-width: 480px) {
+  .header .nav-container {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .logo {
+    gap: 8px;
+  }
+  .logo-img {
+    height: 38px;
+  }
+  .logo-text {
+    font-size: 0.98rem;
+  }
+  .logo-text span {
+    font-size: 0.52rem;
+    letter-spacing: 0.4px;
+  }
+}
+
+@media (max-width: 360px) {
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .header .nav-container {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    gap: 6px;
+  }
+  .logo {
+    gap: 6px;
+  }
+  .logo-img {
+    height: 32px;
+  }
+  .logo-text {
+    font-size: 0.86rem;
+    line-height: 1.05;
+  }
+  .logo-text span {
+    font-size: 0.46rem;
+    letter-spacing: 0.2px;
+  }
+  .nav-toggle {
+    padding: 4px;
+    min-width: 40px;
+    min-height: 40px;
+  }
+}
+
 @media (max-width: 320px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .header .nav-container {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    gap: 4px;
+  }
+  .logo-img {
+    height: 28px;
+  }
+  .logo-text {
+    font-size: 0.8rem;
+  }
+  .logo-text span {
+    font-size: 0.42rem;
+  }
   .hero {
     padding: 16px 0 70px;
   }
   .main-heading {
-    font-size: 1.7rem;
+    font-size: 1.65rem;
   }
   .hero-btn-primary,
   .hero-btn-secondary {
-    font-size: 0.88rem;
-    padding: 10px 20px;
-    min-height: 42px;
+    font-size: 0.84rem;
+    padding: 8px 16px;
+    min-height: 40px;
     height: auto;
   }
   .benefit-item {
@@ -2789,11 +2992,11 @@ p:last-child {
     gap: 3px;
   }
   .intake-card-content {
-    gap: 10px;
+    gap: 8px;
   }
   .intake-card-icon-box {
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
   }
 }
 

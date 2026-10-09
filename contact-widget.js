@@ -17,7 +17,11 @@
       return;
     }
 
-    var isSubdir = window.location.pathname.indexOf('/programmes/') !== -1 || window.location.pathname.indexOf('/blog/') !== -1;
+    var pathname = window.location.pathname.toLowerCase();
+    var isSubdir = pathname.indexOf('/programmes/') !== -1 || 
+                   pathname.indexOf('/blog/') !== -1 ||
+                   pathname.indexOf('\\programmes\\') !== -1 ||
+                   pathname.indexOf('\\blog\\') !== -1;
     var contactHref = isSubdir ? '../contact.html' : 'contact.html';
 
     var widget = document.createElement('div');
