@@ -887,7 +887,9 @@ data.forEach(p => {
         <img src="../eden-university-application-logo.png" alt="Eden University Logo" class="logo-img">
         <div class="logo-text">EDEN UNIVERSITY<span>OFFICIAL ADMISSIONS PORTAL</span></div>
       </a>
-      <button class="nav-toggle" id="nav-toggle">☰</button>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open mobile navigation menu">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
       <nav class="nav-links" id="desktop-nav">
         <a href="../index.html">Home</a>
         <a href="../programmes.html">Programmes</a>
@@ -897,7 +899,10 @@ data.forEach(p => {
         <a href="../fees.html">Fees &amp; Funding</a>
         
         <div class="nav-dropdown">
-          <a href="#" class="dropdown-trigger" onclick="return false;">More ▼</a>
+          <span class="dropdown-trigger" role="button" tabindex="0">
+            More
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </span>
           <div class="dropdown-menu">
             <a href="../testimonials.html">Student Success</a>
             <a href="../faq.html">FAQ</a>
@@ -906,14 +911,40 @@ data.forEach(p => {
           </div>
         </div>
 
-        <a href="../apply.html?prog=${p.slug}" class="nav-cta">Apply Online</a>
+        <a href="../apply.html?prog=${slug}" class="nav-cta">Apply Online</a>
       </nav>
     </div>
   </header>
 
+  <!-- Mobile Drawer -->
+  <div class="nav-overlay" id="nav-overlay"></div>
+  <div class="nav-drawer" id="nav-drawer">
+    <div class="nav-drawer-header">
+      <div class="logo-text">
+        EDEN UNIVERSITY
+        <span>ADMISSIONS</span>
+      </div>
+      <button class="nav-drawer-close" id="nav-close" aria-label="Close menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="18" x2="18" y2="6"></line></svg>
+      </button>
+    </div>
+    <a href="../index.html">Home</a>
+    <a href="../eden-university-application.html">Application Guide</a>
+    <a href="../programmes.html">Programmes</a>
+    <a href="../requirements.html">Requirements</a>
+    <a href="../fees.html">Fees &amp; Funding</a>
+    <a href="../intakes.html">Intakes</a>
+    <a href="../schools.html">Schools &amp; Faculties</a>
+    <a href="../process.html">Application Process</a>
+    <a href="../testimonials.html">Student Success</a>
+    <a href="../faq.html">FAQ</a>
+    <a href="../contact.html">Contact Us</a>
+    <a href="../apply.html?prog=${slug}" class="btn btn-primary" style="margin-top: 20px;">Apply Online</a>
+  </div>
+
   <div class="page-header" style="padding: 100px 0 80px;">
     <div class="container">
-      <span style="background: rgba(255,255,255,0.2); padding: 6px 12px; border-radius: 4px; font-weight: 600; font-size: 0.85rem; letter-spacing: 1px; margin-bottom: 20px; display: inline-block; text-transform: uppercase;">SCHOOL OF ${p.school}</span>
+      <span style="background: rgba(255,255,255,0.2); padding: 6px 12px; border-radius: 4px; font-weight: 600; font-size: 0.85rem; letter-spacing: 1px; margin-bottom: 20px; display: inline-block; text-transform: uppercase;">${p.school.toUpperCase().startsWith('SCHOOL OF') ? p.school.toUpperCase() : 'SCHOOL OF ' + p.school.toUpperCase()}</span>
       <h1 style="font-size: 3rem;">${p.name}</h1>
       <p>Advance your career with our rigorous academic programme.</p>
     </div>
@@ -952,7 +983,7 @@ data.forEach(p => {
             <div style="margin-bottom: 15px; font-size: 0.85rem; color: var(--primary); background: rgba(0, 43, 91, 0.05); padding: 10px; border-radius: 6px; font-weight: 600; border-left: 3px solid var(--accent); line-height: 1.4;">
               Students pay fees per semester. Full programme fees are not required upfront. Contact Admissions via WhatsApp for payment guidance.
             </div>
-            <a href="../apply.html?prog=${slug}" class="btn btn-primary" style="width: 100%; margin-bottom: 15px;">Apply Now</a>
+            <div style="text-align: center; margin-bottom: 15px;"><a href="../apply.html?prog=${slug}" class="btn btn-primary btn-md">Apply Now</a></div>
           </div>
         </div>
       </div>
@@ -1007,11 +1038,14 @@ data.forEach(p => {
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.026A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/></svg>
             admissions@edenuniversity.edu.zm
           </p>
-          <a href="https://wa.me/260779934886" class="btn btn-whatsapp" style="width: 100%;">Chat on WhatsApp</a>
+          <div style="margin-top: 12px;"><a href="https://wa.me/260779934886" class="btn btn-whatsapp btn-sm">Chat on WhatsApp</a></div>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 Eden University Application Portal. All Rights Reserved. | Official Admissions Support</p>
+        <div class="footer-bottom-info">
+          <p>&copy; 2026&ndash;2027 Eden University. All Rights Reserved. &bull; Official Admissions Support Services</p>
+          <p class="footer-credit"><a href="https://www.henlertech.com/" target="_blank" rel="noopener noreferrer">WEBSITE DONE BY HENLER TECHNOLOGIES</a></p>
+        </div>
         <div style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0;">
           <h2>Official Admissions Support</h2>
           <p>This portal provides official Eden University application and admissions assistance services for prospective students. Applicants can receive guidance on programme selection, admission requirements, application submission, and enrollment procedures.</p>
@@ -1024,33 +1058,17 @@ data.forEach(p => {
     const navToggle = document.getElementById('nav-toggle');
     const navDrawer = document.getElementById('nav-drawer');
     const navOverlay = document.getElementById('nav-overlay');
+    const navClose = document.getElementById('nav-close');
     if(navToggle) {
       navToggle.addEventListener('click', () => { navDrawer.classList.add('open'); navOverlay.classList.add('open'); });
     }
+    if(navClose) {
+      navClose.addEventListener('click', () => { navDrawer.classList.remove('open'); navOverlay.classList.remove('open'); });
+    }
+    if(navOverlay) {
+      navOverlay.addEventListener('click', () => { navDrawer.classList.remove('open'); navOverlay.classList.remove('open'); });
+    }
   </script>
-
-<!-- SEO FOOTER START -->
-<footer style="background: #002B5B; color: #fff; padding: 40px 20px; font-size: 0.9rem; text-align: center; margin-top: 50px;">
-  <div style="max-width: 1200px; margin: 0 auto;">
-    <div style="margin-bottom: 20px;">
-      <a href="index.html" style="color: #fff; text-decoration: none; margin: 0 10px;">Home</a> |
-      <a href="programmes.html" style="color: #fff; text-decoration: none; margin: 0 10px;">Programmes</a> |
-      <a href="schools.html" style="color: #fff; text-decoration: none; margin: 0 10px;">Schools</a> |
-      <a href="requirements.html" style="color: #fff; text-decoration: none; margin: 0 10px;">Requirements</a> |
-      <a href="process.html" style="color: #fff; text-decoration: none; margin: 0 10px;">Application Process</a> |
-      <a href="fees.html" style="color: #fff; text-decoration: none; margin: 0 10px;">Fees & Funding</a> |
-      <a href="faq.html" style="color: #fff; text-decoration: none; margin: 0 10px;">FAQ</a> |
-      <a href="contact.html" style="color: #fff; text-decoration: none; margin: 0 10px;">Contact Us</a>
-    </div>
-    <div style="margin-bottom: 20px; font-size: 0.85rem; color: #aaa;">
-      <a href="eden-university-zambia.html" style="color: #aaa; text-decoration: none; margin: 0 10px;">Eden University Zambia</a> |
-      <a href="eden-university-application-zambia.html" style="color: #aaa; text-decoration: none; margin: 0 10px;">Eden University Application Zambia</a> |
-      <a href="eden-university-whatsapp.html" style="color: #aaa; text-decoration: none; margin: 0 10px;">Eden University WhatsApp</a>
-    </div>
-    <p style="margin: 0; color: #777;">&copy; 2026 Eden University. Designed by <a href="https://www.henlertech.com/" style="color: inherit; text-decoration: none;">HENLER TECHNOLOGIES</a> All Rights Reserved.</p>
-  </div>
-</footer>
-<!-- SEO FOOTER END -->
 </body>
 </html>`;
   fs.writeFileSync(path.join('programmes', `${slug}.html`), html);

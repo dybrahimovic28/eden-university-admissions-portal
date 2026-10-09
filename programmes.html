@@ -1,116 +1,80 @@
-﻿<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eden University Programmes | Courses Offered in Zambia</title>
+  <title>Eden University Programmes &amp; Courses | Degrees &amp; Diplomas</title>
   
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="eden-university-application-logo.png" type="image/png">
   <script src="programmes_data.js"></script>
-  <style>
-    /* Table specific styles matching the official PDF structure */
-    .school-group {
-      margin-bottom: 40px;
-    }
-    .school-header {
-      background: var(--primary-dark);
-      color: white;
-      padding: 12px 20px;
-      font-size: 1.1rem;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      border-radius: 4px 4px 0 0;
-    }
-    .table-responsive {
-      width: 100%;
-      overflow-x: auto;
-      background: white;
-      border: 1px solid #ddd;
-      border-top: none;
-      border-radius: 0 0 4px 4px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    }
-    .academic-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.85rem;
-      min-width: 1100px;
-    }
-    .academic-table th {
-      background: var(--primary);
-      color: white;
-      text-align: left;
-      padding: 12px 15px;
-      white-space: nowrap;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    .academic-table td {
-      padding: 12px 15px;
-      border-bottom: 1px solid #eee;
-      border-right: 1px solid #f5f5f5;
-      vertical-align: middle;
-      white-space: nowrap;
-    }
-    .academic-table td:last-child {
-      border-right: none;
-    }
-    .academic-table tr:hover { background-color: #f0f7ff; }
-    
-    .fee-col {
-      font-family: monospace;
-      font-size: 0.9rem;
-    }
 
-    .btn-sm { padding: 5px 10px; font-size: 0.8rem; margin-right: 5px; }
-
-    /* Comparison Tray */
-    .comparison-tray { position: fixed; bottom: 0; left: 0; width: 100%; background: var(--primary-dark); color: white; padding: 20px; box-shadow: 0 -4px 20px rgba(0,0,0,0.2); z-index: 2000; transform: translateY(100%); transition: 0.3s ease; display: flex; justify-content: space-between; align-items: center; }
-    .comparison-tray.active { transform: translateY(0); }
-    .compare-items { display: flex; gap: 15px; }
-    .compare-item { background: rgba(255,255,255,0.1); padding: 8px 15px; border-radius: 4px; font-size: 0.85rem; display: flex; align-items: center; gap: 10px; }
-    .compare-item button { background: none; border: none; color: var(--accent); cursor: pointer; font-weight: bold; }
-    
-    .comparison-modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 3000; display: none; align-items: center; justify-content: center; padding: 20px; }
-    .comparison-content { background: white; width: 100%; max-width: 900px; border-radius: 8px; padding: 30px; max-height: 90vh; overflow-y: auto; }
-    .comp-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-    .comp-table th, .comp-table td { padding: 15px; border: 1px solid #ddd; text-align: left; }
-    .comp-table th { background: var(--bg-light); color: var(--primary); width: 20%; }
-  </style>
-
-  <meta name="description" content="Explore accredited programmes at Eden University Zambia. View undergraduate degrees, diplomas, fees per semester, entry requirements, and apply online.">
+  <meta name="description" content="Explore accredited programmes and courses at Eden University Zambia. View undergraduate degrees, diplomas, fees per semester, entry requirements, and apply online.">
   <meta name="google-site-verification" content="UNnOLAxCH5Sq6M1OhcmAzu4K60C8LLVww4OCD-LQqwI" />
   <link rel="canonical" href="https://www.edenuniversityapplication.com/programmes.html">
-  <meta property="og:title" content="Eden University Programmes | Courses Offered in Zambia">
-  <meta property="og:description" content="Explore accredited programmes at Eden University Zambia. View undergraduate degrees, diplomas, fees per semester, entry requirements, and apply online.">
+  <meta property="og:title" content="Eden University Programmes &amp; Courses | Degrees &amp; Diplomas">
+  <meta property="og:description" content="Explore accredited programmes and courses at Eden University Zambia. View undergraduate degrees, diplomas, fees per semester, entry requirements, and apply online.">
   <meta property="og:url" content="https://www.edenuniversityapplication.com/programmes.html">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Eden University Programmes | Courses Offered in Zambia">
-  <meta name="twitter:description" content="Explore accredited programmes at Eden University Zambia. View undergraduate degrees, diplomas, fees per semester, entry requirements, and apply online.">
-  <script type="application/ld+json" class="seo-schema">{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Programmes Database | Eden University Admissions",
-  "url": "https://www.edenuniversityapplication.com/programmes.html"
-}</script>
-  <script type="application/ld+json">
+  <meta name="twitter:title" content="Eden University Programmes &amp; Courses | Degrees &amp; Diplomas">
+  <meta name="twitter:description" content="Explore accredited programmes and courses at Eden University Zambia. View undergraduate degrees, diplomas, fees per semester, entry requirements, and apply online.">
+  
+  <script type="application/ld+json" class="seo-schema">
   {
     "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
+    "@graph": [
       {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://www.edenuniversityapplication.com/"
+        "@type": "WebPage",
+        "@id": "https://www.edenuniversityapplication.com/programmes.html#webpage",
+        "name": "Eden University Programmes & Courses | Degrees & Diplomas",
+        "url": "https://www.edenuniversityapplication.com/programmes.html",
+        "description": "Explore accredited programmes and courses at Eden University Zambia. View undergraduate degrees, diplomas, fees per semester, entry requirements, and apply online."
       },
       {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Programmes",
-        "item": "https://www.edenuniversityapplication.com/programmes.html"
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.edenuniversityapplication.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Programmes & Courses",
+            "item": "https://www.edenuniversityapplication.com/programmes.html"
+          }
+        ]
+      },
+      {
+        "@type": "EducationalOrganization",
+        "@id": "https://www.edenuniversityapplication.com/#organization",
+        "name": "Eden University Admissions & Application Portal",
+        "url": "https://www.edenuniversityapplication.com/",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "P.O BOX 37727 BARLASTONE PARK",
+          "addressLocality": "Lusaka",
+          "addressRegion": "Lusaka Province",
+          "addressCountry": "ZM"
+        },
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+260-779-934-886",
+            "contactType": "Admissions Support",
+            "contactOption": "WhatsApp",
+            "availableLanguage": ["English"]
+          },
+          {
+            "@type": "ContactPoint",
+            "telephone": "+260-973-439-282",
+            "contactType": "Additional Admissions Contact",
+            "availableLanguage": ["English"]
+          }
+        ]
       }
     ]
   }
@@ -118,28 +82,59 @@
 </head>
 <body>
 
-  <header class="header">
+  <!-- Top Contact & Utility Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <span class="top-bar-intake-badge">
+          <span class="dot"></span>
+          January 2027 Intake Available
+        </span>
+      </div>
+      <div class="top-bar-right">
+        <a href="https://wa.me/260779934886" class="top-bar-link" target="_blank" rel="noopener noreferrer">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Admissions WhatsApp: +260 779 934 886
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="mainHeader">
     <div class="container nav-container">
       <a href="index.html" class="logo">
-        <img src="eden-university-application-logo.png" alt="Eden University Logo" class="logo-img">
-        <div class="logo-text">EDEN UNIVERSITY<span>ADMISSIONS & APPLICATION PORTAL</span></div>
+        <img src="eden-university-application-logo.png" alt="Eden University Crest Logo" class="logo-img">
+        <div class="logo-text">
+          EDEN UNIVERSITY
+          <span>ADMISSIONS &amp; APPLICATION PORTAL</span>
+        </div>
       </a>
-      <button class="nav-toggle" id="nav-toggle">â˜°</button>
+      
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+
       <nav class="nav-links" id="desktop-nav">
         <a href="index.html">Home</a>
         <a href="programmes.html" class="active">Programmes</a>
         <a href="schools.html">Schools</a>
         <a href="requirements.html">Requirements</a>
-        <a href="process.html">Application Process</a>
+        <a href="process.html">Process</a>
         <a href="fees.html">Fees &amp; Funding</a>
+        <a href="intakes.html">Intakes</a>
         
         <div class="nav-dropdown">
-          <a href="#" class="dropdown-trigger" onclick="return false;">More â–¼</a>
+          <span class="dropdown-trigger" role="button" tabindex="0">
+            More
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </span>
           <div class="dropdown-menu">
+            <a href="eden-university-application.html">Application Guide</a>
             <a href="testimonials.html">Student Success</a>
+            <a href="international-relations.html">International Students</a>
             <a href="faq.html">FAQ</a>
             <a href="contact.html">Contact Us</a>
-            <a href="international-relations.html">International Relations</a>
           </div>
         </div>
 
@@ -147,1419 +142,332 @@
       </nav>
     </div>
   </header>
+
   <!-- Mobile Drawer -->
   <div class="nav-overlay" id="nav-overlay"></div>
   <div class="nav-drawer" id="nav-drawer">
-    <button class="nav-toggle" id="nav-close" style="text-align: right;">âœ•</button>
-    <a href="index.html">Home</a>
-    <a href="programmes.html">Programmes</a>
-    <a href="schools.html">Schools</a>
-    <a href="requirements.html">Requirements</a>
-    <a href="process.html">Application Process</a>
-    <a href="fees.html">Fees &amp; Funding</a>
-    <a href="testimonials.html">Student Success</a>
-    <a href="faq.html">FAQ</a>
-    <a href="contact.html">Contact Us</a>
-    <a href="apply.html" class="btn btn-primary" style="margin-top: 20px;">Apply Online</a>
+    <div class="nav-drawer-header">
+      <div class="logo-text">
+        EDEN UNIVERSITY
+        <span>ADMISSIONS</span>
+      </div>
+      <button class="nav-drawer-close" id="nav-close" aria-label="Close menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="18" x2="18" y2="6"></line></svg>
+      </button>
+    </div>
+    <div class="nav-drawer-links">
+      <a href="index.html">Home</a>
+      <a href="programmes.html" class="active">Programmes</a>
+      <a href="schools.html">Schools &amp; Faculties</a>
+      <a href="requirements.html">Requirements</a>
+      <a href="process.html">Application Process</a>
+      <a href="fees.html">Fees &amp; Funding</a>
+      <a href="intakes.html">January 2027 Intake</a>
+      <a href="eden-university-application.html">Application Guide</a>
+      <a href="testimonials.html">Student Success</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+    <div class="nav-drawer-footer">
+      <a href="apply.html" class="btn btn-primary" style="width: 100%;">Apply Now</a>
+    </div>
   </div>
 
-  <div class="page-header" style="background: linear-gradient(rgba(0, 43, 91, 0.65), rgba(0, 43, 91, 0.65)), url('Eden University application Zambia fees.avif') center center / cover no-repeat; padding: 80px 0 60px;">
+  <!-- Page Header -->
+  <div class="page-header" style="background: linear-gradient(135deg, rgba(7, 27, 58, 0.92) 0%, rgba(11, 42, 91, 0.88) 100%), url('Eden University application Zambia fees.avif') center center / cover no-repeat;">
     <div class="container">
-      <h1 style="color: #FFFFFF; font-weight: 900; text-shadow: 0 2px 8px rgba(0,0,0,0.45), 0 4px 20px rgba(0,0,0,0.35);">Eden University Programmes</h1>
-      <p style="color: #FFFFFF; font-weight: 500; text-shadow: 0 2px 8px rgba(0,0,0,0.4); max-width: 800px; margin: 0 auto; line-height: 1.6;">Explore accredited undergraduate degrees, diplomas, and postgraduate programmes across all schools at Eden University in Zambia. Check semester fees, duration, and study modes.</p>
+      <span class="badge badge-gold" style="margin-bottom: 16px;">ACADEMIC CATALOGUE &bull; 2026&ndash;2027</span>
+      <h1>Eden University Programmes &amp; Courses</h1>
+      <p>Explore accredited undergraduate degrees, diplomas, and postgraduate qualifications across all 6 faculties. Check duration, tuition schedules, and study modes.</p>
     </div>
   </div>
 
-  <section class="section" style="padding-top: 20px;">
-    <div class="container" style="max-width: 1400px;">
-      
-      <!-- Search & Filters -->
-      <div style="background: var(--bg-light); padding: 20px; border-radius: 8px; margin-bottom: 30px; display: flex; gap: 20px; align-items: center;">
-        <div class="form-group" style="margin-bottom: 0; flex: 2;">
-          <input type="text" id="searchInput" class="form-control" placeholder="Search by programme name... (e.g. Nursing, Law)">
-        </div>
-        <div class="form-group" style="margin-bottom: 0; flex: 1;">
-          <select id="schoolFilter" class="form-control">
-            <option value="all">All Schools</option>
-          </select>
-        </div>
-        <div class="form-group" style="margin-bottom: 0; flex: 1;">
-          <select id="modeFilter" class="form-control">
-            <option value="all">All Modes</option>
-            <option value="Full-Time">Full-Time</option>
-            <option value="Distance">Distance</option>
-          </select>
-        </div>
-      </div>
-
-      <!-- Important Notice Banner -->
-      <div style="background: rgba(247, 147, 30, 0.1); border-left: 5px solid var(--accent); padding: 20px; border-radius: 4px; margin-bottom: 30px;">
-        <h3 style="color: var(--primary); margin-top: 0; margin-bottom: 10px; font-size: 1.1rem; display: flex; align-items: center; gap: 10px;">
-          <i class="fas fa-exclamation-circle" style="color: var(--accent);"></i> IMPORTANT NOTICE
-        </h3>
-        <p style="margin: 0 0 10px 0; font-size: 0.95rem; line-height: 1.6; color: #333;">All fees displayed below are in <strong>Zambian Kwacha (ZMW)</strong>.</p>
-        <p style="margin: 0 0 10px 0; font-size: 0.95rem; line-height: 1.6; color: #333;">International applicants who wish to view estimated fees in their local currency should visit the <a href="fees.html" style="color: var(--primary); font-weight: 600; text-decoration: underline;">Fees &amp; Funding</a> page, where currency conversion tools are available.</p>
-        <p style="margin: 0; font-size: 0.95rem; line-height: 1.6; color: #333;">For exact payment guidance, please contact Admissions via <a href="https://wa.me/260779934886" style="color: #25D366; font-weight: 600; text-decoration: none;"><i class="fab fa-whatsapp"></i> WhatsApp</a>.</p>
-      </div>
-
-      <!-- Container for dynamically generated tables -->
-      <div id="catalogContainer">    <div class="school-group">
-      <div class="school-header">
-        SCHOOL OF SCHOOL OF MEDICINE
-      </div>
-      <div class="table-responsive">
-        <table class="academic-table">
-          <thead>
-            <tr>
-              <th style="width: 50px;">Comp</th>
-              <th style="width: 300px;">PROGRAMME</th>
-              <th>MODE</th>
-              <th>DURATION</th>
-              <th>Y1 S1</th>
-              <th>Y1 S2</th>
-              <th>Y2 S1</th>
-              <th>Y2 S2</th>
-              <th>Y3 S1</th>
-              <th>Y3 S2</th>
-              <th style="text-align: right; min-width: 140px;">ACTIONS</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(0)" aria-label="Compare Diploma in Clinical Medicine">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/diploma-in-clinical-medicine.html" style="color: inherit; text-decoration: none;">Diploma in Clinical Medicine</a>
-              </td>
-              <td>Full-Time</td>
-              <td>3 YEARS</td>
-              <td class="fee-col">7,760</td>
-              <td class="fee-col">7,090</td>
-              <td class="fee-col">8,090</td>
-              <td class="fee-col">7,590</td>
-              <td class="fee-col">7,000</td>
-              <td class="fee-col">-</td>
-              <td style="text-align: right;">
-                <a href="programmes/diploma-in-clinical-medicine.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=diploma-in-clinical-medicine" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(1)" aria-label="Compare Diploma in Environmental Health">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/diploma-in-environmental-health.html" style="color: inherit; text-decoration: none;">Diploma in Environmental Health</a>
-              </td>
-              <td>Full-Time</td>
-              <td>3 YEARS</td>
-              <td class="fee-col">7,210</td>
-              <td class="fee-col">7,140</td>
-              <td class="fee-col">7,140</td>
-              <td class="fee-col">7,140</td>
-              <td class="fee-col">7,140</td>
-              <td class="fee-col">7,140</td>
-              <td style="text-align: right;">
-                <a href="programmes/diploma-in-environmental-health.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=diploma-in-environmental-health" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(2)" aria-label="Compare Diploma in Biomedical Sciences">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/diploma-in-biomedical-sciences.html" style="color: inherit; text-decoration: none;">Diploma in Biomedical Sciences</a>
-              </td>
-              <td>Full-Time</td>
-              <td>3 YEARS</td>
-              <td class="fee-col">7,300</td>
-              <td class="fee-col">7,300</td>
-              <td class="fee-col">7,300</td>
-              <td class="fee-col">7,300</td>
-              <td class="fee-col">7,300</td>
-              <td class="fee-col">7,300</td>
-              <td style="text-align: right;">
-                <a href="programmes/diploma-in-biomedical-sciences.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=diploma-in-biomedical-sciences" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(3)" aria-label="Compare Diploma in Occupational Health and Safety">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/diploma-in-occupational-health-and-safety.html" style="color: inherit; text-decoration: none;">Diploma in Occupational Health and Safety</a>
-              </td>
-              <td>Full-Time</td>
-              <td>3 YEARS</td>
-              <td class="fee-col">7,300</td>
-              <td class="fee-col">7,300</td>
-              <td class="fee-col">7,300</td>
-              <td class="fee-col">7,300</td>
-              <td class="fee-col">7,300</td>
-              <td class="fee-col">7,300</td>
-              <td style="text-align: right;">
-                <a href="programmes/diploma-in-occupational-health-and-safety.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=diploma-in-occupational-health-and-safety" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(4)" aria-label="Compare BSc. Clinical Medicine">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/bsc-clinical-medicine.html" style="color: inherit; text-decoration: none;">BSc. Clinical Medicine</a>
-              </td>
-              <td>Full-Time</td>
-              <td>5 YEARS</td>
-              <td class="fee-col">10,300</td>
-              <td class="fee-col">10,300</td>
-              <td class="fee-col">9,910</td>
-              <td class="fee-col">9,910</td>
-              <td class="fee-col">10,340</td>
-              <td class="fee-col">10,340</td>
-              <td style="text-align: right;">
-                <a href="programmes/bsc-clinical-medicine.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=bsc-clinical-medicine" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(5)" aria-label="Compare BSc in Biomedical Sciences">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/bsc-in-biomedical-sciences.html" style="color: inherit; text-decoration: none;">BSc in Biomedical Sciences</a>
-              </td>
-              <td>Full-Time</td>
-              <td>4 YEARS</td>
-              <td class="fee-col">10,300</td>
-              <td class="fee-col">10,300</td>
-              <td class="fee-col">9,910</td>
-              <td class="fee-col">9,910</td>
-              <td class="fee-col">10,340</td>
-              <td class="fee-col">10,340</td>
-              <td style="text-align: right;">
-                <a href="programmes/bsc-in-biomedical-sciences.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=bsc-in-biomedical-sciences" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(6)" aria-label="Compare BSc in Public Health">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/bsc-in-public-health.html" style="color: inherit; text-decoration: none;">BSc in Public Health</a>
-              </td>
-              <td>Full-Time</td>
-              <td>4 YEARS</td>
-              <td class="fee-col">8,300</td>
-              <td class="fee-col">8,300</td>
-              <td class="fee-col">8,300</td>
-              <td class="fee-col">8,300</td>
-              <td class="fee-col">8,800</td>
-              <td class="fee-col">8,800</td>
-              <td style="text-align: right;">
-                <a href="programmes/bsc-in-public-health.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=bsc-in-public-health" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(7)" aria-label="Compare BSc in Occupational Health and Safety">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/bsc-in-occupational-health-and-safety.html" style="color: inherit; text-decoration: none;">BSc in Occupational Health and Safety</a>
-              </td>
-              <td>Full-Time</td>
-              <td>4 YEARS</td>
-              <td class="fee-col">8,300</td>
-              <td class="fee-col">8,300</td>
-              <td class="fee-col">8,300</td>
-              <td class="fee-col">8,300</td>
-              <td class="fee-col">8,800</td>
-              <td class="fee-col">8,800</td>
-              <td style="text-align: right;">
-                <a href="programmes/bsc-in-occupational-health-and-safety.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=bsc-in-occupational-health-and-safety" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(8)" aria-label="Compare BSc. Environmental Health">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/bsc-environmental-health.html" style="color: inherit; text-decoration: none;">BSc. Environmental Health</a>
-              </td>
-              <td>Full-Time</td>
-              <td>5 YEARS</td>
-              <td class="fee-col">10,300</td>
-              <td class="fee-col">10,300</td>
-              <td class="fee-col">7,860</td>
-              <td class="fee-col">7,790</td>
-              <td class="fee-col">8,290</td>
-              <td class="fee-col">8,290</td>
-              <td style="text-align: right;">
-                <a href="programmes/bsc-environmental-health.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=bsc-environmental-health" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(9)" aria-label="Compare Bachelor of Medicine & Bachelor of Surgery">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/bachelor-of-medicine-bachelor-of-surgery.html" style="color: inherit; text-decoration: none;">Bachelor of Medicine & Bachelor of Surgery</a>
-              </td>
-              <td>Full-Time</td>
-              <td>6 YEARS</td>
-              <td class="fee-col">10,300</td>
-              <td class="fee-col">10,300</td>
-              <td class="fee-col">13,300</td>
-              <td class="fee-col">15,790</td>
-              <td class="fee-col">15,790</td>
-              <td class="fee-col">-</td>
-              <td style="text-align: right;">
-                <a href="programmes/bachelor-of-medicine-bachelor-of-surgery.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=bachelor-of-medicine-bachelor-of-surgery" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(10)" aria-label="Compare BSc. Clinical Medicine">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/bsc-clinical-medicine-distance.html" style="color: inherit; text-decoration: none;">BSc. Clinical Medicine</a>
-              </td>
-              <td>Distance</td>
-              <td>3 YEARS</td>
-              <td class="fee-col">8,490</td>
-              <td class="fee-col">8,290</td>
-              <td class="fee-col">-</td>
-              <td class="fee-col">-</td>
-              <td class="fee-col">-</td>
-              <td class="fee-col">-</td>
-              <td style="text-align: right;">
-                <a href="programmes/bsc-clinical-medicine-distance.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=bsc-clinical-medicine-distance" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(11)" aria-label="Compare BSc. Environmental Health">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/bsc-environmental-health-distance.html" style="color: inherit; text-decoration: none;">BSc. Environmental Health</a>
-              </td>
-              <td>Distance</td>
-              <td>3 YEARS</td>
-              <td class="fee-col">8,490</td>
-              <td class="fee-col">8,290</td>
-              <td class="fee-col">-</td>
-              <td class="fee-col">-</td>
-              <td class="fee-col">-</td>
-              <td class="fee-col">-</td>
-              <td style="text-align: right;">
-                <a href="programmes/bsc-environmental-health-distance.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=bsc-environmental-health-distance" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>    <div class="school-group">
-      <div class="school-header">
-        SCHOOL OF SCHOOL OF NURSING & MIDWIFERY
-      </div>
-      <div class="table-responsive">
-        <table class="academic-table">
-          <thead>
-            <tr>
-              <th style="width: 50px;">Comp</th>
-              <th style="width: 300px;">PROGRAMME</th>
-              <th>MODE</th>
-              <th>DURATION</th>
-              <th>Y1 S1</th>
-              <th>Y1 S2</th>
-              <th>Y2 S1</th>
-              <th>Y2 S2</th>
-              <th>Y3 S1</th>
-              <th>Y3 S2</th>
-              <th style="text-align: right; min-width: 140px;">ACTIONS</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(12)" aria-label="Compare Diploma in Nursing">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/diploma-in-nursing.html" style="color: inherit; text-decoration: none;">Diploma in Nursing</a>
-              </td>
-              <td>Full-Time</td>
-              <td>3 YEARS</td>
-              <td class="fee-col">10,160</td>
-              <td class="fee-col">8,540</td>
-              <td class="fee-col">10,160</td>
-              <td class="fee-col">8,540</td>
-              <td class="fee-col">9,540</td>
-              <td class="fee-col">7,790</td>
-              <td style="text-align: right;">
-                <a href="programmes/diploma-in-nursing.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=diploma-in-nursing" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(13)" aria-label="Compare Diploma in Midwifery">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/diploma-in-midwifery.html" style="color: inherit; text-decoration: none;">Diploma in Midwifery</a>
-              </td>
-              <td>Full-Time</td>
-              <td>3 YEARS</td>
-              <td class="fee-col">10,160</td>
-              <td class="fee-col">8,540</td>
-              <td class="fee-col">10,160</td>
-              <td class="fee-col">8,540</td>
-              <td class="fee-col">9,540</td>
-              <td class="fee-col">7,790</td>
-              <td style="text-align: right;">
-                <a href="programmes/diploma-in-midwifery.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=diploma-in-midwifery" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(14)" aria-label="Compare Diploma in Public Health Nursing">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/diploma-in-public-health-nursing.html" style="color: inherit; text-decoration: none;">Diploma in Public Health Nursing</a>
-              </td>
-              <td>Full-Time</td>
-              <td>3 YEARS</td>
-              <td class="fee-col">10,160</td>
-              <td class="fee-col">8,540</td>
-              <td class="fee-col">10,160</td>
-              <td class="fee-col">8,540</td>
-              <td class="fee-col">9,540</td>
-              <td class="fee-col">7,790</td>
-              <td style="text-align: right;">
-                <a href="programmes/diploma-in-public-health-nursing.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=diploma-in-public-health-nursing" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(15)" aria-label="Compare BSc Midwifery">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/bsc-midwifery.html" style="color: inherit; text-decoration: none;">BSc Midwifery</a>
-              </td>
-              <td>Full-Time</td>
-              <td>4 YEARS</td>
-              <td class="fee-col">10,300</td>
-              <td class="fee-col">10,300</td>
-              <td class="fee-col">9,360</td>
-              <td class="fee-col">9,590</td>
-              <td class="fee-col">9,290</td>
-              <td class="fee-col">9,090</td>
-              <td style="text-align: right;">
-                <a href="programmes/bsc-midwifery.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=bsc-midwifery" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(16)" aria-label="Compare BSc Nursing">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/bsc-nursing.html" style="color: inherit; text-decoration: none;">BSc Nursing</a>
-              </td>
-              <td>Full-Time</td>
-              <td>4 YEARS</td>
-              <td class="fee-col">10,300</td>
-              <td class="fee-col">10,300</td>
-              <td class="fee-col">9,360</td>
-              <td class="fee-col">9,590</td>
-              <td class="fee-col">9,290</td>
-              <td class="fee-col">9,090</td>
-              <td style="text-align: right;">
-                <a href="programmes/bsc-nursing.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=bsc-nursing" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(17)" aria-label="Compare BSc Nursing">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/bsc-nursing-distance.html" style="color: inherit; text-decoration: none;">BSc Nursing</a>
-              </td>
-              <td>Distance</td>
-              <td>2 YEARS</td>
-              <td class="fee-col">8,490</td>
-              <td class="fee-col">8,290</td>
-              <td class="fee-col">-</td>
-              <td class="fee-col">-</td>
-              <td class="fee-col">-</td>
-              <td class="fee-col">-</td>
-              <td style="text-align: right;">
-                <a href="programmes/bsc-nursing-distance.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=bsc-nursing-distance" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>    <div class="school-group">
-      <div class="school-header">
-        SCHOOL OF SCHOOL OF PHARMACY
-      </div>
-      <div class="table-responsive">
-        <table class="academic-table">
-          <thead>
-            <tr>
-              <th style="width: 50px;">Comp</th>
-              <th style="width: 300px;">PROGRAMME</th>
-              <th>MODE</th>
-              <th>DURATION</th>
-              <th>Y1 S1</th>
-              <th>Y1 S2</th>
-              <th>Y2 S1</th>
-              <th>Y2 S2</th>
-              <th>Y3 S1</th>
-              <th>Y3 S2</th>
-              <th style="text-align: right; min-width: 140px;">ACTIONS</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(18)" aria-label="Compare Diploma in Pharmacy">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/diploma-in-pharmacy.html" style="color: inherit; text-decoration: none;">Diploma in Pharmacy</a>
-              </td>
-              <td>Full-Time</td>
-              <td>3 YEARS</td>
-              <td class="fee-col">9,565</td>
-              <td class="fee-col">9,495</td>
-              <td class="fee-col">9,495</td>
-              <td class="fee-col">9,495</td>
-              <td class="fee-col">5,200</td>
-              <td class="fee-col">9,495</td>
-              <td style="text-align: right;">
-                <a href="programmes/diploma-in-pharmacy.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=diploma-in-pharmacy" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(19)" aria-label="Compare BSc Pharmacy">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/bsc-pharmacy.html" style="color: inherit; text-decoration: none;">BSc Pharmacy</a>
-              </td>
-              <td>Full-Time</td>
-              <td>5 YEARS</td>
-              <td class="fee-col">10,300</td>
-              <td class="fee-col">10,300</td>
-              <td class="fee-col">10,470</td>
-              <td class="fee-col">10,400</td>
-              <td class="fee-col">10,400</td>
-              <td class="fee-col">10,400</td>
-              <td style="text-align: right;">
-                <a href="programmes/bsc-pharmacy.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=bsc-pharmacy" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>    <div class="school-group">
-      <div class="school-header">
-        SCHOOL OF SCHOOL OF NATURAL SCIENCES
-      </div>
-      <div class="table-responsive">
-        <table class="academic-table">
-          <thead>
-            <tr>
-              <th style="width: 50px;">Comp</th>
-              <th style="width: 300px;">PROGRAMME</th>
-              <th>MODE</th>
-              <th>DURATION</th>
-              <th>Y1 S1</th>
-              <th>Y1 S2</th>
-              <th>Y2 S1</th>
-              <th>Y2 S2</th>
-              <th>Y3 S1</th>
-              <th>Y3 S2</th>
-              <th style="text-align: right; min-width: 140px;">ACTIONS</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(20)" aria-label="Compare Bachelor of Science in Chemistry">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/bachelor-of-science-in-chemistry.html" style="color: inherit; text-decoration: none;">Bachelor of Science in Chemistry</a>
-              </td>
-              <td>Full-Time</td>
-              <td>4 YEARS</td>
-              <td class="fee-col">10,300</td>
-              <td class="fee-col">10,300</td>
-              <td class="fee-col">7,560</td>
-              <td class="fee-col">7,490</td>
-              <td class="fee-col">8,100</td>
-              <td class="fee-col">8,100</td>
-              <td style="text-align: right;">
-                <a href="programmes/bachelor-of-science-in-chemistry.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=bachelor-of-science-in-chemistry" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(21)" aria-label="Compare Bachelor of Science in Biology">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/bachelor-of-science-in-biology.html" style="color: inherit; text-decoration: none;">Bachelor of Science in Biology</a>
-              </td>
-              <td>Full-Time</td>
-              <td>4 YEARS</td>
-              <td class="fee-col">10,300</td>
-              <td class="fee-col">10,300</td>
-              <td class="fee-col">7,560</td>
-              <td class="fee-col">7,490</td>
-              <td class="fee-col">8,100</td>
-              <td class="fee-col">8,100</td>
-              <td style="text-align: right;">
-                <a href="programmes/bachelor-of-science-in-biology.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=bachelor-of-science-in-biology" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(22)" aria-label="Compare BSc in Ecology & Conservation Biology">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/bsc-in-ecology-conservation-biology.html" style="color: inherit; text-decoration: none;">BSc in Ecology & Conservation Biology</a>
-              </td>
-              <td>Full-Time</td>
-              <td>4 YEARS</td>
-              <td class="fee-col">10,300</td>
-              <td class="fee-col">10,300</td>
-              <td class="fee-col">7,560</td>
-              <td class="fee-col">7,490</td>
-              <td class="fee-col">8,100</td>
-              <td class="fee-col">8,100</td>
-              <td style="text-align: right;">
-                <a href="programmes/bsc-in-ecology-conservation-biology.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=bsc-in-ecology-conservation-biology" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(23)" aria-label="Compare Fire Engineering & Rescue Management">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/fire-engineering-rescue-management-distance.html" style="color: inherit; text-decoration: none;">Fire Engineering & Rescue Management</a>
-              </td>
-              <td>Distance</td>
-              <td>4 YEARS</td>
-              <td class="fee-col">6,500</td>
-              <td class="fee-col">6,500</td>
-              <td class="fee-col">6,500</td>
-              <td class="fee-col">6,500</td>
-              <td class="fee-col">6,500</td>
-              <td class="fee-col">6,500</td>
-              <td style="text-align: right;">
-                <a href="programmes/fire-engineering-rescue-management-distance.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=fire-engineering-rescue-management-distance" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>    <div class="school-group">
-      <div class="school-header">
-        SCHOOL OF SCHOOL OF EDUCATION
-      </div>
-      <div class="table-responsive">
-        <table class="academic-table">
-          <thead>
-            <tr>
-              <th style="width: 50px;">Comp</th>
-              <th style="width: 300px;">PROGRAMME</th>
-              <th>MODE</th>
-              <th>DURATION</th>
-              <th>Y1 S1</th>
-              <th>Y1 S2</th>
-              <th>Y2 S1</th>
-              <th>Y2 S2</th>
-              <th>Y3 S1</th>
-              <th>Y3 S2</th>
-              <th style="text-align: right; min-width: 140px;">ACTIONS</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(24)" aria-label="Compare Secondary Degree">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/secondary-degree.html" style="color: inherit; text-decoration: none;">Secondary Degree</a>
-              </td>
-              <td>Full-Time</td>
-              <td>4 YEARS</td>
-              <td class="fee-col">5,320</td>
-              <td class="fee-col">5,320</td>
-              <td class="fee-col">5,320</td>
-              <td class="fee-col">5,320</td>
-              <td class="fee-col">5,320</td>
-              <td class="fee-col">5,320</td>
-              <td style="text-align: right;">
-                <a href="programmes/secondary-degree.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=secondary-degree" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(25)" aria-label="Compare Secondary Diploma">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/secondary-diploma.html" style="color: inherit; text-decoration: none;">Secondary Diploma</a>
-              </td>
-              <td>Full-Time</td>
-              <td>3 YEARS</td>
-              <td class="fee-col">4,920</td>
-              <td class="fee-col">4,920</td>
-              <td class="fee-col">4,920</td>
-              <td class="fee-col">4,920</td>
-              <td class="fee-col">4,920</td>
-              <td class="fee-col">4,920</td>
-              <td style="text-align: right;">
-                <a href="programmes/secondary-diploma.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=secondary-diploma" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(26)" aria-label="Compare Primary Degree">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/primary-degree.html" style="color: inherit; text-decoration: none;">Primary Degree</a>
-              </td>
-              <td>Full-Time</td>
-              <td>4 YEARS</td>
-              <td class="fee-col">5,320</td>
-              <td class="fee-col">5,320</td>
-              <td class="fee-col">5,320</td>
-              <td class="fee-col">5,320</td>
-              <td class="fee-col">5,320</td>
-              <td class="fee-col">5,320</td>
-              <td style="text-align: right;">
-                <a href="programmes/primary-degree.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=primary-degree" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(27)" aria-label="Compare Primary Diploma">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/primary-diploma.html" style="color: inherit; text-decoration: none;">Primary Diploma</a>
-              </td>
-              <td>Full-Time</td>
-              <td>3 YEARS</td>
-              <td class="fee-col">4,125</td>
-              <td class="fee-col">4,125</td>
-              <td class="fee-col">4,125</td>
-              <td class="fee-col">4,125</td>
-              <td class="fee-col">4,125</td>
-              <td class="fee-col">4,125</td>
-              <td style="text-align: right;">
-                <a href="programmes/primary-diploma.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=primary-diploma" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(28)" aria-label="Compare Diploma in Early Childhood">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/diploma-in-early-childhood.html" style="color: inherit; text-decoration: none;">Diploma in Early Childhood</a>
-              </td>
-              <td>Full-Time</td>
-              <td>3 YEARS</td>
-              <td class="fee-col">3,350</td>
-              <td class="fee-col">3,350</td>
-              <td class="fee-col">3,350</td>
-              <td class="fee-col">3,350</td>
-              <td class="fee-col">3,350</td>
-              <td class="fee-col">3,350</td>
-              <td style="text-align: right;">
-                <a href="programmes/diploma-in-early-childhood.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=diploma-in-early-childhood" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(29)" aria-label="Compare Secondary Degree">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/secondary-degree-distance.html" style="color: inherit; text-decoration: none;">Secondary Degree</a>
-              </td>
-              <td>Distance</td>
-              <td>3 YEARS</td>
-              <td class="fee-col">4,315</td>
-              <td class="fee-col">4,315</td>
-              <td class="fee-col">4,315</td>
-              <td class="fee-col">4,315</td>
-              <td class="fee-col">4,315</td>
-              <td class="fee-col">4,315</td>
-              <td style="text-align: right;">
-                <a href="programmes/secondary-degree-distance.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=secondary-degree-distance" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(30)" aria-label="Compare Diploma in Early Childhood">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/diploma-in-early-childhood-distance.html" style="color: inherit; text-decoration: none;">Diploma in Early Childhood</a>
-              </td>
-              <td>Distance</td>
-              <td>3 YEARS</td>
-              <td class="fee-col">2,550</td>
-              <td class="fee-col">2,550</td>
-              <td class="fee-col">2,550</td>
-              <td class="fee-col">2,550</td>
-              <td class="fee-col">2,550</td>
-              <td class="fee-col">2,550</td>
-              <td style="text-align: right;">
-                <a href="programmes/diploma-in-early-childhood-distance.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=diploma-in-early-childhood-distance" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(31)" aria-label="Compare Primary Degree">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/primary-degree-distance.html" style="color: inherit; text-decoration: none;">Primary Degree</a>
-              </td>
-              <td>Distance</td>
-              <td>4 YEARS</td>
-              <td class="fee-col">4,015</td>
-              <td class="fee-col">4,015</td>
-              <td class="fee-col">4,015</td>
-              <td class="fee-col">4,015</td>
-              <td class="fee-col">4,015</td>
-              <td class="fee-col">4,015</td>
-              <td style="text-align: right;">
-                <a href="programmes/primary-degree-distance.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=primary-degree-distance" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(32)" aria-label="Compare Secondary Diploma">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/secondary-diploma-distance.html" style="color: inherit; text-decoration: none;">Secondary Diploma</a>
-              </td>
-              <td>Distance</td>
-              <td>3 YEARS</td>
-              <td class="fee-col">3,220</td>
-              <td class="fee-col">3,220</td>
-              <td class="fee-col">3,220</td>
-              <td class="fee-col">3,220</td>
-              <td class="fee-col">3,220</td>
-              <td class="fee-col">3,220</td>
-              <td style="text-align: right;">
-                <a href="programmes/secondary-diploma-distance.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=secondary-diploma-distance" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(33)" aria-label="Compare Primary Diploma">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/primary-diploma-distance.html" style="color: inherit; text-decoration: none;">Primary Diploma</a>
-              </td>
-              <td>Distance</td>
-              <td>3 YEARS</td>
-              <td class="fee-col">3,220</td>
-              <td class="fee-col">3,220</td>
-              <td class="fee-col">3,220</td>
-              <td class="fee-col">3,220</td>
-              <td class="fee-col">3,220</td>
-              <td class="fee-col">3,220</td>
-              <td style="text-align: right;">
-                <a href="programmes/primary-diploma-distance.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=primary-diploma-distance" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(34)" aria-label="Compare Diploma in Teaching Methodology">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/diploma-in-teaching-methodology-distance.html" style="color: inherit; text-decoration: none;">Diploma in Teaching Methodology</a>
-              </td>
-              <td>Distance</td>
-              <td>1 YEAR</td>
-              <td class="fee-col">4,120</td>
-              <td class="fee-col">4,120</td>
-              <td class="fee-col">-</td>
-              <td class="fee-col">-</td>
-              <td class="fee-col">-</td>
-              <td class="fee-col">-</td>
-              <td style="text-align: right;">
-                <a href="programmes/diploma-in-teaching-methodology-distance.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=diploma-in-teaching-methodology-distance" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>    <div class="school-group">
-      <div class="school-header">
-        SCHOOL OF SCHOOL OF HUMANITIES & SOCIAL SCIENCES
-      </div>
-      <div class="table-responsive">
-        <table class="academic-table">
-          <thead>
-            <tr>
-              <th style="width: 50px;">Comp</th>
-              <th style="width: 300px;">PROGRAMME</th>
-              <th>MODE</th>
-              <th>DURATION</th>
-              <th>Y1 S1</th>
-              <th>Y1 S2</th>
-              <th>Y2 S1</th>
-              <th>Y2 S2</th>
-              <th>Y3 S1</th>
-              <th>Y3 S2</th>
-              <th style="text-align: right; min-width: 140px;">ACTIONS</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(35)" aria-label="Compare Diploma in ICT">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/diploma-in-ict.html" style="color: inherit; text-decoration: none;">Diploma in ICT</a>
-              </td>
-              <td>Full-Time</td>
-              <td>3 YEARS</td>
-              <td class="fee-col">5,690</td>
-              <td class="fee-col">5,620</td>
-              <td class="fee-col">5,620</td>
-              <td class="fee-col">5,620</td>
-              <td class="fee-col">5,620</td>
-              <td class="fee-col">5,620</td>
-              <td style="text-align: right;">
-                <a href="programmes/diploma-in-ict.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=diploma-in-ict" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(36)" aria-label="Compare Diploma in Social Work">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/diploma-in-social-work.html" style="color: inherit; text-decoration: none;">Diploma in Social Work</a>
-              </td>
-              <td>Full-Time</td>
-              <td>3 YEARS</td>
-              <td class="fee-col">5,690</td>
-              <td class="fee-col">5,620</td>
-              <td class="fee-col">5,620</td>
-              <td class="fee-col">5,620</td>
-              <td class="fee-col">5,620</td>
-              <td class="fee-col">5,620</td>
-              <td style="text-align: right;">
-                <a href="programmes/diploma-in-social-work.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=diploma-in-social-work" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(37)" aria-label="Compare Diploma in Guidance & Counselling">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/diploma-in-guidance-counselling.html" style="color: inherit; text-decoration: none;">Diploma in Guidance & Counselling</a>
-              </td>
-              <td>Full-Time</td>
-              <td>3 YEARS</td>
-              <td class="fee-col">5,690</td>
-              <td class="fee-col">5,620</td>
-              <td class="fee-col">5,620</td>
-              <td class="fee-col">5,620</td>
-              <td class="fee-col">5,620</td>
-              <td class="fee-col">5,620</td>
-              <td style="text-align: right;">
-                <a href="programmes/diploma-in-guidance-counselling.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=diploma-in-guidance-counselling" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(38)" aria-label="Compare Bachelor of Science ICT">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/bachelor-of-science-ict.html" style="color: inherit; text-decoration: none;">Bachelor of Science ICT</a>
-              </td>
-              <td>Full-Time</td>
-              <td>4 YEARS</td>
-              <td class="fee-col">8,760</td>
-              <td class="fee-col">8,760</td>
-              <td class="fee-col">8,760</td>
-              <td class="fee-col">8,760</td>
-              <td class="fee-col">8,760</td>
-              <td class="fee-col">8,760</td>
-              <td style="text-align: right;">
-                <a href="programmes/bachelor-of-science-ict.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=bachelor-of-science-ict" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(39)" aria-label="Compare Bachelor of Science in Psychology">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/bachelor-of-science-in-psychology.html" style="color: inherit; text-decoration: none;">Bachelor of Science in Psychology</a>
-              </td>
-              <td>Full-Time</td>
-              <td>4 YEARS</td>
-              <td class="fee-col">8,760</td>
-              <td class="fee-col">8,760</td>
-              <td class="fee-col">8,760</td>
-              <td class="fee-col">8,760</td>
-              <td class="fee-col">8,760</td>
-              <td class="fee-col">8,760</td>
-              <td style="text-align: right;">
-                <a href="programmes/bachelor-of-science-in-psychology.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=bachelor-of-science-in-psychology" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(40)" aria-label="Compare Bachelor of Arts in Public Administration & International Relations">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/bachelor-of-arts-in-public-administration-international-relations.html" style="color: inherit; text-decoration: none;">Bachelor of Arts in Public Administration & International Relations</a>
-              </td>
-              <td>Full-Time</td>
-              <td>4 YEARS</td>
-              <td class="fee-col">8,760</td>
-              <td class="fee-col">8,760</td>
-              <td class="fee-col">8,760</td>
-              <td class="fee-col">8,760</td>
-              <td class="fee-col">8,760</td>
-              <td class="fee-col">8,760</td>
-              <td style="text-align: right;">
-                <a href="programmes/bachelor-of-arts-in-public-administration-international-relations.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=bachelor-of-arts-in-public-administration-international-relations" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(41)" aria-label="Compare Bachelor of Arts in Guidance & Counselling">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/bachelor-of-arts-in-guidance-counselling.html" style="color: inherit; text-decoration: none;">Bachelor of Arts in Guidance & Counselling</a>
-              </td>
-              <td>Full-Time</td>
-              <td>4 YEARS</td>
-              <td class="fee-col">8,760</td>
-              <td class="fee-col">8,760</td>
-              <td class="fee-col">8,760</td>
-              <td class="fee-col">8,760</td>
-              <td class="fee-col">8,760</td>
-              <td class="fee-col">8,760</td>
-              <td style="text-align: right;">
-                <a href="programmes/bachelor-of-arts-in-guidance-counselling.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=bachelor-of-arts-in-guidance-counselling" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(42)" aria-label="Compare Bachelor of Arts in Development Studies">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/bachelor-of-arts-in-development-studies.html" style="color: inherit; text-decoration: none;">Bachelor of Arts in Development Studies</a>
-              </td>
-              <td>Full-Time</td>
-              <td>4 YEARS</td>
-              <td class="fee-col">8,760</td>
-              <td class="fee-col">8,760</td>
-              <td class="fee-col">8,760</td>
-              <td class="fee-col">8,760</td>
-              <td class="fee-col">8,760</td>
-              <td class="fee-col">8,760</td>
-              <td style="text-align: right;">
-                <a href="programmes/bachelor-of-arts-in-development-studies.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=bachelor-of-arts-in-development-studies" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(43)" aria-label="Compare Bachelor of Arts in Social Work">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/bachelor-of-arts-in-social-work.html" style="color: inherit; text-decoration: none;">Bachelor of Arts in Social Work</a>
-              </td>
-              <td>Full-Time</td>
-              <td>4 YEARS</td>
-              <td class="fee-col">8,760</td>
-              <td class="fee-col">8,760</td>
-              <td class="fee-col">8,760</td>
-              <td class="fee-col">8,760</td>
-              <td class="fee-col">8,760</td>
-              <td class="fee-col">8,760</td>
-              <td style="text-align: right;">
-                <a href="programmes/bachelor-of-arts-in-social-work.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=bachelor-of-arts-in-social-work" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(44)" aria-label="Compare Bachelor of Science ICT">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/bachelor-of-science-ict-distance.html" style="color: inherit; text-decoration: none;">Bachelor of Science ICT</a>
-              </td>
-              <td>Distance</td>
-              <td>4 YEARS</td>
-              <td class="fee-col">7,960</td>
-              <td class="fee-col">7,890</td>
-              <td class="fee-col">7,890</td>
-              <td class="fee-col">7,890</td>
-              <td class="fee-col">7,890</td>
-              <td class="fee-col">7,890</td>
-              <td style="text-align: right;">
-                <a href="programmes/bachelor-of-science-ict-distance.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=bachelor-of-science-ict-distance" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(45)" aria-label="Compare Bachelor of Art in Guidance & Counselling">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/bachelor-of-art-in-guidance-counselling-distance.html" style="color: inherit; text-decoration: none;">Bachelor of Art in Guidance & Counselling</a>
-              </td>
-              <td>Distance</td>
-              <td>4 YEARS</td>
-              <td class="fee-col">7,960</td>
-              <td class="fee-col">7,890</td>
-              <td class="fee-col">7,890</td>
-              <td class="fee-col">7,890</td>
-              <td class="fee-col">7,890</td>
-              <td class="fee-col">7,890</td>
-              <td style="text-align: right;">
-                <a href="programmes/bachelor-of-art-in-guidance-counselling-distance.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=bachelor-of-art-in-guidance-counselling-distance" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(46)" aria-label="Compare Bachelor of Art in Social Work">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/bachelor-of-art-in-social-work-distance.html" style="color: inherit; text-decoration: none;">Bachelor of Art in Social Work</a>
-              </td>
-              <td>Distance</td>
-              <td>4 YEARS</td>
-              <td class="fee-col">7,960</td>
-              <td class="fee-col">7,890</td>
-              <td class="fee-col">7,890</td>
-              <td class="fee-col">7,890</td>
-              <td class="fee-col">7,890</td>
-              <td class="fee-col">7,890</td>
-              <td style="text-align: right;">
-                <a href="programmes/bachelor-of-art-in-social-work-distance.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=bachelor-of-art-in-social-work-distance" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>    <div class="school-group">
-      <div class="school-header">
-        SCHOOL OF SCHOOL OF LAW & BUSINESS
-      </div>
-      <div class="table-responsive">
-        <table class="academic-table">
-          <thead>
-            <tr>
-              <th style="width: 50px;">Comp</th>
-              <th style="width: 300px;">PROGRAMME</th>
-              <th>MODE</th>
-              <th>DURATION</th>
-              <th>Y1 S1</th>
-              <th>Y1 S2</th>
-              <th>Y2 S1</th>
-              <th>Y2 S2</th>
-              <th>Y3 S1</th>
-              <th>Y3 S2</th>
-              <th style="text-align: right; min-width: 140px;">ACTIONS</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(47)" aria-label="Compare Bachelor of Law">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/bachelor-of-law.html" style="color: inherit; text-decoration: none;">Bachelor of Law</a>
-              </td>
-              <td>Full-Time</td>
-              <td>4 YEARS</td>
-              <td class="fee-col">9,560</td>
-              <td class="fee-col">9,490</td>
-              <td class="fee-col">9,490</td>
-              <td class="fee-col">9,490</td>
-              <td class="fee-col">9,490</td>
-              <td class="fee-col">9,490</td>
-              <td style="text-align: right;">
-                <a href="programmes/bachelor-of-law.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=bachelor-of-law" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(48)" aria-label="Compare BSc in Business Management (BSCBM)">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/bsc-in-business-management-bscbm.html" style="color: inherit; text-decoration: none;">BSc in Business Management (BSCBM)</a>
-              </td>
-              <td>Full-Time</td>
-              <td>4 YEARS</td>
-              <td class="fee-col">7,870</td>
-              <td class="fee-col">7,800</td>
-              <td class="fee-col">7,800</td>
-              <td class="fee-col">7,800</td>
-              <td class="fee-col">7,800</td>
-              <td class="fee-col">7,800</td>
-              <td style="text-align: right;">
-                <a href="programmes/bsc-in-business-management-bscbm.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=bsc-in-business-management-bscbm" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(49)" aria-label="Compare BSc in Accounting and Finance (BSCAF)">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/bsc-in-accounting-and-finance-bscaf.html" style="color: inherit; text-decoration: none;">BSc in Accounting and Finance (BSCAF)</a>
-              </td>
-              <td>Full-Time</td>
-              <td>4 YEARS</td>
-              <td class="fee-col">7,870</td>
-              <td class="fee-col">7,800</td>
-              <td class="fee-col">7,800</td>
-              <td class="fee-col">7,800</td>
-              <td class="fee-col">7,800</td>
-              <td class="fee-col">7,800</td>
-              <td style="text-align: right;">
-                <a href="programmes/bsc-in-accounting-and-finance-bscaf.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=bsc-in-accounting-and-finance-bscaf" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(50)" aria-label="Compare BSc in Banking and Finance (BSCBF)">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/bsc-in-banking-and-finance-bscbf.html" style="color: inherit; text-decoration: none;">BSc in Banking and Finance (BSCBF)</a>
-              </td>
-              <td>Full-Time</td>
-              <td>4 YEARS</td>
-              <td class="fee-col">7,870</td>
-              <td class="fee-col">7,800</td>
-              <td class="fee-col">7,800</td>
-              <td class="fee-col">7,800</td>
-              <td class="fee-col">7,800</td>
-              <td class="fee-col">7,800</td>
-              <td style="text-align: right;">
-                <a href="programmes/bsc-in-banking-and-finance-bscbf.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=bsc-in-banking-and-finance-bscbf" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(51)" aria-label="Compare BSc in Human Resources Management (BSCHRM)">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/bsc-in-human-resources-management-bschrm.html" style="color: inherit; text-decoration: none;">BSc in Human Resources Management (BSCHRM)</a>
-              </td>
-              <td>Full-Time</td>
-              <td>4 YEARS</td>
-              <td class="fee-col">7,870</td>
-              <td class="fee-col">7,800</td>
-              <td class="fee-col">7,800</td>
-              <td class="fee-col">7,800</td>
-              <td class="fee-col">7,800</td>
-              <td class="fee-col">7,800</td>
-              <td style="text-align: right;">
-                <a href="programmes/bsc-in-human-resources-management-bschrm.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=bsc-in-human-resources-management-bschrm" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(52)" aria-label="Compare BSc in Economics and Finance (BSCEF)">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/bsc-in-economics-and-finance-bscef.html" style="color: inherit; text-decoration: none;">BSc in Economics and Finance (BSCEF)</a>
-              </td>
-              <td>Full-Time</td>
-              <td>4 YEARS</td>
-              <td class="fee-col">7,870</td>
-              <td class="fee-col">7,800</td>
-              <td class="fee-col">7,800</td>
-              <td class="fee-col">7,800</td>
-              <td class="fee-col">7,800</td>
-              <td class="fee-col">7,800</td>
-              <td style="text-align: right;">
-                <a href="programmes/bsc-in-economics-and-finance-bscef.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=bsc-in-economics-and-finance-bscef" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(53)" aria-label="Compare BSc in Purchasing and Chain Management (BSCPCM)">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/bsc-in-purchasing-and-chain-management-bscpcm.html" style="color: inherit; text-decoration: none;">BSc in Purchasing and Chain Management (BSCPCM)</a>
-              </td>
-              <td>Full-Time</td>
-              <td>4 YEARS</td>
-              <td class="fee-col">7,870</td>
-              <td class="fee-col">7,800</td>
-              <td class="fee-col">7,800</td>
-              <td class="fee-col">7,800</td>
-              <td class="fee-col">7,800</td>
-              <td class="fee-col">7,800</td>
-              <td style="text-align: right;">
-                <a href="programmes/bsc-in-purchasing-and-chain-management-bscpcm.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=bsc-in-purchasing-and-chain-management-bscpcm" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">
-                <input type="checkbox" onchange="toggleCompare(54)" aria-label="Compare BSc in Marketing (BSCMKT)">
-              </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">
-                <a href="programmes/bsc-in-marketing-bscmkt.html" style="color: inherit; text-decoration: none;">BSc in Marketing (BSCMKT)</a>
-              </td>
-              <td>Full-Time</td>
-              <td>4 YEARS</td>
-              <td class="fee-col">7,870</td>
-              <td class="fee-col">7,800</td>
-              <td class="fee-col">7,800</td>
-              <td class="fee-col">7,800</td>
-              <td class="fee-col">7,800</td>
-              <td class="fee-col">7,800</td>
-              <td style="text-align: right;">
-                <a href="programmes/bsc-in-marketing-bscmkt.html" class="btn btn-outline btn-sm">Details</a>
-                <a href="apply.html?prog=bsc-in-marketing-bscmkt" class="btn btn-primary btn-sm">Apply</a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+  <!-- Breadcrumbs -->
+  <div class="breadcrumbs">
+    <div class="container breadcrumbs-inner">
+      <a href="index.html">Home</a> &gt; 
+      <span class="current">Programmes Catalogue</span>
     </div>
-      </div>
+  </div>
+
+  <section class="section" style="padding-top: 36px;">
+    <div class="container" style="max-width: 1360px;">
       
+      <!-- Search & Filters Toolcard -->
+      <div style="background: var(--bg-white); padding: 24px; border-radius: var(--radius-md); margin-bottom: 24px; border: 1px solid var(--border); box-shadow: var(--shadow-sm);">
+        <div style="display: flex; gap: 16px; flex-wrap: wrap; align-items: center;">
+          
+          <div style="flex: 2; min-width: 260px; position: relative;">
+            <input type="text" id="searchInput" class="form-control" placeholder="Search programmes by name (e.g. Medicine, Nursing, Law, ICT)..." style="padding-left: 42px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--text-light)" stroke-width="2" style="position: absolute; left: 14px; top: 50%; transform: translateY(-50%); pointer-events: none;"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          </div>
+
+          <div style="flex: 1; min-width: 200px;">
+            <select id="schoolFilter" class="form-control" aria-label="Filter by academic school">
+              <option value="all">All Academic Schools</option>
+            </select>
+          </div>
+
+          <div style="flex: 1; min-width: 160px;">
+            <select id="modeFilter" class="form-control" aria-label="Filter by study mode">
+              <option value="all">All Study Modes</option>
+              <option value="Full-Time">Full-Time Only</option>
+              <option value="Distance">Distance Learning</option>
+            </select>
+          </div>
+
+          <div style="flex: 1; min-width: 160px;">
+            <select id="levelFilter" class="form-control" aria-label="Filter by qualification level">
+              <option value="all">All Levels</option>
+              <option value="Degree">Degree</option>
+              <option value="Diploma">Diploma</option>
+              <option value="Masters">Masters</option>
+            </select>
+          </div>
+
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--border-light); flex-wrap: wrap; gap: 12px;">
+          <div id="resultCountBadge" style="font-size: 0.9rem; font-weight: 600; color: var(--primary);">
+            Showing all 55 accredited programmes
+          </div>
+          <div style="font-size: 0.85rem; color: var(--text-muted);">
+            Tip: Check the compare box to compare fees across multiple programmes.
+          </div>
+        </div>
+      </div>
+
+      <!-- Currency & Tuition Notice -->
+      <div class="alert-box alert-warning">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D4A72C" stroke-width="2.5" style="flex-shrink:0;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+        <div>
+          <h4 style="color: #715206; font-size: 1rem; margin-bottom: 4px;">Official Fee Currency &bull; Zambian Kwacha (ZMW)</h4>
+          <p style="color: #533B03; font-size: 0.92rem; margin: 0; line-height: 1.5;">
+            Tuition amounts shown are per academic semester in Zambian Kwacha. International applicants may calculate estimated fees in USD, MWK, ZAR, BWP, etc. on our <a href="fees.html" style="color: var(--primary); font-weight: 700; text-decoration: underline;">Fees &amp; Funding Calculator</a>.
+          </p>
+        </div>
+      </div>
+
+      <!-- Dynamic Programme Catalog Container -->
+      <div id="catalogContainer">
+        <div style="text-align: center; padding: 40px; color: var(--text-muted);">
+          Loading academic programmes catalogue...
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- Comparison Tray -->
+  <!-- Comparison Floating Tray -->
   <div class="comparison-tray" id="compTray">
-    <div>
-      <h4 style="margin-bottom: 5px; color: var(--accent);">Compare Programmes</h4>
+    <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
+      <strong style="color: var(--accent); font-size: 0.95rem;">Compare Selected Programmes:</strong>
       <div class="compare-items" id="compItems"></div>
     </div>
     <div style="display: flex; gap: 10px;">
-      <button class="btn btn-primary" id="btnCompare">Compare Now</button>
-      <button class="btn btn-outline" id="btnClearComp" style="border-color: rgba(255,255,255,0.3); color: white;">Clear</button>
+      <button class="btn btn-outline-white btn-sm" id="btnClearComp">Clear</button>
+      <button class="btn btn-primary btn-sm" id="btnCompare">Compare Side-by-Side</button>
     </div>
   </div>
 
   <!-- Comparison Modal -->
   <div class="comparison-modal" id="compModal">
     <div class="comparison-content">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-        <h2 style="color: var(--primary);">Programme Comparison</h2>
-        <button id="closeModal" style="background:none; border:none; font-size: 1.5rem; cursor: pointer;">Ã¢Å“â€¢</button>
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid var(--border); padding-bottom: 14px;">
+        <h2 style="color: var(--primary); font-size: 1.5rem;">Programme Comparison Matrix</h2>
+        <button id="closeModal" style="background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--text-muted);">&times;</button>
       </div>
       <div id="compTableContainer" style="overflow-x: auto;"></div>
     </div>
   </div>
 
+  <!-- Global Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="logo" style="margin-bottom: 20px;">
+            <div style="width: 48px; height: 48px; background: white; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; padding: 4px;">
+              <img src="eden-university-application-logo.png" alt="Eden University Logo" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+            </div>
+            <div class="logo-text" style="color: var(--white);">
+              EDEN UNIVERSITY
+              <span style="color: var(--accent);">ADMISSIONS</span>
+            </div>
+          </a>
+          <p style="color: rgba(255,255,255,0.75); font-size: 0.92rem; line-height: 1.6;">
+            Dedicated to academic excellence. Secure your future with our streamlined online application system.
+          </p>
+          <div class="footer-social">
+            <span class="footer-social-title">Follow Us</span>
+            <div class="footer-social-links">
+              <a href="https://www.facebook.com/profile.php?id=61560646456928" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Eden University Application Portal on Facebook">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+              </a>
+              <a href="https://www.tiktok.com/@eden_university_2027" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Eden University Application Portal on TikTok">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.49 6.27 6.27 0 0 0 1.87-4.49V8.78a8.21 8.21 0 0 0 4.9 1.6V6.93a4.78 4.78 0 0 1-1-.24z"/>
+                </svg>
+              </a>
+              <a href="https://www.instagram.com/eden_admission.zm/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Eden University Application Portal on Instagram">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h4>Admissions</h4>
+          <ul class="footer-links">
+            <li><a href="apply.html">Apply Online</a></li>
+            <li><a href="programmes.html">Find a Programme</a></li>
+            <li><a href="requirements.html">Entry Requirements</a></li>
+            <li><a href="fees.html">Fees &amp; Funding</a></li>
+            <li><a href="intakes.html">January 2027 Intake</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>University Links</h4>
+          <ul class="footer-links">
+            <li><a href="schools.html">Our Schools</a></li>
+            <li><a href="testimonials.html">Student Success</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Eden University Admissions</h4>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <span>P.O BOX 37727 BARLASTONE PARK, LUSAKA, ZAMBIA</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>Phone / WhatsApp: <a href="tel:+260779934886" style="color: inherit; text-decoration: underline;">+260 779 934 886</a></span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>Additional Contact: <a href="tel:+260973439282" style="color: inherit; text-decoration: underline;">+260 973 439 282</a></span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>Additional Contact: <a href="tel:+260763551856" style="color: inherit; text-decoration: underline;">+260 763 551 856</a></span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <a href="mailto:applyforeden@gmail.com" style="color: var(--accent);">applyforeden@gmail.com</a>
+          </div>
+          <div style="margin-top: 12px;"><a href="https://wa.me/260779934886" class="btn btn-whatsapp btn-sm" target="_blank" rel="noopener noreferrer">Chat on Admissions WhatsApp</a></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-info">
+          <p>&copy; 2026&ndash;2027 Eden University. All Rights Reserved. &bull; Official Admissions Support Services</p>
+          <p class="footer-credit"><a href="https://www.henlertech.com/" target="_blank" rel="noopener noreferrer">WEBSITE DONE BY HENLER TECHNOLOGIES</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Contact Widget Script -->
+  <script src="contact-widget.js" defer></script>
+
   <script>
-    // Extract unique schools
-    const uniqueSchools = [...new Set(programmesData.map(p => p.school))];
-    
-    // Populate School Filter
+    // Navigation Drawer
+    const navToggle = document.getElementById('nav-toggle');
+    const navClose = document.getElementById('nav-close');
+    const navDrawer = document.getElementById('nav-drawer');
+    const navOverlay = document.getElementById('nav-overlay');
+
+    if (navToggle && navDrawer) {
+      navToggle.addEventListener('click', () => {
+        navDrawer.classList.add('open');
+        navOverlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      });
+      const closeDrawer = () => {
+        navDrawer.classList.remove('open');
+        navOverlay.classList.remove('open');
+        document.body.style.overflow = '';
+      };
+      if (navClose) navClose.addEventListener('click', closeDrawer);
+      if (navOverlay) navOverlay.addEventListener('click', closeDrawer);
+    }
+
+    // Helper to format school name without redundant "School of" prefixes
+    function formatSchoolHeader(rawName) {
+      const clean = rawName.replace(/^School\s+of\s+/i, '').trim();
+      return 'SCHOOL OF ' + clean.toUpperCase();
+    }
+
+    function formatSchoolOption(rawName) {
+      const clean = rawName.replace(/^School\s+of\s+/i, '').trim();
+      return 'School of ' + clean;
+    }
+
+    // Filter elements
+    const searchInput = document.getElementById('searchInput');
     const schoolFilter = document.getElementById('schoolFilter');
+    const modeFilter = document.getElementById('modeFilter');
+    const levelFilter = document.getElementById('levelFilter');
+    const catalogContainer = document.getElementById('catalogContainer');
+    const resultCountBadge = document.getElementById('resultCountBadge');
+
+    // Extract unique schools cleanly
+    const uniqueSchools = [...new Set(programmesData.map(p => p.school))];
     uniqueSchools.forEach(s => {
       const opt = document.createElement('option');
       opt.value = s;
-      opt.innerText = `School of ${s}`;
+      opt.textContent = formatSchoolOption(s);
       schoolFilter.appendChild(opt);
     });
 
-    const searchInput = document.getElementById('searchInput');
-    const modeFilter = document.getElementById('modeFilter');
-    const catalogContainer = document.getElementById('catalogContainer');
-    
     let toCompare = [];
 
     function renderCatalog() {
-      const searchStr = searchInput.value.toLowerCase();
+      const searchStr = searchInput.value.toLowerCase().trim();
       const selectedSchool = schoolFilter.value;
       const selectedMode = modeFilter.value;
+      const selectedLevel = levelFilter.value;
 
       catalogContainer.innerHTML = '';
+      let totalVisible = 0;
 
       uniqueSchools.forEach(school => {
-        // Filter rows for this specific school
-        let schoolProgs = programmesData.map((p, originalIdx) => ({ p, originalIdx }))
+        if (selectedSchool !== 'all' && selectedSchool !== school) {
+          return;
+        }
+
+        const schoolProgs = programmesData
+          .map((p, originalIdx) => ({ p, originalIdx }))
           .filter(item => item.p.school === school)
           .filter(item => {
             const matchSearch = item.p.name.toLowerCase().includes(searchStr);
             const matchMode = selectedMode === 'all' || item.p.mode === selectedMode;
-            return matchSearch && matchMode;
+            const matchLevel = selectedLevel === 'all' || item.p.level === selectedLevel;
+            return matchSearch && matchMode && matchLevel;
           });
 
-        // Skip rendering the table if no programmes match or if school filter excludes it
-        if (schoolProgs.length === 0 || (selectedSchool !== 'all' && selectedSchool !== school)) {
-          return;
-        }
+        if (schoolProgs.length === 0) return;
+        totalVisible += schoolProgs.length;
 
-        // Build Table
         let tableHtml = `
           <div class="school-group">
             <div class="school-header">
-              SCHOOL OF ${school.toUpperCase()}
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+              ${formatSchoolHeader(school)}
+              <span class="badge badge-gold" style="margin-left: auto; font-size: 0.75rem;">${schoolProgs.length} Programmes</span>
             </div>
             <div class="table-responsive">
               <table class="academic-table">
                 <thead>
                   <tr>
-                    <th style="width: 50px;">Comp</th>
-                    <th style="width: 300px;">PROGRAMME</th>
+                    <th style="width: 44px; text-align: center;">Comp</th>
+                    <th style="width: 320px;">PROGRAMME</th>
+                    <th>LEVEL</th>
                     <th>MODE</th>
                     <th>DURATION</th>
                     <th>Y1 S1</th>
@@ -1568,7 +476,7 @@
                     <th>Y2 S2</th>
                     <th>Y3 S1</th>
                     <th>Y3 S2</th>
-                    <th style="text-align: right; min-width: 140px;">ACTIONS</th>
+                    <th style="text-align: right; min-width: 160px;">ACTIONS</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -1577,22 +485,25 @@
         schoolProgs.forEach(item => {
           const inCompare = toCompare.includes(item.originalIdx);
           const f = item.p.fees;
-          
+
           tableHtml += `
             <tr>
               <td style="text-align: center;">
-                <input type="checkbox" ${inCompare ? 'checked' : ''} onchange="toggleCompare(${item.originalIdx})">
+                <input type="checkbox" ${inCompare ? 'checked' : ''} onchange="toggleCompare(${item.originalIdx})" aria-label="Compare ${item.p.name}">
               </td>
-              <td style="font-weight: 600; color: var(--primary); white-space: normal;">${item.p.name}</td>
+              <td style="font-weight: 700; color: var(--primary); white-space: normal;">
+                <a href="programmes/${item.p.slug}.html" style="color: inherit; text-decoration: none;">${item.p.name}</a>
+              </td>
+              <td><span class="badge ${item.p.level === 'Degree' ? 'badge-blue' : 'badge-gold'}">${item.p.level}</span></td>
               <td>${item.p.mode}</td>
-              <td>${item.p.duration}</td>
+              <td style="white-space: nowrap;">${item.p.duration}</td>
               <td class="fee-col">${f[0] > 0 ? f[0].toLocaleString() : '-'}</td>
               <td class="fee-col">${f[1] > 0 ? f[1].toLocaleString() : '-'}</td>
               <td class="fee-col">${f[2] > 0 ? f[2].toLocaleString() : '-'}</td>
               <td class="fee-col">${f[3] > 0 ? f[3].toLocaleString() : '-'}</td>
               <td class="fee-col">${f[4] > 0 ? f[4].toLocaleString() : '-'}</td>
               <td class="fee-col">${f[5] > 0 ? f[5].toLocaleString() : '-'}</td>
-              <td style="text-align: right;">
+              <td style="text-align: right; white-space: nowrap;">
                 <a href="programmes/${item.p.slug}.html" class="btn btn-outline btn-sm">Details</a>
                 <a href="apply.html?prog=${item.p.slug}" class="btn btn-primary btn-sm">Apply</a>
               </td>
@@ -1609,22 +520,40 @@
         catalogContainer.innerHTML += tableHtml;
       });
 
-      if(catalogContainer.innerHTML === '') {
-        catalogContainer.innerHTML = `<div style="text-align: center; padding: 50px; background: white; border-radius: 8px; border: 1px solid #ddd; color: var(--text-muted);">No programmes match your search criteria.</div>`;
+      resultCountBadge.textContent = `Showing ${totalVisible} accredited programme${totalVisible === 1 ? '' : 's'}`;
+
+      if (totalVisible === 0) {
+        catalogContainer.innerHTML = `
+          <div style="text-align: center; padding: 60px 20px; background: white; border-radius: var(--radius-md); border: 1px solid var(--border); box-shadow: var(--shadow-sm);">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--text-light)" stroke-width="1.5" style="margin: 0 auto 16px;"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <h3 style="color: var(--primary); margin-bottom: 8px;">No programmes match your search</h3>
+            <p style="color: var(--text-muted); margin-bottom: 20px;">Try adjusting your keyword or resetting your filters to view available programmes.</p>
+            <button onclick="resetFilters()" class="btn btn-primary btn-sm">Reset All Filters</button>
+          </div>
+        `;
       }
+    }
+
+    function resetFilters() {
+      searchInput.value = '';
+      schoolFilter.value = 'all';
+      modeFilter.value = 'all';
+      levelFilter.value = 'all';
+      renderCatalog();
     }
 
     searchInput.addEventListener('input', renderCatalog);
     schoolFilter.addEventListener('change', renderCatalog);
     modeFilter.addEventListener('change', renderCatalog);
+    levelFilter.addEventListener('change', renderCatalog);
 
     // Comparison Logic
     function toggleCompare(idx) {
-      if(toCompare.includes(idx)) {
+      if (toCompare.includes(idx)) {
         toCompare = toCompare.filter(i => i !== idx);
       } else {
-        if(toCompare.length >= 3) {
-          alert("You can only compare up to 3 programmes at a time.");
+        if (toCompare.length >= 3) {
+          alert("You can compare up to 3 programmes at a time.");
           event.target.checked = false;
           return;
         }
@@ -1636,7 +565,7 @@
     function renderTray() {
       const tray = document.getElementById('compTray');
       const compItems = document.getElementById('compItems');
-      if(toCompare.length === 0) {
+      if (toCompare.length === 0) {
         tray.classList.remove('active');
         return;
       }
@@ -1644,10 +573,12 @@
       compItems.innerHTML = '';
       toCompare.forEach(idx => {
         const p = programmesData[idx];
-        compItems.innerHTML += `<div class="compare-item">
-          ${p.name} (${p.mode})
-          <button onclick="toggleCompare(${idx}); renderCatalog();">Ã¢Å“â€¢</button>
-        </div>`;
+        compItems.innerHTML += `
+          <div class="compare-item">
+            <span>${p.name} (${p.mode})</span>
+            <button onclick="toggleCompare(${idx}); renderCatalog();" aria-label="Remove ${p.name}">&times;</button>
+          </div>
+        `;
       });
     }
 
@@ -1658,17 +589,19 @@
     });
 
     document.getElementById('btnCompare').addEventListener('click', () => {
-      const tableHtml = `<table class="comp-table">
-        <tr><th>Programme</th>${toCompare.map(i => `<td><strong style="color:var(--primary);">${programmesData[i].name}</strong></td>`).join('')}</tr>
-        <tr><th>School</th>${toCompare.map(i => `<td>${programmesData[i].school}</td>`).join('')}</tr>
-        <tr><th>Qualification</th>${toCompare.map(i => `<td>${programmesData[i].level}</td>`).join('')}</tr>
-        <tr><th>Mode</th>${toCompare.map(i => `<td>${programmesData[i].mode}</td>`).join('')}</tr>
-        <tr><th>Duration</th>${toCompare.map(i => `<td>${programmesData[i].duration}</td>`).join('')}</tr>
-        <tr><th>Sem 1 Tuition</th>${toCompare.map(i => `<td>ZMW ${programmesData[i].fees[0].toLocaleString()}</td>`).join('')}</tr>
-        <tr><th>Sem 2 Tuition</th>${toCompare.map(i => `<td>ZMW ${programmesData[i].fees[1].toLocaleString()}</td>`).join('')}</tr>
-        <tr><th>Total Year 1</th>${toCompare.map(i => `<td><strong>ZMW ${(programmesData[i].fees[0] + programmesData[i].fees[1]).toLocaleString()}</strong></td>`).join('')}</tr>
-        <tr><th>Actions</th>${toCompare.map(i => `<td><a href="apply.html?prog=${programmesData[i].slug}" class="btn btn-primary btn-sm" style="width:100%; display:block; text-align:center;">Apply Now</a></td>`).join('')}</tr>
-      </table>`;
+      const tableHtml = `
+        <table class="comp-table">
+          <tr><th>Programme</th>${toCompare.map(i => `<td><strong style="color:var(--primary);">${programmesData[i].name}</strong></td>`).join('')}</tr>
+          <tr><th>School</th>${toCompare.map(i => `<td>${formatSchoolOption(programmesData[i].school)}</td>`).join('')}</tr>
+          <tr><th>Qualification</th>${toCompare.map(i => `<td><span class="badge badge-blue">${programmesData[i].level}</span></td>`).join('')}</tr>
+          <tr><th>Study Mode</th>${toCompare.map(i => `<td>${programmesData[i].mode}</td>`).join('')}</tr>
+          <tr><th>Duration</th>${toCompare.map(i => `<td>${programmesData[i].duration}</td>`).join('')}</tr>
+          <tr><th>Sem 1 Tuition</th>${toCompare.map(i => `<td><strong>ZMW ${programmesData[i].fees[0].toLocaleString()}</strong></td>`).join('')}</tr>
+          <tr><th>Sem 2 Tuition</th>${toCompare.map(i => `<td><strong>ZMW ${programmesData[i].fees[1].toLocaleString()}</strong></td>`).join('')}</tr>
+          <tr><th>Total Year 1</th>${toCompare.map(i => `<td style="color:var(--primary); font-weight:800;">ZMW ${(programmesData[i].fees[0] + programmesData[i].fees[1]).toLocaleString()}</td>`).join('')}</tr>
+          <tr><th>Actions</th>${toCompare.map(i => `<td><a href="apply.html?prog=${programmesData[i].slug}" class="btn btn-primary btn-sm" style="width:100%; text-align:center;">Apply Now</a></td>`).join('')}</tr>
+        </table>
+      `;
       document.getElementById('compTableContainer').innerHTML = tableHtml;
       document.getElementById('compModal').style.display = 'flex';
     });
@@ -1677,31 +610,15 @@
       document.getElementById('compModal').style.display = 'none';
     });
 
+    // Close modal on background click
+    document.getElementById('compModal').addEventListener('click', (e) => {
+      if (e.target === document.getElementById('compModal')) {
+        document.getElementById('compModal').style.display = 'none';
+      }
+    });
+
     // Initial render
     renderCatalog();
   </script>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const navToggle = document.getElementById('nav-toggle');
-      const navClose = document.getElementById('nav-close');
-      const navDrawer = document.getElementById('nav-drawer');
-      const navOverlay = document.getElementById('nav-overlay');
-
-      if(navToggle && navDrawer) {
-        navToggle.addEventListener('click', () => {
-          navDrawer.classList.add('open');
-          navOverlay.classList.add('open');
-        });
-        
-        const closeDrawer = () => {
-          navDrawer.classList.remove('open');
-          navOverlay.classList.remove('open');
-        };
-        if(navClose) navClose.addEventListener('click', closeDrawer);
-        if(navOverlay) navOverlay.addEventListener('click', closeDrawer);
-      }
-    });
-  </script>
-</body></html>
-
+</body>
+</html>

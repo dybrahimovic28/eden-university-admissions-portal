@@ -38,7 +38,7 @@
         <img src="../eden-university-application-logo.png" alt="Eden University Logo" class="logo-img">
         <div class="logo-text">EDEN UNIVERSITY<span>ADMISSIONS & APPLICATION PORTAL</span></div>
       </a>
-      <button class="nav-toggle" id="nav-toggle">â˜°</button>
+      <button class="nav-toggle" id="nav-toggle">?</button>
       <nav class="nav-links" id="desktop-nav">
         <a href="../index.html">Home</a>
         <a href="../programmes.html">Programmes</a>
@@ -48,7 +48,7 @@
         <a href="../fees.html">Fees &amp; Funding</a>
         
         <div class="nav-dropdown">
-          <a href="#" class="dropdown-trigger" onclick="return false;">More â–¼</a>
+          <a href="#" class="dropdown-trigger" onclick="return false;">More ?</a>
           <div class="dropdown-menu">
             <a href="../testimonials.html">Student Success</a>
             <a href="../faq.html">FAQ</a>
@@ -57,14 +57,33 @@
           </div>
         </div>
 
-        <a href="../apply.html?prog=undefined" class="nav-cta">Apply Online</a>
+        <a href="../apply.html?prog=bsc-in-ecology-conservation-biology" class="nav-cta">Apply Online</a>
       </nav>
     </div>
   </header>
 
+  <!-- Mobile Drawer -->
+  <div class="nav-overlay" id="nav-overlay"></div>
+  <div class="nav-drawer" id="nav-drawer">
+    <button class="nav-toggle" id="nav-close" style="text-align: right;" aria-label="Close menu">✕</button>
+    <a href="../index.html">Home</a>
+    <a href="../eden-university-application.html">Application Guide</a>
+    <a href="../programmes.html">Programmes</a>
+    <a href="../requirements.html">Requirements</a>
+    <a href="../fees.html">Fees &amp; Funding</a>
+    <a href="../intakes.html">Intakes</a>
+    <a href="../schools.html">Schools &amp; Faculties</a>
+    <a href="../process.html">Application Process</a>
+    <a href="../testimonials.html">Student Success</a>
+    <a href="../faq.html">FAQ</a>
+    <a href="../contact.html">Contact Us</a>
+    <a href="../international-relations.html">International Relations</a>
+    <a href="../apply.html" class="btn btn-primary" style="margin-top: 20px;">Apply Online</a>
+  </div>
+
   <div class="page-header" style="padding: 100px 0 80px;">
     <div class="container">
-      <span style="background: rgba(255,255,255,0.2); padding: 6px 12px; border-radius: 4px; font-weight: 600; font-size: 0.85rem; letter-spacing: 1px; margin-bottom: 20px; display: inline-block; text-transform: uppercase;">SCHOOL OF School Of Natural Sciences</span>
+      <span style="background: rgba(255,255,255,0.2); padding: 6px 12px; border-radius: 4px; font-weight: 600; font-size: 0.85rem; letter-spacing: 1px; margin-bottom: 20px; display: inline-block; text-transform: uppercase;">SCHOOL OF Natural Sciences</span>
       <h1 style="font-size: 3rem;">BSc in Ecology & Conservation Biology</h1>
       <p>Advance your career with our rigorous academic programme.</p>
     </div>
@@ -98,14 +117,14 @@
             <div style="margin-bottom: 15px; font-size: 0.85rem; color: var(--primary); background: rgba(0, 43, 91, 0.05); padding: 10px; border-radius: 6px; font-weight: 600; border-left: 3px solid var(--accent); line-height: 1.4;">
               Students pay fees per semester. Full programme fees are not required upfront. Contact Admissions via WhatsApp for payment guidance.
             </div>
-            <a href="../apply.html?prog=bsc-in-ecology-conservation-biology" class="btn btn-primary" style="width: 100%; margin-bottom: 15px;">Apply Now</a>
+            <div style="text-align: center; margin-bottom: 15px;"><a href="../apply.html?prog=bsc-in-ecology-conservation-biology" class="btn btn-primary btn-md">Apply Now</a></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+    <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
@@ -116,59 +135,108 @@
             </div>
             <div class="logo-text" style="color: white;">
               EDEN UNIVERSITY
-              <span style="color: var(--accent);">ADMISSIONS</span>
+              <span style="color: var(--accent);">ADMISSIONS &amp; APPLICATION PORTAL</span>
             </div>
           </a>
-          <p style="color: rgba(255,255,255,0.7);">Dedicated to academic excellence. Secure your future with our streamlined online application system.</p>
+          <p style="color: rgba(255,255,255,0.7); line-height: 1.6;">Dedicated admissions information and application assistance portal for prospective Eden University students in Zambia and across Africa.</p>
+          <div class="footer-social">
+            <span class="footer-social-title">Follow Us</span>
+            <div class="footer-social-links">
+              <a href="https://www.facebook.com/profile.php?id=61560646456928" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Eden University Application Portal on Facebook">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+              </a>
+              <a href="https://www.tiktok.com/@eden_university_2027" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Eden University Application Portal on TikTok">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.49 6.27 6.27 0 0 0 1.87-4.49V8.78a8.21 8.21 0 0 0 4.9 1.6V6.93a4.78 4.78 0 0 1-1-.24z"/>
+                </svg>
+              </a>
+              <a href="https://www.instagram.com/eden_admission.zm/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Eden University Application Portal on Instagram">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
         </div>
         <div>
           <h4>Admissions</h4>
           <ul class="footer-links">
+            <li><a href="../eden-university-application.html">How to Apply</a></li>
             <li><a href="../programmes.html">Find a Programme</a></li>
             <li><a href="../requirements.html">Entry Requirements</a></li>
-            <li><a href="../fees.html">Fees & Funding</a></li>
+            <li><a href="../fees.html">Fees &amp; Funding</a></li>
+            <li><a href="../intakes.html">January &amp; July Intakes</a></li>
             <li><a href="../apply.html">Apply Online</a></li>
           </ul>
         </div>
         <div>
-          <h4>University Links</h4>
+          <h4>Information</h4>
           <ul class="footer-links">
-            <li><a href="../schools.html">Our Schools</a></li>
+            <li><a href="../schools.html">Schools &amp; Faculties</a></li>
+            <li><a href="../process.html">Application Process</a></li>
             <li><a href="../testimonials.html">Student Success</a></li>
-            <li><a href="../faq.html">FAQ</a></li>
-            <li><a href="../contact.html">Contact Us</a></li>
+            <li><a href="../faq.html">Admissions FAQ</a></li>
+            <li><a href="../contact.html">Contact Admissions</a></li>
+            <li><a href="../international-relations.html">International Relations</a></li>
           </ul>
         </div>
-        <div>
-          <h4>Contact Admissions</h4>
-          <p style="color: rgba(255,255,255,0.7); margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
-            Lusaka, Zambia
-          </p>
-          <p style="color: rgba(255,255,255,0.7); margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.394.33.92.036 1.32l-1.611 2.228a11.511 11.511 0 0 0 5.244 5.244l2.228-1.611c.4-.294.926-.293 1.32.036l2.306 1.795a1.745 1.745 0 0 1 .163 2.61l-1.31 1.31c-.48.48-1.12.77-1.802.77C5.074 16 0 10.926 0 4.195c0-.68.29-1.32.77-1.802l1.31-1.31z"/></svg>
-            +260 779 934 886
-          </p>
-          <p style="color: rgba(255,255,255,0.7); margin-bottom: 20px; display: flex; align-items: center; gap: 8px;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.026A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/></svg>
-            admissions@edenuniversity.edu.zm
-          </p>
-          <a href="https://wa.me/260779934886" class="btn btn-whatsapp" style="width: 100%;">Chat on WhatsApp</a>
+                <div>
+          <h4>Eden University Admissions</h4>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <span>P.O BOX 37727 BARLASTONE PARK, LUSAKA, ZAMBIA</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>Phone / WhatsApp: <a href="tel:+260779934886" style="color: inherit; text-decoration: underline;">+260 779 934 886</a></span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>Additional Contact: <a href="tel:+260973439282" style="color: inherit; text-decoration: underline;">+260 973 439 282</a></span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>Additional Contact: <a href="tel:+260763551856" style="color: inherit; text-decoration: underline;">+260 763 551 856</a></span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <a href="mailto:applyforeden@gmail.com" style="color: var(--accent);">applyforeden@gmail.com</a>
+          </div>
+          <div style="margin-top: 12px;"><a href="https://wa.me/260779934886" class="btn btn-whatsapp btn-sm" target="_blank" rel="noopener noreferrer">Chat on Admissions WhatsApp</a></div>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 Eden University Application Portal. All Rights Reserved. | Admissions Information & Support</p>
+            <div class="footer-bottom">
+        <div class="footer-bottom-info">
+          <p>&copy; 2026&ndash;2027 Eden University. All Rights Reserved. &bull; Official Admissions Support Services</p>
+          <p class="footer-credit"><a href="https://www.henlertech.com/" target="_blank" rel="noopener noreferrer">WEBSITE DONE BY HENLER TECHNOLOGIES</a></p>
+        </div>
       </div>
     </div>
   </footer>
 
   <script>
     const navToggle = document.getElementById('nav-toggle');
+    const navClose = document.getElementById('nav-close');
     const navDrawer = document.getElementById('nav-drawer');
     const navOverlay = document.getElementById('nav-overlay');
-    if(navToggle) {
-      navToggle.addEventListener('click', () => { navDrawer.classList.add('open'); navOverlay.classList.add('open'); });
+
+    if (navToggle && navDrawer) {
+      navToggle.addEventListener('click', () => {
+        navDrawer.classList.add('open');
+        navOverlay.classList.add('open');
+      });
+      const closeDrawer = () => {
+        navDrawer.classList.remove('open');
+        navOverlay.classList.remove('open');
+      };
+      if (navClose) navClose.addEventListener('click', closeDrawer);
+      if (navOverlay) navOverlay.addEventListener('click', closeDrawer);
     }
   </script>
+  <!-- Floating Contact Widget Script -->
+  <script src="../contact-widget.js" defer></script>
 </body>
 </html>
+

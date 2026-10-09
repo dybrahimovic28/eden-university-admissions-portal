@@ -1,2 +1,8 @@
 node_modules/
 run_nav_update.js
+scratch/
+audit_blog.js
+build_blog_articles.js
+list_data_progs.js
+map_slugs.js
+upgrade_programmes_and_secondary.js
